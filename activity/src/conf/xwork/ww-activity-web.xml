@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 活动页 -->
+	<package name="lansha-activity" namespace="/activity" extends="lansha-index-base">
+		<!-- 活动首页 -->
+		<action name="index" class="com.yaowang.lansha.action.web.ActivityAction" method="index">
+			<result>/activity/web/index/index.ftl</result>
+		</action>
+		<!-- 发红包 -->
+		<action name="fahongbao" class="com.yaowang.lansha.action.web.ActivityAction" method="fahongbao">
+			<result name="web">/activity/web/index/fahongbao.ftl</result>
+			<result name="wap">/activity/wap/index/fahongbao_wap.ftl</result>
+		</action>
+		<!-- 奖品领取人-->
+		<action name="receiver" class="com.yaowang.lansha.action.web.ActivityAction" method="receiver">
+			<result>/activity/web/index/index.ftl</result>
+		</action>
+		<!-- 用户退出停留在活动首页 -->
+		<action name="logout" class="com.yaowang.lansha.action.web.ActivityAction" method="logout"/>
+		<!-- 奖品列表接口 -->
+		<action name="giftList" class="com.yaowang.lansha.action.web.ActivityAction" method="giftList"/>
+		<!-- 中奖纪录接口  -->
+		<action name="list" class="com.yaowang.lansha.action.web.ActivityAction" method="list"/>
+		<!-- 我的中奖记录接口 -->
+		<action name="mylist" class="com.yaowang.lansha.action.web.ActivityAction" method="mylist" />
+		<!-- 我的抽奖次数 -->
+		<action name="remainTimes" class="com.yaowang.lansha.action.web.ActivityAction" method="remainTimes" />			
+		<!-- 抽奖接口(重点) -->
+		<action name="action" class="com.yaowang.lansha.action.web.ActivityAction" method="action"/>
+		
+		<!-- PC端活动推广 -->
+		<action name="saveActivity" class="com.yaowang.lansha.action.web.ActivityGiftStockAction" method="saveActivity"/>
+		
+	</package>
+</struts>

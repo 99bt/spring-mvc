@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 活动wap页面 -->
+	<package name="lansha-wap-activity" namespace="/wap/activity" extends="lansha-index-base">
+		<!-- 活动首页 -->
+		<action name="index" class="com.yaowang.lansha.action.wap.ActivityWapAction" method="index">
+			<result>/activity/wap/index/index.ftl</result>
+		</action>
+		<!-- 抽奖接口(重点) -->
+		<action name="action" class="com.yaowang.lansha.action.wap.ActivityWapAction" method="action"/>
+		<!-- 注册-->
+		<action name="register" class="com.yaowang.lansha.action.wap.BasisOperation" method="register"/>
+		<!-- 登录-->
+		<action name="login" class="com.yaowang.lansha.action.wap.BasisOperation" method="login"/>
+		<!-- 退出-->
+		<action name="logout" class="com.yaowang.lansha.action.wap.BasisOperation" method="logout"/>
+		<!-- 短信发送-->
+		<action name="sendSMS" class="com.yaowang.lansha.action.wap.BasisOperation" method="sendSMS"/>
+	</package>
+	<!-- 活动wap页面 -->
+	<package name="lansha-wap-cf-activity" namespace="/wap/activity/cf" extends="lansha-index-base">
+		<!-- 活动首页 -->
+		<action name="index" class="com.yaowang.lansha.action.wap.ActivityWapCfAction" method="index">
+			<result>/activity/wap/cf/index.ftl</result>
+		</action>
+		<!-- 抽奖接口(重点) -->
+		<action name="action" class="com.yaowang.lansha.action.wap.ActivityWapCfAction" method="action"/>
+		<!-- 注册-->
+		<action name="register" class="com.yaowang.lansha.action.wap.BasisOperationCfAction" method="register"/>
+		<!-- 登录-->
+		<action name="login" class="com.yaowang.lansha.action.wap.BasisOperationCfAction" method="login"/>
+		<!-- 退出-->
+		<action name="logout" class="com.yaowang.lansha.action.wap.BasisOperationCfAction" method="logout"/>
+		<!-- 短信发送-->
+		<action name="sendSMS" class="com.yaowang.lansha.action.wap.BasisOperationCfAction" method="sendSMS"/>
+	</package>
+</struts>

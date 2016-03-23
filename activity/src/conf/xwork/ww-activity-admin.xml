@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<!-- 活动管理 -->
+	<package name="admin-activity" namespace="/admin/activity" extends="project-admin">
+        <!-- 精彩活动列表 -->
+        <action name="activity-push" class="com.yaowang.lansha.action.admin.ActivityPushAction" method="list">
+            <result>/activity/admin/push/push-list.ftl</result>
+        </action>
+        <!-- 精彩活动列详情 -->
+        <action name="activity-push-detail" class="com.yaowang.lansha.action.admin.ActivityPushAction" method="detail">
+            <result>/activity/admin/push/push-detail.ftl</result>
+        </action>
+        <!-- 保存精彩活动 -->
+        <action name="activity-push-save" class="com.yaowang.lansha.action.admin.ActivityPushAction" method="save">
+            <result>/activity/admin/push/push-list.ftl</result>
+        </action>
+        <!-- 删除 -->
+        <action name="activity-push-delete" class="com.yaowang.lansha.action.admin.ActivityPushAction" method="delete">
+            <result>/activity/admin/push/push-list.ftl</result>
+        </action>
+		<!-- 活动列表 -->
+		<action name="activity" class="com.yaowang.lansha.action.admin.ActivityItemAction" method="list">
+			<result>/activity/admin/item/item-list.ftl</result>
+		</action>
+		<!-- 活动详情 -->
+		<action name="activity-detail" class="com.yaowang.lansha.action.admin.ActivityItemAction" method="detail">
+			<result>/activity/admin/item/item-detail.ftl</result>
+		</action>
+		<!-- 保存活动 -->
+		<action name="activity-save" class="com.yaowang.lansha.action.admin.ActivityItemAction" method="save">
+			<result name="success">/activity/admin/item/item-list.ftl</result>
+			<result name="error">/activity/admin/item/item-detail.ftl</result>
+		</action>
+		<!-- 删除活动 -->
+		<action name="activity-delete" class="com.yaowang.lansha.action.admin.ActivityItemAction" method="delete">
+			<result>/activity/admin/item/item-list.ftl</result>
+		</action>
+		<!-- 活动上线 -->
+		<action name="activity-online" class="com.yaowang.lansha.action.admin.ActivityItemAction" method="online">
+			<result>/activity/admin/item/item-list.ftl</result>
+		</action>
+		<!-- 活动下线 -->
+		<action name="activity-offline" class="com.yaowang.lansha.action.admin.ActivityItemAction" method="offline">
+			<result>/activity/admin/item/item-list.ftl</result>
+		</action>
+		
+		<!-- 礼包列表 -->
+		<action name="activity-gift-list" class="com.yaowang.lansha.action.admin.ActivityItemGiftAction" method="list">
+			<result>/activity/admin/item/gift-list.ftl</result>
+		</action>
+		<!-- 礼包详情 -->
+		<action name="activity-gift-detail" class="com.yaowang.lansha.action.admin.ActivityItemGiftAction" method="detail">
+			<result>/activity/admin/item/gift-detail.ftl</result>
+		</action>
+		<!-- 保存礼包 -->
+		<action name="activity-gift-save" class="com.yaowang.lansha.action.admin.ActivityItemGiftAction" method="save">
+			<result name="success">/activity/admin/item/gift-list.ftl</result>
+			<result name="error">/activity/admin/item/gift-detail.ftl</result>
+		</action>
+		<!-- 删除礼包 -->
+		<action name="activity-gift-delete" class="com.yaowang.lansha.action.admin.ActivityItemGiftAction" method="delete">
+			<result>/activity/admin/item/gift-list.ftl</result>
+		</action>
+		<!-- 礼包上线 -->
+		<action name="activity-gift-online" class="com.yaowang.lansha.action.admin.ActivityItemGiftAction" method="online">
+			<result>/activity/admin/item/gift-list.ftl</result>
+		</action>
+		<!-- 礼包下线 -->
+		<action name="activity-gift-offline" class="com.yaowang.lansha.action.admin.ActivityItemGiftAction" method="offline">
+			<result>/activity/admin/item/gift-list.ftl</result>
+		</action>
+		<!-- 礼包库存 -->
+		<action name="activity-gift-stock" class="com.yaowang.lansha.action.admin.ActivityItemGiftAction" method="giftStock">
+			<result name="success">/activity/admin/item/gift-list.ftl</result>
+			<result name="error">/activity/admin/item/gift-detail.ftl</result>
+		</action>
+	</package>
+	
+	<!-- 礼物发放 -->
+	<package name="admin-activity-gift" namespace="/admin/activity" extends="project-admin">
+		<!-- 礼物活动列表 -->
+		<action name="gift" class="com.yaowang.lansha.action.admin.ActivityItemAction" method="list">
+			<result>/activity/admin/gift/item-list.ftl</result>
+		</action>
+		<!-- 礼物列表 -->
+		<action name="gift-list" class="com.yaowang.lansha.action.admin.ActivityGiftStockAction" method="list">
+			<result>/activity/admin/gift/gift-list.ftl</result>
+		</action>
+        <!--excel 导入-->
+        <action name="gift-import" class="com.yaowang.lansha.action.admin.ActivityGiftStockAction" method="importExcel">
+            <result type="redirect">gift-list.html?entity.itemId=${itemId}</result>
+        </action>
+		<!-- 礼物发放数据导出 -->
+		<action name="gift-export" class="com.yaowang.lansha.action.admin.ActivityGiftStockAction" method="export" />
+		<!-- 发货-->
+		<action name="gift-doGift" class="com.yaowang.lansha.action.admin.ActivityGiftStockAction" method="doGift">
+			<result>/activity/admin/gift/gift-list.ftl</result>
+		</action>
+		<!-- 查看 -->
+		<action name="gift-view" class="com.yaowang.lansha.action.admin.ActivityGiftStockAction" method="view">
+			<result>/activity/admin/gift/gift-view.ftl</result>
+		</action>
+		<!-- 批量发货-->
+		<action name="gift-doBatchGifts" class="com.yaowang.lansha.action.admin.ActivityGiftStockAction" method="doBatchGifts">
+			<result>/activity/admin/gift/gift-list.ftl</result>
+		</action>
+		<!-- 批量拒绝-->
+		<action name="gift-doBatchRejectGifts" class="com.yaowang.lansha.action.admin.ActivityGiftStockAction" method="doBatchRejectGifts">
+			<result>/activity/admin/gift/gift-list.ftl</result>
+		</action>
+	</package>
+
+
+
+    <!-- 活动礼品库存-->
+	<package name="admin-activity-giftStock" namespace="/admin/activity" extends="project-admin">
+		<!-- 活动礼品库存 -->
+		<action name="activity-details" class="com.yaowang.lansha.action.admin.ActivityGiftStockAction" method="listview">
+			<result>/activity/admin/activityGiftStoc/list.ftl</result>
+		</action>
+		<!-- 活动报表 -->
+		<action name="user" class="com.yaowang.lansha.action.admin.ActivityItemAction" method="list">
+			<result>/activity/admin/activityGiftStoc/item-list.ftl</result>
+		</action>
+	</package>
+
+	<!-- 礼物报表 -->
+	<package name="admin-activity-gift-report" namespace="/admin/report" extends="project-admin">
+		<!-- 活动报表 -->
+		<action name="giftReport" class="com.yaowang.lansha.action.admin.ActivityItemAction" method="list">
+			<result>/activity/admin/report/item-list.ftl</result>
+		</action>
+		<!-- 礼物报表详细 -->
+		<action name="giftReport-view" class="com.yaowang.lansha.action.admin.ActivityGiftReportAction" method="list">
+			<result>/activity/admin/report/gift-report.ftl</result>
+		</action>
+		<!-- 礼物报表统计 -->
+		<action name="giftReport-statistics" class="com.yaowang.lansha.action.admin.ActivityGiftReportAction" method="statistics"/>
+		
+		<action name="giftReport-stock" class="com.yaowang.lansha.action.admin.ActivityGiftReportAction" method="list">
+			<result>/activity/admin/report/giftstock-report.ftl</result>
+		</action>
+		
+		<!-- 礼物报表统计 -->
+		<action name="giftReport-stockStatistics" class="com.yaowang.lansha.action.admin.ActivityGiftReportAction" method="stockStatistics"/>
+	</package>
+</struts>
