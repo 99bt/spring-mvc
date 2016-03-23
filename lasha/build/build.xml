@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="subsystem build" basedir="./" default="build-subsystem-jar">
+    <property file="./build.properties" />
+	
+	<!-- 加入环境变量 -->
+	<property environment="env"/>
+	<!-- classpath路径 -->
+	<path id="classpath">
+		<fileset dir="../../build/lib">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="../../webapp/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+		<filelist>
+			<file name="${env.JAVA_HOME}/jre/lib/rt.jar"/>
+		</filelist>
+	</path>
+
+	<!-- 打subsystem jar包 -->
+	<target name="build-subsystem-jar">
+		<!-- 打包文件夹 -->
+		<delete dir="./build"></delete>
+		<mkdir dir="./build"></mkdir>
+		<delete file="./yw-${subsystem.name}.jar"></delete>
+		<!-- 配置文件 -->
+		<copy todir="./build/conf">
+			<fileset dir="../src/conf" />
+			<fileset dir="../../activity/src/conf" />
+		</copy>
+		<copy todir="./build">
+			<fileset dir="../src" >
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+		
+		<!-- 拷贝网页文件
+		<copy todir="./build/">
+			<fileset dir="../webapp/">
+				<include name="**/*.ftl"/>
+			</fileset>
+		</copy>
+		<copydir dest="./build/META-INF/resources/static/${subsystem.name}" src="../webapp/static/${subsystem.name}"></copydir>
+		 -->
+		
+		<!-- 编译java文件 -->
+		<javac target="1.6" source="1.6" destdir="./build" encoding="utf-8" classpathref="classpath" debug="on">
+			<src path="../src"></src>
+			<src path="../../activity/src"></src>
+			<classpath path="../../build/base.jar" />
+		</javac>
+		<!-- 打jar包 -->
+		<jar destfile="./yw-${subsystem.name}.jar">
+			<fileset dir="./build"></fileset>
+			<!-- 版本号 -->
+			<manifest>
+		        <attribute name="Built-By" value="${user.name}" />
+				<attribute name="Implementation-Title" value="${app.name}"/>
+				<attribute name="Implementation-Vendor" value="${app.name}"/>
+				<attribute name="Implementation-Version" value="trunk-${subsystem.name}-${subsystem.version}-${version}-${date.today}"/>
+			</manifest>
+		</jar>
+		<!-- 删除build文件夹 -->
+		<delete dir="./build" />
+	</target>
+	
+	<!-- 获取时间 -->
+	<tstamp>
+        <format property="date.today" pattern="yyyyMMdd-HHmm" />
+    </tstamp>
+</project>

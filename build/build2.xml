@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="lansha build" basedir="../">
+    <property file="${basedir}/build/build.properties" />
+	<!-- 打内网war包 -->
+	<target name="build-war-snapshot">
+		<!--base.jar,拷贝网页 -->
+		<ant antfile="build.xml"
+	        dir="./build"
+	        inheritall="false"
+	   		inheritrefs="false"
+	        target="build-war"
+        />
+        <!-- subsystem.jar -->
+        <ant antfile="build.xml"
+	        dir="./${app.name}/build"
+	        inheritall="false"
+	        inheritrefs="false"
+	        target="build-subsystem-jar"
+        />
+
+		<!-- 拷贝 jar -->
+		<copy todir="./build/ROOT/WEB-INF/lib">
+			<fileset dir="./${app.name}/build">
+				<include name="*.jar"/>
+			</fileset>
+		</copy>
+		<delete file="./${app.name}/build">
+			<fileset dir="./${app.name}/build">
+				<include name="*.jar"/>
+			</fileset>
+		</delete>
+		<!-- 拷贝配置 -->
+		<copy todir="./build/ROOT" overwrite="true">
+			<fileset dir="${snapshot.path}" />
+		</copy>
+		<!-- 生成war包 -->
+		<property name="warName" value="${app.name}.war" />
+		<war destfile="./build/${app.name}.war" basedir="./build/ROOT">
+			<manifest>
+		        <attribute name="Built-By" value="${user.name}" />
+		        <attribute name="Implementation-Title" value="${app.name}" />
+		        <attribute name="Implementation-Version" value="${app.version}" />
+		    </manifest>
+		</war>
+
+		<echo>内网测试包</echo>
+		<!-- 删除build目录 -->
+		<delete dir="./build/ROOT"></delete>
+	</target>
+
+	<!-- 打外网war包 -->
+	<target name="build-war-realease">
+		<!--base.jar,拷贝网页 -->
+		<ant antfile="build.xml"
+	        dir="./build"
+	        inheritall="false"
+	   		inheritrefs="false"
+	        target="build-war"
+        />
+        <!-- subsystem.jar -->
+        <ant antfile="build.xml"
+	        dir="./${app.name}/build"
+	        inheritall="false"
+	        inheritrefs="false"
+	        target="build-subsystem-jar"
+        />
+
+		<!-- 拷贝 jar -->
+		<copy todir="./build/ROOT/WEB-INF/lib">
+			<fileset dir="./${app.name}/build">
+				<include name="*.jar"/>
+			</fileset>
+		</copy>
+		<delete file="./${app.name}/build">
+			<fileset dir="./${app.name}/build">
+				<include name="*.jar"/>
+			</fileset>
+		</delete>
+		<!-- 拷贝配置 -->
+		<copy todir="./build/ROOT" overwrite="true">
+			<fileset dir="${realease.path}" />
+		</copy>
+		<!-- 生成war包 -->
+		<property name="warName" value="${app.name}.war" />
+		<war destfile="./build/${app.name}.war" basedir="./build/ROOT">
+			<manifest>
+		        <attribute name="Built-By" value="${user.name}" />
+		        <attribute name="Implementation-Title" value="${app.name}" />
+		        <attribute name="Implementation-Version" value="${app.version}" />
+		    </manifest>
+		</war>
+		
+		<echo>外网包</echo>
+		<!-- 删除build目录 -->
+		<delete dir="./build/ROOT"></delete>
+	</target>
+</project>

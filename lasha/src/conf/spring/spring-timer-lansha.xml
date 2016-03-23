@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-lazy-init="true">
+	<description>spring定时器</description>
+	
+	<!-- 定时获取主播状态 -->
+	<bean id="masterStateTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref ="masterStateService" />
+		<property name="targetMethod" value="report" />
+	</bean>
+	<bean id="masterStateTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref ="masterStateTaskJob" />
+		<!-- 正式环境 （每隔二分钟）
+		-->
+		<property name="cronExpression" value="0 0/2 * * * ?" />
+		<!-- 测试（10秒钟）
+		<property name="cronExpression" value="0/10 * * * * ?" />
+		-->
+	</bean>
+	
+	<!-- 主播积分 -->
+	<bean id="roomRankingTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref ="roomRankingService" />
+		<property name="targetMethod" value="report" />
+	</bean>
+	<bean id="roomRankingTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref ="roomRankingTaskJob" />
+		<!-- 正式环境 每天凌晨3点
+		 -->
+		<property name="cronExpression" value="0 0 3 * * ?" />
+		<!-- 测试（10秒钟）
+		<property name="cronExpression" value="0/10 * * * * ?" />
+		-->
+	</bean>
+	
+	<!-- 日票重置 -->
+	<bean id="ticketResetTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref ="ticketResetTaskService" />
+		<property name="targetMethod" value="reset" />
+	</bean>
+	<bean id="ticketResetTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref ="ticketResetTaskJob" />
+		<!-- 正式环境 每天凌晨0点-->
+		<property name="cronExpression" value="0 0 0 * * ?" />
+		<!-- 测试（10秒钟）	 -->
+		<!-- <property name="cronExpression" value="0/10 * * * * ?" /> -->
+	</bean>
+	
+	<!--&lt;!&ndash; 积分排行清除缓存 &ndash;&gt;-->
+	<!--<bean id="scoreClearTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+		<!--<property name="targetObject" ref ="scoreClearService" />-->
+		<!--<property name="targetMethod" value="clearScore" />-->
+	<!--</bean>-->
+	<!--<bean id="scoreClearTask" class="org.springframework.scheduling.quartz.CronTriggerBean">-->
+		<!--<property name="jobDetail" ref ="scoreClearTaskJob" />-->
+		<!--&lt;!&ndash; 10分钟清一次缓存&ndash;&gt;-->
+		<!--<property name="cronExpression" value="0 0/10 * * * ?" />-->
+		<!--&lt;!&ndash; 测试（10秒钟）	 &ndash;&gt;-->
+		<!--&lt;!&ndash; <property name="cronExpression" value="0/10 * * * * ?" /> &ndash;&gt;-->
+	<!--</bean>-->
+
+	<!-- 启动定时器 -->
+	<bean class="com.yaowang.util.spring.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref local="masterStateTask" />
+				<ref local="roomRankingTask" />
+				<ref local="ticketResetTask" />
+			</list>
+		</property>
+	</bean>
+</beans>

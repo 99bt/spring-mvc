@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="finance build" basedir="./">
+    <property file="./build.properties" />
+	<!-- 加入环境变量 -->
+	<property environment="env"/>
+	<!-- classpath路径 -->
+	<path id="classpath">
+		<fileset dir="./lib">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="../webapp/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+		<filelist>
+			<file name="${env.JAVA_HOME}/jre/lib/rt.jar"/>
+		</filelist>
+	</path>
+
+	<!-- 打base jar包 -->
+	<target name="build-base-jar">
+		<!-- 打包文件夹 -->
+		<delete dir="./build"></delete>
+		<mkdir dir="./build"></mkdir>
+		<delete file="./base.jar"></delete>
+		<!-- 配置文件 -->
+		<copy todir="./build/conf">
+			<fileset dir="../src/conf" />
+		</copy>
+		
+		<!-- 编译java文件 -->
+		<javac target="1.6" source="1.6" destdir="./build" encoding="utf-8" classpathref="classpath" debug="on">
+			<src path="../src"></src>
+		</javac>
+		<!-- 打jar包 -->
+		<jar destfile="./base.jar">
+			<fileset dir="./build"></fileset>
+			<!-- 版本号 -->
+			<manifest>
+		        <attribute name="Built-By" value="${user.name}" />
+				<attribute name="Implementation-Title" value="${app.name}"/>
+				<attribute name="Implementation-Vendor" value="${app.name}"/>
+				<attribute name="Implementation-Version" value="trunk-${app.name}-${app.version}-${version}-${date.today}"/>
+			</manifest>
+		</jar>
+		<!-- 删除build文件夹 -->
+		<delete dir="./build" />
+	</target>
+	
+	<!-- 打war包 -->
+	<target name="build-war" depends="build-base-jar">
+		<!-- 删除build目录 -->
+		<delete dir="./ROOT"></delete>
+		<mkdir dir="./ROOT"/>
+		<!-- 拷贝网页文件 -->
+		<copy todir="./ROOT">
+			<fileset dir="../webapp">
+				<include name="**"/>
+				<exclude name="WEB-INF/classes/**"/>
+				
+				<exclude name="static/${app.name}/**"/>
+			</fileset>
+		</copy>
+		
+		<!-- 拷贝 jar -->
+		<copy todir="./ROOT/WEB-INF/lib">
+			<fileset dir="./">
+				<include name="*.jar"/>
+			</fileset>
+		</copy>
+		<!-- 删除jar -->
+		<delete file="./*.jar"></delete>
+		
+		<!-- 拷贝realease-config -->
+		<copy todir="./ROOT" overwrite="true">
+			<fileset dir="../realease-config" />
+		</copy>
+	</target>
+	
+	<!-- 获取时间 -->
+	<tstamp>
+        <format property="date.today" pattern="yyyyMMdd-HHmm" />
+    </tstamp>
+</project>
