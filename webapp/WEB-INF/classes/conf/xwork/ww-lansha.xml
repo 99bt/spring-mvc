@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!--  -->
+	<package name="lansha-index-base" namespace="/" extends="project-base">
+		<!-- 拦截器 -->
+		<interceptors>
+			<!-- 推广拦截器 -->
+			<interceptor name="lanshaSpreadWebInterceptor" class="com.yaowang.lansha.common.interceptors.LanshaSpreadWebInterceptor" />
+			<interceptor-stack name="lanshaSpreadWebInterceptor">
+                <interceptor-ref name="defaultStack" />
+				<interceptor-ref name="lanshaSpreadWebInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 默认拦截器 -->
+		<default-interceptor-ref name="lanshaSpreadWebInterceptor" />
+		
+		<global-results>
+			<!-- 登录 -->
+			<result name="login">/lansha/web/index/login.ftl</result>
+			<!-- 消息 -->
+			<result name="msg">/lansha/web/common/msg.ftl</result>
+		</global-results>
+	</package>
+	
+	<package name="lansha-web-login" namespace="/" extends="lansha-index-base">
+		<!-- 拦截器 -->
+		<interceptors>
+			<!-- 管理员登录拦截器 -->
+			<interceptor name="lanshaWebInterceptor" class="com.yaowang.lansha.common.interceptors.LanshaWebInterceptor" />
+			<interceptor-stack name="lanshaWebInterceptorStack">
+                <interceptor-ref name="defaultStack" />
+				<interceptor-ref name="lanshaSpreadWebInterceptor" />
+				<interceptor-ref name="lanshaWebInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 默认拦截器 -->
+		<default-interceptor-ref name="lanshaWebInterceptorStack" />
+	</package>
+	
+	<!-- 前台页面-->
+	<package name="project-lansha-index" namespace="/" extends="lansha-index-base">
+		<!-- 首页 -->
+		<action name="index" class="com.yaowang.lansha.action.web.IndexAction" method="index">
+			<result>/lansha/web/index/index.ftl</result>
+		</action>
+        <action name="integralrule" class="com.yaowang.lansha.action.web.IndexAction" method="integralrule">
+            <result>/lansha/web/common/integralrule.ftl</result>
+        </action>
+
+		<!-- 跳转止登录 -->
+		<action name="login" class="com.yaowang.lansha.action.web.LoginAction">
+			<result>/lansha/web/index/login.ftl</result>
+		</action>
+		<!-- 登录 -->
+		<action name="dologin" class="com.yaowang.lansha.action.web.LoginAction" method="dologin" />
+		<!-- 退出 -->
+		<action name="logout" class="com.yaowang.lansha.action.web.LoginAction" method="logout">
+			<result>/lansha/web/index/login.ftl</result>
+		</action>
+		<!-- 跳转止注册 -->
+		<action name="register" class="com.yaowang.lansha.action.web.RegisterAction">
+			<result>/lansha/web/index/register.ftl</result>
+		</action>
+		<!-- 注册 -->
+		<action name="doregister" class="com.yaowang.lansha.action.web.RegisterAction" method="doregister"/>
+
+		<!-- 注册时发送验证码 -->
+		<action name="rcode" class="com.yaowang.lansha.action.web.RegisterAction" method="sendSMS">
+			<result>/lansha/web/index/register.ftl</result>
+		</action>
+		<!-- 跳转止密码修改-->
+		<action name="findPwd" class="com.yaowang.lansha.action.web.RegisterAction">
+			<result>/lansha/web/index/findPwd.ftl</result>
+		</action>
+		<!-- 修改密码 -->
+		<action name="doupdatePassword" class="com.yaowang.lansha.action.web.RegisterAction" method="doupdatePassword"/>
+
+		<!-- 帮助 -->
+		<action name="help-*" class="com.yaowang.lansha.common.action.LanshaBaseAction">
+			<result>/lansha/web/help/{1}.ftl</result>
+		</action>
+		
+		<!-- 关于我们 -->
+		<action name="about-*" class="com.yaowang.lansha.common.action.LanshaBaseAction">
+			<result>/lansha/web/about/{1}.ftl</result>
+		</action>
+		
+		<!-- 上传到临时目录 -->
+		<action name="uploadImg" class="com.yaowang.lansha.action.web.UploadAction" method="uploadImg"/>
+		
+		<!-- 协议 -->
+		<action name="agreement" class="com.yaowang.lansha.action.web.UploadAction">
+			<result>/lansha/web/user/agreement.ftl</result>
+		</action>
+		<!-- pc端注册协议 -->
+		<action name="pc-agreement" class="com.yaowang.lansha.action.web.UploadAction">
+			<result>/lansha/web/user/pc-agreement.ftl</result>
+		</action>
+		
+		<!-- 跳转止工具下载 -->
+		<action name="appdownload" class="com.yaowang.lansha.action.web.AppDownloadAction"  method="appDownload">
+			<result>/lansha/web/help/activit-download.ftl</result>
+		</action>
+		<!-- 工具下载 -->
+		<action name="doAppDownload" class="com.yaowang.lansha.action.web.AppDownloadAction" method="doAppDownload">
+			<result>/lansha/wap/appDownload.ftl</result>
+		</action>
+		
+		<!-- 意见反馈 -->
+		<action name="suggestion" class="com.yaowang.lansha.action.web.SuggestionAction" method="suggestion">
+			<result>/lansha/web/suggestion/suggestion.ftl</result>
+		</action>
+		<!-- 保存意见反馈 -->
+		<action name="doSuggestion" class="com.yaowang.lansha.action.web.SuggestionAction" method="doSuggestion" />
+		
+		<!-- 人数 -->
+		<action name="live-online" class="com.yaowang.lansha.action.web.LiveAction" method="online" />
+
+        <!--日票排名 -->
+        <action name="ticket-sort" class="com.yaowang.lansha.action.web.LiveAction" method="ticketSort" />
+        
+        <!-- 美女主播页 -->
+        <action name="meinvzhubo" class="com.yaowang.lansha.action.web.IndexAction" method="meinvzhubo">
+        	<result>/lansha/web/index/meinvzhubo.ftl</result>
+        </action>
+        <!-- 手游赛 -->
+        <action name="shuiyousai" class="com.yaowang.lansha.action.web.IndexAction" method="shuiyousai">
+        	<result>/lansha/web/index/shuiyousai.ftl</result>
+        </action>
+	</package>
+	
+	<!-- 前台页面-->
+	<package name="project-lansha-index-live" namespace="/" extends="lansha-web-login">
+		<!-- 直播-->
+		<action name="live" class="com.yaowang.lansha.action.web.LiveAction" method="live">
+			<interceptor-ref name="lanshaSpreadWebInterceptor" />
+			<result>/lansha/web/index/live/live.ftl</result>
+			<result name="anchor">/lansha/web/index/live/liveAnchor.ftl</result>
+		</action>
+		<!-- 关注 -->
+		<action name="live-relation" class="com.yaowang.lansha.action.web.LiveAction" method="relation" />
+		<!-- 领取蓝鲨币 -->
+		<action name="live-stock" class="com.yaowang.lansha.action.web.LiveAction" method="stock" />
+		<!-- 送礼物 -->
+		<action name="live-giveGift" class="com.yaowang.lansha.action.web.LiveAction" method="giveGift" />
+		<!-- 领取鲜花-->
+		<action name="live-flower" class="com.yaowang.lansha.action.web.LiveAction" method="flower" />
+		<!-- 送鲜花 -->
+		<action name="live-giveFlower" class="com.yaowang.lansha.action.web.LiveAction" method="giveFlower" />
+		<!-- 送鲜花 -->
+		<action name="live-giveTicket" class="com.yaowang.lansha.action.web.LiveAction" method="giveTicket" />
+		<!-- 禁言 -->
+		<action name="live-banned-msg" class="com.yaowang.lansha.action.web.LanshaRoomBlackAction" method="banMsg" />
+		<!-- 添加管理员 -->
+		<action name="live-add-manager" class="com.yaowang.lansha.action.web.LiveAction" method="addManager" />
+	</package>
+	
+	<!-- 前台直播页面-->
+	<package name="project-lansha-live" namespace="/live" extends="lansha-index-base">
+		<!-- 直播-->
+		<action name="*" class="com.yaowang.lansha.action.web.LiveAction" method="live">
+			<result>/lansha/web/index/live/live.ftl</result>
+			<result name="anchor">/lansha/web/index/live/liveAnchor.ftl</result>
+		</action>
+		<action name="updateIsRead" class="com.yaowang.lansha.action.web.LiveAction" method="updateIsRead"/>
+	</package>
+	
+	<!-- 用户中心（非主播）-->
+	<package name="project-lansha-user" namespace="/user" extends="lansha-web-login">
+		<!-- 我的信息 -->
+		<action name="center" class="com.yaowang.lansha.action.web.UserCenterAction" method="info">
+			<result>/lansha/web/user/center.ftl</result>
+		</action>
+		<action name="center-update" class="com.yaowang.lansha.action.web.UserCenterAction" method="update" />
+		<!-- 修改密码 -->
+		<action name="password" class="com.yaowang.lansha.action.web.UserCenterAction" method="info">
+			<result>/lansha/web/user/password.ftl</result>
+		</action>
+		<action name="password-update" class="com.yaowang.lansha.action.web.UserCenterAction" method="updatePassword" />
+		<!-- 手机认证 -->
+		<action name="telphoneAuthe" class="com.yaowang.lansha.action.web.UserCenterAction" method="info">
+			<result>/lansha/web/user/telphoneAuthe.ftl</result>
+		</action>
+		<action name="telphoneAuthe-update" class="com.yaowang.lansha.action.web.UserCenterAction" method="updateTelphone" />
+		<action name="telphoneAuthe-mt" class="com.yaowang.lansha.action.web.UserCenterAction" method="sendSMS" />
+		<!-- 我的关注 -->
+		<action name="myAttention" class="com.yaowang.lansha.action.web.MyAttentionAction" method="myAttention">
+			<result>/lansha/web/user/myAttention.ftl</result>
+		</action>
+		<!-- 我要做主播(实名认证) -->
+		<action name="becomeAnchor" class="com.yaowang.lansha.action.web.BecomeAnchorAction" method="becomeAnchor">
+			<result>/lansha/web/user/becomeAnchor.ftl</result>
+		</action>
+		<action name="todoAnchor" class="com.yaowang.lansha.action.web.BecomeAnchorAction" method="becomeAnchor">
+			<result>/lansha/web/user/todoAnchor.ftl</result>
+		</action>
+		<action name="becomeAnchor-save" class="com.yaowang.lansha.action.web.BecomeAnchorAction" method="becomeAnchorSave"/>
+		<action name="becomeAnchor-pic" class="com.yaowang.lansha.action.web.BecomeAnchorAction" method="pic" />
+		
+		<!-- 观看历史记录 -->
+		<action name="history" class="com.yaowang.lansha.action.web.HistoryAction" method="history">
+			<result>/lansha/web/user/history.ftl</result>
+		</action>
+		<!-- 我的房间  -->
+		<action name="myroom" class="com.yaowang.lansha.action.web.MyRoomAction" method="myroom">
+			<result>/lansha/web/user/myroom.ftl</result>
+		</action>
+		<!-- 保存房间信息 -->
+		<action name="save-room" class="com.yaowang.lansha.action.web.MyRoomAction" method="save" />
+		<!-- 房间管理员 -->
+		<action name="manage" class="com.yaowang.lansha.action.web.ManageAction" method="manage">
+			<result>/lansha/web/user/manage.ftl</result>
+		</action>
+		<action name="manage-save" class="com.yaowang.lansha.action.web.ManageAction" method="saveManage" />
+		<action name="manage-list" class="com.yaowang.lansha.action.web.ManageAction" method="listManage" />
+		<action name="manage-del" class="com.yaowang.lansha.action.web.ManageAction" method="deleteManage" />
+		
+		<!-- 房间禁言管理 -->
+		<action name="RoomBlackList" class="com.yaowang.lansha.action.web.LanshaRoomBlackAction" method="roomBlackList" >
+		    <result>/lansha/web/user/roomBlack.ftl</result>
+		</action>
+		<action name="black-save" class="com.yaowang.lansha.action.web.LanshaRoomBlackAction" method="addBlack" />
+		<action name="black-del" class="com.yaowang.lansha.action.web.LanshaRoomBlackAction" method="deleteBlack" />
+		<!-- 收货地址 -->
+		<action name="address" class="com.yaowang.lansha.action.web.ActivityUserAction" method="info">
+			<result>/lansha/web/user/address.ftl</result>
+		</action>
+		<action name="invite" class="com.yaowang.lansha.action.web.UserCenterAction" method="invite">
+			<result>/lansha/web/user/invite.ftl</result>
+		</action>
+		<!-- 保存收货地址 -->
+		<action name="address-save" class="com.yaowang.lansha.action.web.ActivityUserAction" method="save" />
+		
+		<!-- 我的奖品 -->
+		<action name="record" class="com.yaowang.lansha.action.web.ActivityGiftStockAction" method="list">
+			<result>/lansha/web/user/record.ftl</result>
+		</action>
+		
+		<!-- 主播排行 -->
+		<action name="anchorRank" class="com.yaowang.lansha.action.web.AnchorRankAction" method="anchorRank">
+			<result>/lansha/web/user/anchorRank.ftl</result>
+		</action>
+        <action name="rank" class="com.yaowang.lansha.action.web.AnchorRankAction" method="rank">
+            <result>/lansha/web/user/rank.ftl</result>
+        </action>
+        <!-- 银行信息 -->
+		<action name="bankInfo" class="com.yaowang.lansha.action.web.UserCenterAction" method="bankInfo">
+			<result>/lansha/web/user/bankInfo.ftl</result>
+		</action>
+		<action name="bankInfo-save" class="com.yaowang.lansha.action.web.UserCenterAction" method="bankInfoSave" />
+	</package>
+	
+	<!-- 直播大厅-->
+	<package name="project-lansha-liveList" namespace="/" extends="lansha-index-base">
+		<action name="dosearch" class="com.yaowang.lansha.action.web.LanshaLiveListAction" method="dosearch">
+			<result>/lansha/web/liveList/doSearch.ftl</result>
+		</action>
+		<!-- 逛逛 -->
+		<action name="getNewLive" class="com.yaowang.lansha.action.web.IndexAction" method="getNewLiveRooms" />
+		<action name="getHotLive" class="com.yaowang.lansha.action.web.IndexAction" method="getBestHotRooms" />
+	    <action name="getPushLive" class="com.yaowang.lansha.action.web.IndexAction" method="getPushRooms" />
+		<action name="seelive" class="com.yaowang.lansha.action.web.LiveAction" method="randToHotLive" />
+		<action name="randLive" class="com.yaowang.lansha.action.web.LiveAction" method="switchRandRooms" />
+		<action name="loadSearchMore" class="com.yaowang.lansha.action.web.LanshaLiveListAction" method="loadSearchMore" /> 
+		<!-- 直播大厅-->
+		<action name="liveList" class="com.yaowang.lansha.action.web.LanshaLiveListAction" method="liveList">
+			<result>/lansha/web/liveList/live-list.ftl</result>
+		</action>
+		<!-- 直播大厅加载更多列表-->
+		<action name="getLiveList" class="com.yaowang.lansha.action.web.LanshaLiveListAction" method="getLiveList" />
+	</package>
+	
+	<!-- 游戏专区-->
+	<package name="project-lansha-gameList" namespace="/" extends="lansha-index-base">
+		<!-- 游戏专区-热门游戏-->
+		<action name="gameList" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="gameList">
+			<result>/lansha/web/gameList/game-list.ftl</result>
+		</action>
+		<!-- 游戏专区加载更多列表-->
+		<action name="getGameList" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="getGameList" />
+		<!-- 游戏专区-全部游戏-->
+		<action name="gameCenter" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="gameCenter">
+			<result>/lansha/web/gameList/game-center.ftl</result>
+		</action>
+		<!-- 游戏详情-->
+		<action name="gameDetail" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="gameDetail">
+			<result>/lansha/web/gameList/game-detail.ftl</result>
+		</action>
+		<!-- 在线直播-->
+		<action name="gameLive" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="gameLive">
+			<result>/lansha/web/gameList/game-liveing.ftl</result>
+		</action>
+		<!-- 推广 王者荣耀 在线直播-->
+		<action name="tg_wzry_gameLive" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="gameLiveWZRYTG">
+			<result>/lansha/web/gameList/tg-wzry-game-liveing.ftl</result>
+		</action>
+		<!--推广 王者荣耀  游戏详情-->
+		<action name="tg_wzry_gameDetail" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="gameDetailWZRYTG">
+			<result>/lansha/web/gameList/tg-wzry-game-detail.ftl</result>
+		</action>		
+		<!-- 推广 穿越火线 在线直播-->
+		<action name="tg_cf_gameLive" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="gameLiveCFTG">
+			<result>/lansha/web/gameList/tg-cf-game-liveing.ftl</result>
+		</action>
+		<!--推广 穿越火线  游戏详情-->
+		<action name="tg_cf_gameDetail" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="gameDetailCFTG">
+			<result>/lansha/web/gameList/tg-cf-game-detail.ftl</result>
+		</action>
+		<!-- 推广 活动随机进入直播间-->
+		<action name="activityToLive" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="activityToLive">
+		</action>		
+		<!-- 推广 活动随机进入直播间-->
+		<action name="isShowQq" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="isShowQq">
+		</action>			
+		
+		<!-- 游戏下载-->
+		<action name="download" class="com.yaowang.lansha.action.web.LanshaGameListAction" method="download">
+			<result>/lansha/web/gameList/download.ftl</result>
+		</action>
+	</package>
+</struts>

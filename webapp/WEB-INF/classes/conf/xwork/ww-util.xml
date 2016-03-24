@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 前台公共 -->
+	<package name="project-web-common" namespace="/web" extends="project-base">
+		<!-- 上传临时目录 -->
+		<action name="upload" class="com.yaowang.action.util.UploadAction" method="upload">
+			<result>/common/util/upload.ftl</result>
+		</action>
+		
+		<!-- kindeditor文件上传 -->
+		<action name="kindeditorImgUpload" class="com.yaowang.action.util.UploadAction" method="kindeditor"/>
+		
+		<!-- 验证码 -->
+		<action name="validate" class="com.yaowang.action.util.ValidateAction" method="verification" />
+		
+		<!-- 为了防止session超时 -->
+		<action name="blank" class="com.yaowang.action.util.UploadAction" method="blank"/>
+		
+		<!-- 首页地址 -->
+		<action name="index" class="com.yaowang.action.util.ValidateAction" method="index" />
+	</package>
+</struts>

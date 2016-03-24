@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- struts公共配置页面 -->
+	<package name="project-base" extends="json-default">
+		<!-- 默认页面 -->
+		<result-types>
+			<result-type name="freemarker" class="org.apache.struts2.views.freemarker.FreemarkerResult" default="true" />
+		</result-types>
+	</package>
+	
+	<!-- 后台管理员包 -->
+	<package name="project-admin" extends="project-base">
+		<!-- 拦截器 -->
+		<interceptors>
+			<!-- 管理员登录拦截器 -->
+			<interceptor name="adminInterceptor" class="com.yaowang.common.interceptors.AdminInterceptor" />
+			<interceptor-stack name="adminInterceptorStack">
+                <interceptor-ref name="defaultStack" />
+				<interceptor-ref name="adminInterceptor" />
+			</interceptor-stack>
+			
+			<!-- 管理员模块拦截器 -->
+			<interceptor name="adminModelInterceptor" class="com.yaowang.common.interceptors.AdminModelInterceptor" />
+			<interceptor-stack name="adminModelInterceptorStack">
+                <interceptor-ref name="defaultStack" />
+				<interceptor-ref name="adminInterceptor" />
+				<interceptor-ref name="adminModelInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 默认拦截器 -->
+		<default-interceptor-ref name="adminModelInterceptorStack" />
+		
+		<global-results>
+			<!-- 登录 -->
+			<result name="loginScript">/admin/main/loginScript.ftl</result>
+			<result name="login">/admin/main/login.ftl</result>
+		</global-results>
+	</package>
+	
+	<!-- 接口 -->
+	<package name="project-interface" extends="project-base">
+		<!-- 拦截器 -->
+		<interceptors>
+			<!-- 接口拦截器 -->
+			<interceptor name="interfaceInterceptor" class="com.yaowang.common.interceptors.InterfaceInterceptor" />
+			<interceptor-stack name="interfaceInterceptorStack">
+                <interceptor-ref name="defaultStack" />
+				<interceptor-ref name="interfaceInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 默认拦截器 -->
+		<default-interceptor-ref name="interfaceInterceptorStack" />
+	</package>
+</struts>

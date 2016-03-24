@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 前台auth2登录 -->
+	<package name="lansha-web-other-login" namespace="/oauth2" extends="lansha-index-base">
+		<!-- qq auth2登录 -->
+		<action name="qqlogin" class="com.yaowang.lansha.action.api.IndexOAuth2LoginAction" method="qqlogin"/>
+		<!-- qq 回调 -->
+		<action name="afterloginqq" class="com.yaowang.lansha.action.api.IndexOAuth2LoginAction" method="afterloginqq"/>
+		
+		<!-- 绑定用户
+		<action name="bindUser" class="com.yaowang.b2c.action.web.IndexOAuth2LoginAction">
+			<result>/b2c/web/oauth2/bindUser.ftl</result>
+		</action>
+		<action name="bindUser-save" class="com.yaowang.b2c.action.web.IndexOAuth2LoginAction" method="bindUser"/>
+		 -->
+	</package>
+</struts>

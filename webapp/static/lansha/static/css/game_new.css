@@ -1,0 +1,120 @@
+.game-box .game-list-r-3 { width: 880px; padding: 10px 0 0; min-height: 490px; }
+.game-list-r-3 .game-one { margin-right: 20px; }
+.game-list-r-3 .col-main { color: #8a8a8a; }
+.minBtn { font: 14px/21px "Microsoft Yahei"; color: #8a8a8a; display: block; }
+.minBtn:hover { color: #3ba2ef; }
+.curMinBtn { color: #3ba2ef; }
+.minBtn70 .minBtn { margin-left: 70px; line-height: 30px; }
+.game-center .col-main { color: #3ba2ef; }
+.game-lisrR { position: relative; height: 545px; width: 1180px; }
+.game-lisrR .game-pic-left { width: 280px; height: 458px; position: absolute; top: 30px; left: 0; text-indent: -9999em; }
+.game-lisrR .game-live-num { position: absolute; top: 43px; left: 0; padding-left: 6px; width: 81px; height: 30px; z-index: 99; font: 14px/30px "Microsoft Yahei"; color: #fff; background: #3ba2ef; border-radius: 0 16px 16px 0; }
+.game-lisrR .game-name-left { position: absolute; top: 488px; left: 0; width: 306px; height: 30px; padding: 15px 0; }
+.game-lisrR .game-name-left h3 a { float: left; font: 22px/30px "Microsoft YaHei"; color: #171717; width: 180px; overflow: hidden; height: 32px; text-overflow: ellipsis; }
+.game-lisrR .game-name-left h3 a:hover { color: #3ba2ef; }
+.game-lisrR .game-name-left p { float: left; font: 14px/30px "Microsoft YaHei"; color: #8a8a8a; margin-left: 20px; }
+.game-lisrR .game-name-left em { color: #3ba2ef; }
+.game-lisrR .game-name-left .downloadbtn { background: url("../images/download.png") no-repeat; width: 113px; height: 30px; }
+.game-lisrR .game-name-left .downloadbtn:hover { background: url("../images/download-hover.png") no-repeat; }
+.game-lisrR .game-name-left .downloadbtn:hover .details-box { display: block; }
+.game-lisrR .moreLive { display: none; margin: -20px 0 0 351px; width: 100px; height: 30px; color: #8a8a8a; font: 12px/30px "Microsoft Yahei"; text-align: center; border: 1px solid #8a8a8a; border-radius: 50px; }
+.game-lisrR .moreLive:hover { color: #fff; background: #3ba2ef; border-color: #fff; }
+.fffbf8-body { background: #fffbf8; }
+.game-details { position: relative; width: 100%; height: 500px; background: url("../../upload/details-banner.jpg") no-repeat; }
+.details-title { margin: 0 auto;padding: 20px 0 0 90px;width: 1169px;height: 429px;background: url("../../upload/tuiguang_details_title.png") no-repeat; }
+.login .details-title { height: 455px;background-position: 0 25px;padding-top: 45px; }
+.details-title .left-show { width: 190px;height: 420px; }
+.details-title .left-show .title-gamename { padding-top: 15px; font: 30px/77px "Microsoft YaHei";color: #fff;text-align: center; }
+.details-title .left-show .title-gameicon { display: block;width: 190px;height: 190px; }
+.details-title .left-show .title-gamedownload { margin-top: 12px;width: 140px;height: 46px;padding-left: 48px;background: url("../../upload/tuiguang_download_icon.png") no-repeat 14px 10px;border:1px solid #ff7132;color: #ff7132;font: 18px/46px "Microsoft YaHei"; }
+.details-title .left-show .title-gamedownload.and { border:1px solid #3ba2ef;color: #3ba2ef; background: url("../../upload/tuiguang_download_icon.png") no-repeat 14px -52px; }
+.details-title .center-show { width: 537px;height: 303px;margin: 70px 30px 0 80px; }
+.details-title .right-show { padding-top: 70px;width: 266px;height: 350px; }
+.details-title .right-show img { display: block; }
+.lottery-box { width: 100%;height: 500px;margin-bottom: -16px;min-width:1180px; }
+.lottery-select { position: fixed;top: 320px;right: 15px;width: 114px;height: 111px;background: url("../../upload/lottery_icon.png") no-repeat;z-index: 99; }
+.lottery-box .lottery-con { width: 1180px;margin: 0 auto; }
+.login .lottery-box { display: none; }
+.lottery-box .lottery-show { width: 400px;height: 440px;margin-top: 30px; }
+.lottery-show .qr-box { margin: 10px auto 0; width: 170px;height: 170px;border: 20px solid #c32626; }
+.lottery-show .qr-box img { display: block;width: 100%; }
+/*推广活动页面抽奖样式*/
+.lottery {width:624px;height:440px;margin: 30px 52px 0 87px;background:#c32626;padding:2px;background-size: 100%;overflow: hidden;}
+.lottery ul {padding: 2px;overflow: hidden;}
+.lottery ul li { display:block;width:155px;height:142px;float: left;text-align: center;line-height: 142px;position: relative;}
+.lottery ul li img {max-height: 80%;vertical-align: middle;}
+.lottery ul li i {border: 2px solid #fec854;width:150px;height:135px;position: absolute;top: 0;left: 0px;display: none;}
+.lottery ul li.active i {display: block;}
+.lottery .lottery_btn {line-height: 93px;font-size: 12px;color: #7e0a0d;width: 50%;text-align: center;background: url("../images/lottery_btn.png") center center no-repeat;background-size: 100%;}
+.lottery .lottery_btn em {color: #f8fab4;font-style: normal;}
+.lottery .lottery_btn a {width:100%;height:100%;display:block;text-decoration:none;color: #7e0a0d;text-align: center;position: absolute;top: 44%;font-size: 16px; }
+.lottery-unit-1, .lottery-unit-3, .lottery-unit-5, .lottery-unit-7, .lottery-unit-9  {background: #c32626;}
+.lottery-unit-0, .lottery-unit-2, .lottery-unit-4, .lottery-unit-6, .lottery-unit-8 {background: #5e0e0e;}
+.lottery .corner { position: absolute;left: 0;top:0;width: 50%;height: 42%;background-size: 100% 100%; }
+.lottery .corner1 { background: url("../../upload/lottery/corner_1.png") no-repeat;background-size: 100% 100%; }
+.lottery .corner2 { background: url("../../upload/lottery/corner_2.png") no-repeat;background-size: 100% 100%; }
+.lottery .corner3 { background: url("../../upload/lottery/corner_2.png") no-repeat;background-size: 100% 100%; }
+.lottery .corner4 { background: url("../../upload/lottery/corner_2.png") no-repeat;background-size: 100% 100%; }
+/*推广活动页面抽奖样式 结束*/
+.details-box { padding: 0 0px 20px; border-top: none; }
+.details-box .details-box-title { padding-top: 20px; height: 60px; }
+.details-box .details-btn { width: 200px; height: 59px; color: #8a8a8a; font: 22px/50px "Microsoft Yahei"; text-align: center; }
+.details-box .details-btn:hover { color: #3ba2ef; }
+.details-box .details-cur { background: url("../images/hanvjiantoubg.png") no-repeat; color: #fff; }
+.details-box .details-cur:hover { color: #fff; }
+.details-box .details-box-game { color: #171717; font: 18px/27px "Microsoft Yahei"; margin: 40px 0 21px 0; }
+.details-box .details-box-gameCon { margin-top: 60px; }
+.details-box .details-gameCon-game { color: #171717; font: 18px/27px "Microsoft Yahei"; }
+.details-box .details { font: 16px/28px "Microsoft Yahei"; color: #666; }
+.tips-box { display: none;width: 350px;height: 195px;position: fixed;top: 50%;left: 50%;margin: -97.5px 0 0 -175px;background: #ffffff;z-index: 99; }
+.tips-box .tips-title { font: 16px/35px "Microsoft YaHei";color: #fff;padding-left: 10px;background: #3ba2ef; }
+.tips-box .close { margin-right: 5px;color: #fff; }
+.tips-box .tips-con { padding-top: 35px;font: 16px/1.5 "Microsoft YaHei";color: #373737;text-align: center;padding-bottom: 25px; }
+.tips-box .tips-go { display: block;margin: 0 auto;width: 97px;height: 32px;font: 16px/32px "Microsoft YaHei";text-align: center;color: #fff;background: #3ba2ef; }
+.tips-box .gift-icon { position: absolute;right: 20px;top: 80px;width: 53px;height: 49px;background: url("../../upload/gift_icon.png") no-repeat; }
+
+/** sider **/
+.picScroll-left { overflow: hidden; position: relative; }
+.picScroll-left .hd { overflow: hidden; height: 20px; }
+.picScroll-left .bd ul { overflow: hidden; zoom: 1; }
+.picScroll-left .bd ul li { margin: 0 0 0 20px; float: left; _display: inline; overflow: hidden; text-align: center; }
+.picScroll-left .bd ul li .pic { text-align: center; }
+.picScroll-left .bd ul li .pic img { width: 270px; height: 360px; display: block; }
+.slider .slideBtn { opacity: 1; cursor: pointer; position: absolute; margin-top: -50px; z-index: 3; width: 60px; height: 100px; top: 50%; transition: all .3s; }
+.slider .slideBtn { display: block \9; background-color: #000 \9; }
+.slider:hover .slideBtn { opacity: 1; display: block \9; }
+.next { right: 0; background: url("../images/jiantou.png") no-repeat -95px center rgba(0, 0, 0, 0.65); background-image: url("../images/jiantou.png") \9; background-repeat: no-repeat \9; background-position-x: -95px \9; background-position-y: center \9; }
+.prev { left: 0; background: url("../images/jiantou.png") no-repeat 15px center rgba(0, 0, 0, 0.65); background-image: url("../images/jiantou.png") \9; background-repeat: no-repeat \9; background-position-x: 15px \9; background-position-y: center \9; }
+.game-slide { position: relative;font: 28px/50px "Microsoft YaHei"; border-bottom: 1px solid #bebebe;padding-left: 53px;margin-bottom: 20px;color: #0f0f0f;height: 50px; }
+.game-slide .icon { position: absolute;top: 0;left: 0;width: 41px;height: 49px;border-bottom: 3px solid #3ca2f0;background: url("../images/h_title_icon.png") no-repeat;}
+.game-slide .seach-icon.icon { background: url("../images/seach_icon.png") no-repeat; }
+.game-slide .r-span {  margin-left: 20px;margin-top: 4px;min-width: 37px;height: 49px;font: 14px/36px "Microsoft YaHei";color: #66bdff;background: url("../images/title_icon.png") no-repeat center -80px;text-align: center; }
+.game-slide .r-span:hover { color: #fff;background: url("../images/title_icon_hover.png") no-repeat center 0; }
+.game-slide .r-span.on { background: url("../images/title_icon.png") no-repeat center 0;color: #fff; }
+.game-slide .game-num { padding-left: 17px;font:16px/25px "Microsoft YaHei";color: #0f0f0f; }
+.game-slide .game-num em { color: #3ca2f0; }
+.seach-noData { display: block;margin: 60px auto; }
+.seach-con { min-height: 1170px; }
+.game-slide a.game-slideone { width: 160px; text-align: center; background: #666; color: #fff; margin: 0 20px 0 0; }
+.game-slide a.game-slideone.cur { background: #3ca2f0; }
+.game-slide a.game-slideone:hover { background: #3ca2f0; }
+.game-slide p { height: 30px; }
+.game-slide p a { color: #999; font: 14px/30px "Microsoft YaHei"; margin: 0 0 0 30px; }
+.game-slide p a:hover { color: #3ca2f0; }
+.game-alllist { padding: 10px 0; }
+.game-allone { width: 380px; margin: 20px 20px 0 0; }
+.game-allpic { width: 380px; height: 190px; display: block; position: relative; cursor: pointer; overflow: hidden; }
+.game-allpic img { display: block; }
+.game-alltext { padding: 10px 0; position: relative; }
+.games-hover { position: absolute; top: -100%; left: 0; opacity: 0; width: 100%; height: 100%; filter: alpha(opacity=0); -webkit-transition: all .3s ease-in; -moz-transition: all .3s ease-in; -ms-transition: all .3s ease-in; -o-transition: all .3s ease-in; transition: all .3s ease-in; }
+.games-hover h4 { font: 18px/40px "Microsoft YaHei"; text-align: center; color: #fff; position: relative; z-index: 2; }
+.games-hover h4 a { transition: all .5s; color: #fff; display: block; padding: 75px 0; }
+.games-hover h4 a:hover { color: #3ca2f0; }
+.games-opacity { position: absolute; top: 0; right: 0; width: 100%; height: 100%; background: #000; opacity: .5; filter: alpha(opacity=50); }
+.game-allpic:hover .games-hover { opacity: 1; filter: alpha(opacity=100); top: 0; display /*\**/: block \9; }
+.game-alltext .download-box { top: 40px; }
+.game-allname { font: 18px/30px "Microsoft YaHei"; color: #333; max-width: 200px; height: 30px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: all .5s; }
+.game-allname:hover { color: #3ca2f0; }
+.game-allnum { color: #666; font: 12px/24px "Microsoft YaHei"; padding: 5px 0 0 15px; }
+.game-alldownload { background: #3ca2f0; width: 80px; height: 30px; color: #fff; text-align: center; font: 14px/30px "Microsoft YaHei"; }
+.last { margin-right: 0; }

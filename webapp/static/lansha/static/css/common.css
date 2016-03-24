@@ -1,0 +1,282 @@
+/*reset.css*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { padding: 0; margin: 0; font-family: "Microsoft Yahei"; }
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0; }
+address, caption, cite, code, dfn, em, strong, th, var { font-weight: normal; font-style: normal; }
+ol, ul { list-style: none; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
+q:before, q:after { content: ''; }
+abbr, acronym { border: 0; }
+input, button, textarea { outline: none; }
+a { text-decoration: none; color: #8a8a8a; }
+a, a:active, a:focus { outline: none; -webkit-tap-highlight-color: transparent; }
+.recommend-list a:active, .recommend-list a, .recommend-list a:focus, .game-list a:active, .game-list a, .game-list a:focus { transition: all .5s; }
+body { background-color: #f7f7f7; min-width: 1100px; background-position: center top; background-repeat: no-repeat }
+/*common*/
+.clearfix:after { content: "."; display: block; height: 0; visibility: hidden; clear: both; }
+.clearfix { *zoom: 1; }
+.fl { float: left; }
+.fr { float: right; }
+.col-main { color: #3ba2ef; }
+.mgt10 { margin-top: 10px; }
+.mgt15 { margin-top: 15px; }
+.mgt20 { margin-top: 20px; }
+.mgt22 { margin-top: 22px; }
+.mgt30 { margin-top: 30px; }
+.mgt36 { margin-top: 36px; }
+.mgt40 { margin-top: 40px; }
+.layout { margin: 0 auto; width: 1180px; }
+.hide { display: none !important; }
+.counter { display: none; }
+/*头部*/
+.header-space { height: 49px; }
+.livepage .header-space { height: 40px; }
+.header { height: 49px; width: 100%; min-width: 1180px; z-index: 9999; color: #ccc; position: relative; top: 0; left: 0; }
+.header-nofix { top: 0; left: 0; position: fixed; }
+.header-opacity { width: 100%; height: 100%; background: #222; position: absolute; opacity: .8; top: 0; left: 0; z-index: 2; }
+.header-index { border-bottom: none; }
+.header .header-zindex { position: relative; z-index: 3;}
+.header .header-zindex.live-details-header { padding:  0 10px; }
+.header .logo { width: 177px; height: 38px; margin: 6px 40px 0 0; background: url("../images/logo.png") no-repeat; text-indent: -9999em; overflow: hidden; display: inline-block; }
+.header .nav { font: 18px/30px "Microsoft Yahei"; color: #ccc; padding: 10px 0 0; }
+.header .nav li { width: 63px; text-align: center; float: left; margin-right: 15px; }
+.header .nav a { color: #ccc; display: block; }
+.header .nav .cur a, .header .nav a:hover { background: #3ca2f0; color: #fff; border-radius: 2px; }
+.header-recommend { padding: 10px 0 0; position: relative; }
+.recommend-link { width: 75px; color: #dddede; font: 18px/30px "Microsoft YaHei"; display: block; position: relative; text-align: center; padding-right: 5px; z-index: 2;}
+.recommend-link:after, .recommend-link:before { border: 5px solid transparent; border-top: 5px solid #4d4d4d; width: 0; height: 0; position: absolute; top: 13px; right: 10px; content: ' '; }
+.recommend-link:before { border-top-color: #fff; top: 15px; }
+.header-recommend:hover .recommend-link { width: 73px; background: #f6f6f6; border-radius: 2px 2px 0 0; color: #3ca2f0; border: 1px solid #e6e6e6; border-bottom: none; }
+.header-recommend:hover .recommend-link:after, .header-recommend:hover .recommend-link:before { border-top-color: #f6f6f6; }
+.header-recommend:hover .recommend-link:before { border-top-color: #3ca2f0; }
+.header-recommend:hover .recommend-nlist { display: block; position: absolute; left: 0; top: 39px; }
+.recommend-nlist { background: #f6f6f6; border-radius: 0 0 2px 2px; border: 1px solid #e6e6e6; width: 288px; height: 236px; padding: 0 12px; display: none; }
+.recommend-nlink { text-align: right; font: 12px/30px "Microsoft YaHei"; color: #3ca2f0; }
+.recommend-nlink a { color: #3ca2f0; }
+.recommend-none { width: 137px; padding-bottom: 5px; }
+.recommend-none img { display: block; width: 137px; height: 78px; }
+.recommend-none a { font: 10px/20px "Microsoft YaHei"; color: #333; display: block; float: left; }
+.recommend-none p { font: 10px/20px "Microsoft YaHei"; color: #333; height: 20px; overflow: hidden; }
+.index-black-li { position: relative; }
+.index-black-li img { display: block;width: 100%; }
+.index-black-li .live-bg {  width: 100%; height: 100%; top: 0; left: 0; display: none \9; position: absolute; background: #000; opacity: 0; filter: alpha(opacity=0); z-index: 1; transition: all 0.5s; }
+.index-black-li .live-begin { background: url("../images/play_button.png") no-repeat 4px 0; display: none; width: 45px; height: 45px; position: absolute; top: 50%; left: 50%; margin: -34.5px 0 0 -22.5px; z-index: 2; }
+.index-black-li:hover .live-begin { display: block; }
+.index-black-li:hover .live-bg { display: block \9; opacity: .4; filter: alpha(opacity=40); }
+.header-search { padding: 10px 0 0 35px; }
+.search-text { color: #666;width: 135px; height: 28px; background: #fff; border: 1px solid #dedede; border-right: none; line-height: 28px; border-radius: 3px 0 0 3px; padding: 0 10px; }
+.search-btn { width: 25px; height: 30px; border: 1px solid #dedede; line-height: 28px; border-left: none; border-radius: 0 3px 3px 0; padding: 0; background: url("../images/search.png") no-repeat center center #fff; cursor: pointer; }
+/*.header .nav .cur a:hover { color: #fff; }*/
+.header .user-box { position: relative; font: 14px/30px "Microsoft YaHei"; padding: 10px 0 0; display: block;}
+.header .user-box a.login-this { background: url("../images/smile.png") no-repeat 7px 4px #0684b8; padding-left: 36px; color: #fff; width: 36px; height: 30px; font: 13px/30px "Microsoft YaHei"; border-radius: 2px 0 0 2px; }
+.header .user-box a.reg-this { background: #3ca2f0; color: #fff; width: 51px; height: 30px; text-align: center; font: 13px/30px "Microsoft YaHei"; border-radius: 0 2px 2px 0; }
+.header .user-box a { cursor: pointer; color: #ccc }
+.header .headerBtn { margin: 10px 5px 0; font: 14px/30px "Microsoft YaHei"; }
+.header .headerBtn a { color: #ccc;float: left; }
+.header .headerBtn li { float: right; margin-right: 15px; }
+.header .headerBtn .btnicon { width: 24px; height: 30px; background: url("../images/icon-header.png") -4px 0 no-repeat; margin: 0 2px 0 0; }
+.header .headerBtn .btnicon.download { background-position: -30px 0; }
+.header .search { display: none; width: 230px; height: 36px; border-radius: 21px; padding: 0 15px; background: #232429; margin: 16px 0; }
+.header .search .search-int01 { width: 200px; font: 12px/18px "Microsoft Yahei"; padding: 9px 0; border: none; color: #8d979e; background: #232429; }
+.header .search .search-int02 { width: 20px; height: 30px; border: none; background: url("../images/icon_seach.png") no-repeat 1px 9px; cursor: pointer; }
+.header .user-lest { display: none; position: absolute; width: 153px; border: 1px solid #232429; border-bottom: none; top: 49px; right: 0; z-index: 110; }
+.header .user-lest li { background: #292f35; border-bottom: 1px solid #232429; }
+.header .user-lest li a { display: block; font: 14px/48px "Microsoft Yahei"; color: #8d979e; }
+.header .user-lest li a span { margin: 13px 22.5px; width: 22px; height: 22px; background: url("../images/sprite.png") no-repeat; }
+.header .user-lest li a span.icon1 { background-position: 0 -52px; }
+.header .user-lest li a span.icon2 { background-position: 0 -74px; }
+.header .user-lest li a span.icon3 { background-position: 0 -96px; }
+.header .user-lest li a span.icon4 { background-position: 0 -118px; }
+.header .user-lest li a:hover span.icon1, .header .user-lest .cur a span.icon1 { background-position: -22px -52px; }
+.header .user-lest li a:hover span.icon2 { background-position: -22px -74px; }
+.header .user-lest li a:hover span.icon3 { background-position: -22px -96px; }
+.header .user-lest li a:hover span.icon4 { background-position: -22px -118px; }
+.header .user-lest li a:hover { color: #3ca2f0; background: #232429; }
+.header a:hover { color: #3ba2ef; }
+.livepage .user-lest { top: 40px; }
+/*尾部*/
+.footer { width: 100%; height: 291px; margin-top: 60px; min-width: 1180px; }
+.footer .footerBox { width: 1110px; padding: 40px 35px 0 20px; overflow: hidden; }
+.footer .footerBox .footer-logo { display: block; margin: 47px 90px 135px 0; }
+.footer .footerBox .footer-ul { width: 518px; }
+.footer .footerBox .footer-ul a:hover { color: #3CA2F0; }
+.footer .footerBox .footer-ul li span { width: 87px; height: 35px; font: 14px/35px 'Microsoft YaHei'; color: #fff; }
+.footer .footerBox .footer-ul li a { margin-right: 10px; font: 14px/35px "Microsoft YaHei"; color: #c0c0c0; }
+.footer .footerBox .footer-ul li .wechat { position: relative;margin-top: 5px; width: 35px; height: 35px; background: url("../images/weibo_wechat_icon.png") no-repeat; }
+.wechat img { display: none;background:url("../images/footer_hover_qrcode.png") no-repeat 0 -57px; position: absolute; width: 115px;height: 115px;padding: 10px;top: -53px;left: 32px;z-index: 9; }
+.wechat:hover img { display: block; }
+.footer .footerBox .footer-ul li .weibo.wechat { margin-top: 5px; width: 35px; height: 35px; background: url("../images/weibo_wechat_icon.png") no-repeat -37px 0; }
+.footerBox .QR-box { padding-left: 35px; width: 127px; height: 153px; }
+.footerBox .QR-box p { font: 14px/30px "Microsoft YaHei"; color: #fff; }
+.footerBox .QR-box img { display: block;width: 124px;height: 124px; }
+.footer .footerNav { /*background: #292b2c;*/ background: url("../images/footer-bg.png") 0 0; border-top: solid 1px #919395; }
+.footer .fglo_bg { background: #000; }
+.fglo_bg .fglo { font: 13px/65px "Microsoft Yahei"; color: #dfdee3; text-align: center; }
+/*gamelist*/
+.index-black { padding-bottom: 10px; }
+.index-black .index-box  { width: 584px;padding-left: 6px;padding-top: 30px;padding-bottom: 30px; }
+.index-black .index-box h3 { padding-left: 36px;color: #3ca2f0;background: url("../images/black_title_icon.png") no-repeat 3px 16px;font: 20px/50px "Microsoft YaHei";height: 50px;border-bottom: 1px solid #3ca2f0; }
+.index-black .index-box h3.icon1 { background: url("../images/black_title_icon.png") no-repeat 3px -86px; }
+.index-black .index-black-ul { width: 100%;padding-top: 20px; }
+.index-black .index-black-ul li { width: 185px;height: 140px;margin-right: 12px; position: relative;}
+.index-black .index-black-ul li img { width: 185px;height: 104px; }
+.index-black .index-black-ul li.last { margin-right: 0; }
+.index-black .index-black-ul li a {display:block;position: relative;}
+.index-black .index-black-ul li p { font: 14px/35px "Microsoft YaHei";color: #bebebe;white-space: nowrap; text-overflow: ellipsis; overflow: hidden; max-width: 100%;}
+.index-black .index-black-ul li p a {color: #bebebe;}
+.index-black .index-black-ul li p a:hover {color: #fff;}
+.index-black .index-black-ul li .live-bg { width: 100%; height: 100%; top: 0; left: 0; display: none \9; position: absolute; background: #000; opacity: 0; filter: alpha(opacity=0); z-index: 1; transition: all 0.5s; }
+.index-black .index-black-ul li .play-mask { background: url("../images/play_button.png") no-repeat 4px 0; display: none; width: 45px; height: 45px; position: absolute; top: 50%; left: 50%; margin: -22.5px 0 0 -22.5px; z-index: 2; }
+.index-black .index-black-ul li a:hover .live-bg {display: block \9; opacity: .4; filter: alpha(opacity=40);}
+.index-black .index-black-ul li a:hover .play-mask {display: block;}
+.game-box { padding-top: 20px; }
+.game-title { position: relative; }
+.game-name { font: 28px/50px "Microsoft YaHei"; border-bottom: 1px solid #bebebe;padding-left: 53px;margin-bottom: 20px;color: #0f0f0f;height: 50px; }
+.game-name .r-span { margin-left: 20px;min-width: 37px;height: 49px;font: 14px/36px "Microsoft YaHei";color: #66bdff;background: url("../images/title_icon.png") no-repeat center -80px;text-align: center;margin-top: 4px;}
+.game-name .r-span-more a { margin-left: 25px;margin-top: 5px;display: block;font: 16px/37px "Microsoft YaHei";color: #0f0f0f; }
+.game-name .icon { position: absolute;top: 0;left: 0;margin: 0;width: 41px;height: 49px;border-bottom: 3px solid #3ca2f0;background: url("../images/h_title_icon.png") no-repeat; }
+.game-name .icon1 { background: url("../images/new_title_icon.png") no-repeat 0 4px; }
+.game-name .icon2 { background: url("../images/new_title_icon.png") no-repeat 0 -84px; }
+.game-name .icon3 { background: url("../images/new_title_icon.png") no-repeat 0 -184px; }
+.game-name .game-num { padding-left: 17px;font:16px/25px "Microsoft YaHei";color: #0f0f0f;margin: 0; }
+.game-name .game-num em { color: #3ca2f0; }
+.game-name .r-span:hover { color: #fff;background: url("../images/title_icon_hover.png") no-repeat center 0;  }
+.game-name .r-span.on { background: url("../images/title_icon.png") no-repeat center 0;color: #fff; }
+.game-name a { color: #454544; }
+.game-name a:hover { color: #3ba2ef; }
+.game-people, .game-more { font: 14px/22px "Microsoft YaHei"; padding-top: 8px; }
+.game-people span { margin: 0 4px; color: #454544; }
+.game-more a { color: #454544; }
+.game-more a:hover { color: #3ba2ef; }
+.game-list { padding-top: 10px; }
+.game-one { position: relative; width: 280px; height: 220px; margin: 0px 20px 20px 0; background: #fff; }
+.game-one:hover { height: 220px; cursor: default; background: url("../images/gameone-bg.png") repeat-x center bottom; }
+.game-one:hover .live-anchor-txt { color: #3ba2ef; }
+.game-one.last { margin-right: 0 !important; }
+.game-one .live-icon { position: absolute; bottom: -56px; left: 10px; width: 25px; height: 25px; z-index: 3; /*border-top: 1px solid #fff; border-right: 1px solid #fff;*/ }
+.game-one .live-icon img { display: block; width: 25px; height: 25px;border-radius: 30px; }
+.game-one .game-pic { width: 280px; height: 156px; position: relative; display: block; }
+.game-one .game-pic img { display: block; max-width: 100%; width: 280px; }
+.game-one .live-bg { width: 100%; height: 100%; top: 0; left: 0; display: none \9; position: absolute; background: #000; opacity: 0; filter: alpha(opacity=0); z-index: 1; transition: all 0.5s; }
+.game-one .live-begin { background: url("../images/play_button.png") no-repeat 4px 0; display: none; width: 45px; height: 45px; position: absolute; top: 50%; left: 50%; margin: -22.5px 0 0 -22.5px; z-index: 2; }
+.game-one:hover .live-begin { display: block; }
+.game-one:hover .live-bg { display: block \9; opacity: .4; filter: alpha(opacity=40); }
+.game-one .live-anchor-bg { position: absolute; bottom: 0; left: 0; width: 100%; height: 23px; background: #000; opacity: .6; filter: alpha(opacity=60); z-index: 2; }
+.live-anchor-txt { position: absolute; bottom: 0; left: 0; height: 23px; color: #fff; font: 14px/23px "Microsoft YaHei"; z-index: 3; overflow: hidden; margin-left: 55px; }
+.game-one .room-name { font:14px/34px "Microsoft YaHei"; color: #313131; text-align: left; margin: 0 10px; }
+.game-one .room-name:after { content: ".";  display: block;  height: 0;visibility: hidden;clear: both; }
+.game-one .room-name .room-name-title { float: left;display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 70%; color: #666; height: 30px; }
+.game-one .room-name .room-name-title:hover { color: #3ba2ef; }
+.game-one .room-game-name { color: #0d92c9;font-size:12px; }
+.room-topic { font: 12px/24px "Microsoft YaHei"; color: #999; }
+.room-topic div {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: left; }
+.room-topic div:first-child { margin-left: 42px; width: 120px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+/*.room-topic div:last-child { width: 58px; }*/
+.room-topic .fr { margin-right: 6px; }
+.room-topic i.icon-anchor { background-position: -45px 0; }
+i.icon-sprite { width: 18px; height: 14px; background: url("../images/sprite.png") no-repeat; margin: 4px 2px 0 0; }
+i.icon-anchor { background-position: 4px 0; }
+i.icon-name { background-position: 4px -17px; display: none; }
+i.icon-gamename { background-position: -22px 0px; }
+i.icon-eye { background-position: -44px 0px; }
+i.icon-people { margin: 7px 2px 0 0; width:10px;height: 10px;background: url("../images/icon-people_new.png") no-repeat; }
+/** new **/
+.index-game-new, .index-game-hot {display: none;}
+/*鼠标划过边框动态效果*/
+.header .nav li { position: relative; }
+.header .nav li .show-line { display: none; }
+.show-line-b { *display: none; border: none \0; position: absolute; bottom: 0; left: 0; right: 0; border-bottom: 2px solid #3ca2f0; content: ''; -webkit-transition: all .35s; -moz-transition: all .35s; -ms-transition: all .35s; -o-transition: all .35s; transition: all .35s; -webkit-transform: scale(0, 1); -moz-transform: scale(0, 1); -ms-transform: scale(0, 1); -o-transform: scale(0, 1); transform: scale(0, 1); }
+.game-one:hover .show-line-b { *display: block; border-bottom: 2px solid #3ca2f0 \0; -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
+.download-box { display: none; z-index: 999; width: 164px; height: 264px; position: absolute; top: 45px; right: 0; padding: 0 20px; background: url("../images/download-bg.png") no-repeat; background-size: 100% 100%; }
+.game-name-left.on .download-box { display: block; }
+.download-box img { width: 163px; height: 163px; display: block; margin: 28px auto 15px; }
+.download-box a { width: 60px; height: 26px; border-radius: 50px; padding-left: 16px; font: 14px/26px "Microsoft Yahei"; text-align: center; color: #fff; }
+.download-box .android { margin-left: 8px; background: url("../images/iOSandAid.png") no-repeat 7px center #ff7132; }
+.download-box .iOS { background: url("../images/iOSandAid.png") no-repeat -77px center #3ba2ef; }
+.more { width: 100%; height: 45px; border: 1px solid #e5e5e5; margin: 20px auto; text-align: center; line-height: 45px; margin-bottom: 50px; cursor: pointer; border-radius: 2.5px; background-color: #fff; color: #999; }
+.more:hover { border: 1px solid #dcdcdc; background-color: #f6f6f6; color: #666; }
+.noMoreData { transition: all 3s; width: 100%; height: 45px; border: 1px solid #e5e5e5; margin: 20px auto; text-align: center; line-height: 45px; margin-bottom: 50px; cursor: pointer; border-radius: 2.5px; background-color: #fff; color: #999; }
+.hide3s { opacity: 0; *display: none; cursor: default; }
+.gotop { opacity: 0; transition: .5s; display: none \0; position: fixed; z-index: 999; width: 80px; height: 148px; padding: 25px 0; background: url("../images/gotop-bg.png") no-repeat; top: 200px; left: 1580px; }
+.gotop a { display: none; width: 60px; height: 17px; background: url("../images/gotop.png") no-repeat; padding: 35px 10px 22px; font: 14px/17px "Microsoft Yahei"; color: #3ba2ef; text-align: center; }
+.gotop a:hover { color: #3ba2ef; }
+.gotop .top { background-position: 27px 0; }
+.gotop .collection { margin-top: 10px; background-position: 27px -80px; }
+/*.gotop .top:hover {  background-position: 27px 0; }*/
+/*.gotop .collection:hover {background-position: 27px -80px; }*/
+.gotop.gotopshow { opacity: 1; display: block \0; }
+.gotop.gotopshow a { display: block; }
+/*gotop New*/
+.fixLink { position: fixed; right: 0; bottom: 14%; width: 120px; z-index: 9999; }
+.fixLink li { height: 55px; margin-bottom: 2px; cursor: pointer; }
+.fixLink li:hover em { display: none; }
+.fixLink li:hover span { display: block; width: 120px; background: #3ba2ef; opacity: .83; filter: alpha(opacity=83); text-align: center; color: #fff; font: 16px/55px "Microsoft YaHei"; }
+.gotopSprite { background: url("../images/gotop-sprite.png") no-repeat 0 0 #333; }
+.gotop01 { background-position: 0 0; }
+.gotop02 { background-position: 0 -55px; }
+.gotop03 { background-position: 0 -165px; }
+.gotop04 { background-position: 0 -110px; }
+.fixLink span { display: none; }
+.fixLink em { width: 55px; height: 55px; opacity: .4; filter: alpha(opacity=40); }
+/* for Retina Display start*/
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+.header .logo { background: url('../images/logo@2x.png') 0 center no-repeat; background-size: 177px 38px; }
+.game-one .live-begin { background: url('../images/play_button@2x.png') 0 0 no-repeat; background-size: 34px 45px; }
+.game-lisrR .game-name-left .downloadbtn { background: url("../images/download@2x.png") 0 0 no-repeat !important; background-size: 111px 30px !important; }
+.game-lisrR .game-name-left .downloadbtn:hover { background: url("../images/download-hover@2x.png") 0 0 no-repeat !important; background-size: 111px 30px !important; }
+.header .headerBtn .btnicon { width: 24px; height: 30px; background: url("../images/icon-header@2x.png") -4px 4px no-repeat; background-size: 55px; margin: 2px 2px 0 0; }
+.header .headerBtn .btnicon.download { background-position: -28px 3px; }
+}
+/* for Retina Display end*/
+/*登录注册弹窗*/
+.popup-bg { width: 100%; height: 100%; position: fixed; top: 0; left: 0; opacity: .4; filter: alpha(opacity=40); background: #000; z-index: 910; display: none; }
+.popup-box { position: absolute; top: 50%; left: 50%; margin: -208px 0 0 -400px; width: 800px; background: #fff; display: none; z-index: 920; }
+.popup-close { position: absolute; top: 22px; right: 18px; width: 26px; height: 26px; background: url("../images/close.png") no-repeat 0 0; cursor: pointer; }
+.popup-slide { border-bottom: 1px solid #e8e8e8; font-size: 0; padding: 0 73px; }
+.popup-slide span { font: 28px/68px "Microsoft YaHei"; height: 68px; padding: 0 16px; color: #3ba2ef; display: inline-block; cursor: pointer; }
+.popup-slide span.cur { border-bottom: 2px solid #3ba2ef; margin-bottom: -1px; }
+.popup-cbox { padding: 20px 60px 30px 60px; }
+.login-list { width: 380px; padding-right: 60px; border-right: 1px solid #ccc; }
+.login-one { position: relative; }
+.popup-cbox .infoArea { position: absolute; top: -20px; right: 0; color: #3ba2ef; display: none; font-size: 12px; }
+.popup-cbox .error { color: #ff5959; }
+.login-one .login-code.disabled { background: #ccc; cursor: no-drop; }
+.login-int01 { width: 358px; height: 38px; border: 1px solid #ccc; padding: 0 10px; font: 14px/38px "Microsoft YaHei"; color: #333; }
+.login-int02 { width: 238px; }
+.login-list .find-pwd { font: 14px/30px "Microsoft YaHei"; color: #3ba2ef; }
+.login-list .login-btn, .login-list .login-code { font: 24px/40px "Microsoft YaHei"; text-align: center; display: block; width: 100%; color: #fff; border-radius: 40px; background: #3ba2ef; cursor: pointer; }
+.popup-cbox .login-right { width: 170px; }
+.login-list .login-code { width: 100px; border-radius: 40px; font: normal 14px/40px "Microsoft YaHei"; }
+.login-agreement { text-align: center; font: 14px/30px "Microsoft YaHei"; color: #8a8a8a; }
+.login-agreement a:hover { color: #3ba2ef; }
+.popup-cbox .login-sex { font: 16px/20px "Microsoft YaHei"; margin-top: 6px; }
+.popup-cbox .checkbox { cursor: pointer; }
+.popup-cbox .checkbox .checkbox-icon { background: url("../images/uncheck.png") no-repeat 0 0; height: 18px; margin: 7px 0 0 30px; width: 18px; }
+.popup-cbox .checkbox.checked .checkbox-icon { background: url("../images/oncheck.png") no-repeat 0 0; }
+.popup-cbox label span { margin: 4px 0 0 5px; }
+.login-right p { font: 16px/24px "Microsoft Yahei"; color: #171717; text-align: center; }
+.login-right a { width: 110px; height: 35px; margin-top: 15px; padding-left: 60px; color: #fff; font: 14px/35px "Microsoft Yahei"; border-radius: 50px; }
+.login-right .wechat { background: url("../images/thirdParty.png") no-repeat 20px 5px #5ca642; }
+.login-right .qq { background: url("../images/thirdParty.png") no-repeat 20px -53px #41a7c8; }
+.login-right .sina { background: url("../images/thirdParty.png") no-repeat 20px -111px #ff5959; }
+.login-right .wechat.gray { background: url('../images/thirdPartyGray.png') no-repeat 20px 4px #ababab; }
+.login-right .qq.gray { background: url('../images/thirdPartyGray.png') no-repeat 20px -54px #ababab; }
+.login-right .sina.gray { background: url('../images/thirdPartyGray.png') no-repeat 20px -111px #ababab; }
+@keyframes opacityHover {
+0% { opacity: 0; }
+100% { opacity: .4; }
+}
+/** RcodeBox **/
+.allBtn { background-color: #3ba2ef; border-radius: 3px; display: block; color: #fff; text-align: center; cursor: pointer; outline: 0 }
+.RcodeBox { width: 250px; background-color: #fff; margin: 0 auto; position: absolute; top: 150px; left: 50%; margin-left: -150px; padding: 25px; z-index: 9000; display: none; }
+.RcodeBox span { font-size: 12px; }
+.RcodeBox .wrongText { float: right; color: #ff5959 }
+.RcodeBox .picCode { width: 250px; height: 15px; padding: 10px 0; border: 1px solid #f2f2f2; background-color: #fff; margin-top: 15px; margin-bottom: 15px }
+.RcodeBox .codePic { width: 170px; cursor: pointer }
+.RcodeBox .changePic { font-size: 12px; color: #ff5959; cursor: pointer }
+.RcodeBox .allBtn { width: 120px; height: 35px; line-height: 35px; margin-top: 25px; cursor: pointer; float: left; }
+.RcodeBox .cancelBtn { float: right; background-color: #ccc }
+.fixLink .downloadRcode { position: absolute; top: -114px; width: 85px; height: 112px; background: url("../images/index_rcode_bg.png") 0px 0px no-repeat; cursor: default; margin-left: 35px; }
+.fixLink .downloadRcode img { width: 68px; height: 68px; margin: 8px; margin-top: 27px; }
+

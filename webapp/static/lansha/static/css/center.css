@@ -1,0 +1,179 @@
+.help-box { margin-top: 31px; background: #fff; border: 1px solid #f7f6f7; border-top: none; }
+.user-center { border: 1px solid #e6e5e5; }
+.help-box .help-left { width: 250px; }
+.help-left h3 { height: 36px; margin: 16px 0 13px 0; font: 24px/36px "Microsoft Yahei"; color: #3ba2ef; text-align: center; }
+.help-left li { height: 48px; }
+.help-left li a { display: block; font: 14px/48px "Microsoft Yahei"; color: #171717; }
+.user-center .help-left li.help-cur { background-color: #3ba2ef; }
+.user-center .help-left li.help-cur a { color: #fff; }
+.help-box .help-right { width: 849px; padding: 30px 40px 20px 40px; }
+.help-right .game-list { padding: 0 0 0 17px; }
+.help-box .help-right img { max-width: 100%; }
+.help-right .help-ban { width: 528px; height: 132px; margin: 35px 0; }
+.help-right .help-title { width: 889px; margin-left: -40px; padding-left: 40px; background: #3ba2ef; font: 22px/48px "Microsoft Yahei"; color: #fff; }
+.help-right .help-num { width: 889px; margin: 20px 0 20px -40px; }
+.help-num p { font: 18px/27px "Microsoft Yahei"; color: #3ba2ef; padding-top: 7px; }
+.help-num span { width: 40px; height: 31px; padding-left: 2px; padding-top: 2px; background: url("../images/helpnum.png") no-repeat; color: #fff; font: 24px/30px "Microsoft Yahei"; }
+.help-right .help-p { font: 16px/30px "Microsoft Yahei"; color: #666; margin-bottom: 19px; }
+.help-right .help-p em { color: red }
+.help-right .help-p a { color: #3ba2ef; }
+.help-right .help-p .blue { color: #0070c0; }
+.user-center .help-left { width: 260px; }
+.user-center .help-right { width: 919px; padding: 0; }
+.user-center .help-left li { margin-bottom: 1px; }
+.user-center .help-left li a { display: block; padding-left: 99px; background: url("../images/user-centerIcon.png") no-repeat 0 0; }
+.user-center .help-left li.myMessage a { background-position: 36px 0; }
+.user-center .help-left li.myMessage.help-cur a { background-position: 36px -48px; }
+.user-center .help-left li.myAttention a { background-position: 36px -96px; }
+.user-center .help-left li.myAttention.help-cur a { background-position: 36px -144px; }
+.user-center .help-left li.myHistory a { background-position: 36px -192px; }
+.user-center .help-left li.myHistory.help-cur a { background-position: 36px -240px; }
+.user-center .help-left li.myAdvices { display: none; }
+.user-center .help-left li.myAdvices a { background-position: 36px -288px; }
+.user-center .help-left li.myAdvices.help-cur a { background-position: 36px -336px; }
+.user-center .help-left li.myPrize a { background-position: 36px -384px; }
+.user-center .help-left li.myPrize.help-cur a { background-position: 36px -432px; }
+.user-center .help-left li.myRoom a { background-position: 36px -480px; }
+.user-center .help-left li.myRoom.help-cur a { background-position: 36px -528px; }
+.user-center .help-left li.myNumRank a { background-position: 36px -576px; }
+.user-center .help-left li.myNumRank.help-cur a { background-position: 36px -624px; }
+.user-center .help-left li.myHaveMoney a { background-position: 36px -672px; }
+.user-center .help-left li.myHaveMoney.help-cur a { background-position: 36px -720px; }
+.user-center .help-right .user-namecon { margin-top: 10px; }
+.user-center .help-right .user-faces { width: 80px; height: 80px; margin: 0 15px 0 30px; }
+.user-center .help-right .user-name { font: 20px/40px "Microsoft Yahei"; }
+.user-center .help-right .user-money { font: 12px/18px "Microsoft Yahei"; color: #7e7e7e; }
+.user-center .help-right .user-money em { font-size: 14px; color: #ff7132; }
+.user-center .help-right .user-title { border-bottom: 1px solid #f1f0f0; padding-bottom: 30px; }
+.user-center .help-right .user-con { margin: 20px 0 0 40px; }
+.user-center .help-right .myroom-con { margin: 20px 0 40px 0; }
+.help-li { padding-left: 61px;height: 48px;border-bottom: #e6e5e5 1px solid;}
+.help-li-first { border-top: #e6e5e5 1px solid;}
+.user-recommend { padding: 20px 0 0 31px; }
+.user-recommend h3 { font: 14px/35px "Microsoft YaHei"; padding-right: 5px; color: #999; }
+.user-copy01 { width: 295px; height: 33px; border: 1px solid #e6e5e5; border-right: none; font: 14px/33px "Microsoft YaHei"; color: #666; padding: 0 10px; }
+.user-copy02 { width: 64px; height: 35px; border: none; font: 16px/34px "Microsoft YaHei"; color: #fff; text-align: center; background: #3ba2ef; border-right: none; cursor: pointer; }
+.user-recommend p { padding: 0 0 0 17px; font: 14px/36px "Microsoft YaHei"; color: #999; }
+.user-recommend p span { color: #3ba2ef; margin: 0 5px; }
+.help-right .user-con .user-conTitle a { width: 90px; height: 37px; font: 14px/36px "Microsoft Yahei"; text-align: center; color: #666; }
+.help-right .myroom-con .user-conTitle { padding-bottom: 40px; }
+.help-right .myroom-con .user-conTitle a { margin: 0 10px; }
+.myroom-con .myroom-box { padding: 0 36px; width: 800px; }
+.myroom-con .p-big { font: 22px/50px "Microsoft YaHei";color: #666; }
+.myroom-con .p-1 { font:14px/30px "Microsoft YaHei";color: #666; }
+.myroom-con .input-2 { width: 235px;height: 28px;border:1px solid #f1f0f0;font: 12px/28px "Microsoft YaHei";padding: 0 10px;color: #666; }
+.myroom-con .add-btn-2 { margin-left: 20px;width: 140px;  height: 34px;  font: 14px/34px "Microsoft Yahei";  color: #fff;  border-radius: 50px;  background: #3ba2ef;  text-align: center; }
+.myroom-box .list-2 { margin-top: 35px; }
+.myroom-box .list-2 li { float: left;margin: 0 20px 20px;}
+.myroom-box .list-2 li img { display: block;width: 80px;height: 80px;margin: 0 auto; border-radius: 5px;}
+.myroom-box .list-2 li p { height: 21px;font:14px/1.5 "Microsoft YaHei";color: #171717;text-align: center;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;    width: 80px; }
+/** 移除 **/
+.list-2 li { position: relative; }
+.remove-btn { display: none \9; opacity: 0; transition: all .5s; cursor: pointer; z-index: 3; position: absolute; right: -8px; top: -8px; border-radius: 20px; background: rgba(0, 0, 0, 0.6); width: 20px; height: 20px; font: 14px/18px "Microsoft YaHei"; color: #fff; text-align: center; }
+.list-2 li:hover .remove-btn{ opacity: 1; display: block \9; }
+
+.help-right .user-con .user-conTitle a:hover { color: #3ba2ef; }
+.help-right .user-con .user-conTitle .cur { color: #fff; background: #3ba2ef; }
+.help-right .user-con .user-conTitle .cur:hover { color: #fff; }
+/*.help-right .user-con .user-conTitle { border-bottom: 1px solid #f1f0f0; }*/
+.help-right .user-con .sub { margin-top: 40px; margin-left: 140px; width: 268px; height: 40px; background: #3ba2ef; color: #fff; font: 24px/40px "Microsoft Yahei"; text-align: center; border-radius: 18px; }
+.no-data { width: 90px; font: 18px/28px 'Microsoft Yahei'; text-align: center; margin: 0 auto; color: #b3b3b3; padding: 50px 0px; }
+.help-right.user-room { padding-top: 65px !important; }
+.room-box { margin-bottom: 15px; }
+.room-box .room-left { width: 110px; text-align: right; font: 14px/50px "Microsoft Yahei"; color: #666; }
+.room-box .room-num { max-width: 660px; overflow: hidden; text-overflow: ellipsis; font: 14px/50px "Microsoft Yahei"; color: #ff7132; }
+.room-box .room-name { margin-top: 8.5px; width: 220px; height: 17px; border: 1px solid #ccc; padding: 8px 10px; font: 14px/17px "Microsoft Yahei"; color: #282828; }
+.room-box .room-a { margin: 9px 0 0 19px; text-align: center; width: 111px; height: 30px; color: #3ba2ef; border-radius: 50px; border: 1px solid #ccc; font: 14px/30px "Microsoft Yahei"; }
+.room-box select { width: 240px; height: 30px; line-height: 30px; border: 1px solid #ccc; }
+.room-box .room-a:hover { border: 1px solid #fff; color: #fff; background: #3ba2ef; }
+.room-box input.on, .room-box .textarea.on { border: 1px solid #3ba2ef; }
+.room-box .room-type { text-decoration: underline; margin-left: 20px; color: #3ba2ef; font: 14px/50px "Microsoft Yahei"; }
+.room-box .textarea { resize: none; width: 400px; height: 120px; padding: 10px; font: 12px/20px "Microsoft Yahei"; color: #666; border: 1px solid #ccc; }
+.user-room .room-modify, .myroom-con .room-modify { margin: 26px 0 0 145px; width: 140px; height: 34px; font: 14px/34px "Microsoft Yahei"; color: #fff; border-radius: 50px; background: #3ba2ef; text-align: center; }
+/*认证*/
+.approve { padding: 0 40px 70px 120px; }
+.approve .approve-pic { width: 56px; height: 56px; background: url("../images/success.png") no-repeat 0 0; }
+.approve .approve-text { margin: 28px 0 0 15px; height: 40px; font: 16px/40px "Microsoft YaHei"; color: #ff7132; }
+.approve .approve-fail .approve-pic { width: 56px; height: 56px; background: url("../images/fail.png") no-repeat 0 0; }
+.approve .approve-fail .approve-text { color: #666; }
+.approve-list { font: 12px/30px "Microsoft YaHei"; color: #666; margin-top: 15px; }
+.approve-one span { display: inline-block; width: 55px; }
+.be-anchor { height: 40px; background: #ebf6fd; font: 16px/40px "Microsoft YaHei"; margin-left: -40px; text-indent: 40px; }
+.approve p { font: 14px/30px "Microsoft YaHei"; height: 30px; overflow: hidden; margin-top: 20px; }
+.approve h5 a { color: #3ba2ef; }
+.approve h5 a:hover { color: #3ba2ef; text-decoration: underline; }
+.approve-link { font-size: 0; margin-top: 15px; }
+.approve-link a, .approve-link span { display: inline-block; width: 138px; font: 14px/50px "Microsoft YaHei"; color: #666; background: #fff; border: 1px solid #3ba2ef; position: relative; margin-right: 24px; }
+.approve-link a:hover, .approve-link span:hover { color: #fff; background: #3ba2ef; }
+.approve-link i { position: absolute; top: 0; right: 0; width: 54px; height: 43px; background: url("../images/version32.png") no-repeat 0 0; }
+.approve-link i.x64 { background: url("../images/version64.png") no-repeat 0 0; }
+/*lottery*/
+.address-list { padding: 0px 80px 0px; }
+.address-list .title { height: 36px; line-height: 36px; color: #282828; overflow: hidden; border-bottom: 1px solid #f7f7f7; }
+.address-list .title .showAddress { font-size: 12px; color: #282828; cursor: pointer; }
+#addressForm { display: none }
+.address-list li { margin-top: 20px; }
+.approve .approve-address { font:18px/1.5 "Microsoft YaHei";color:#333; }
+.approve .approve-address em { color: #ff7132; }
+.approve .renzhen-btn { width:160px;height: 47px;color: #fff;font: 16px/47px "Microsoft YaHei";text-align: center; }
+.approve .renzhen-btn1 { background: #3ba2ef;margin: 0 30px 0 10px; }
+.approve .renzhen-btn2 { background: #ff7132; }
+.address-one { margin-top: 30px; }
+.address-two { margin-top: 50px; }
+.address-int01 { width: 280px; height: 32px; padding: 0 10px; font: 14px/30px "Microsoft YaHei"; color: #333; border: 1px solid #ccc; }
+.address-two .address-btn { width: 240px; }
+.prize-record { width: 754px; margin: 0 auto; padding: 40px 0; min-height: 400px; }
+.prize-record dt { background: #3ba2ef; text-indent: 35px; font: 18px/40px "Microsoft YaHei"; color: #fff; }
+.prize-record dd { border: 1px solid #ccc; border-top: none; width: 752px; font-size: 0; }
+.prize-record dd span { display: inline-block; vertical-align: middle; padding: 24px 0; text-align: center; font-size: 14px; color: #8a8a8a; font-family: "Microsoft YaHei"; }
+.prize-record dd span.prize-td01 { width: 180px; text-align: left; padding: 0 15px; }
+.prize-record dd span.prize-td02 { width: 180px; }
+.prize-record dd span.prize-td03 { width: 144px; }
+.prize-record dd span.prize-td04 { width: 188px; word-break: break-all; }
+/** bindmp **/
+.have-code { color: #2e9cee; }
+.have-code:hover { color: #3ba2ef; }
+.have-code.disabled { color: #7a7d83; background: #fff; }
+.btn.disabled { color: #ccc; background: #e5e5e5; }
+/*feedback*/
+.live_wrap { width: 1000px; margin: 0 auto 60px; padding-top: 30px; }
+.u_header { height: 50px; margin-bottom: 20px; border-bottom: 2px #ebebeb solid; }
+.u_header h1 { width: 167px; height: 50px; font-size: 30px; color: #555; border-bottom: 2px #2e9cee solid; text-align: center; }
+.u_header .glyphicon01_back { margin-top: 24px; color: #909090; padding-right: 10px; }
+.feedback { background: none; margin-top: 0px; }
+.feedback .u_mainbody { width: 1000px; padding: 0px; float: left; overflow: hidden; min-height: 280px; color: #737373; }
+.feedbackMes { margin-top: 15px; }
+.notice01 { padding: 10px 0px; border-bottom: 1px #ccc solid; margin-bottom: 20px; }
+.formGroup { margin-bottom: 5px; }
+.formGroup .controlLable { text-align: right; width: 42px; }
+.formGroup .controlLable, .formGroup .col { float: left; }
+.formGroup .col { width: 948px; float: left; }
+.feedback { background: none; margin-top: 0px; }
+.feedback .u_mainbody { width: 1000px; padding: 0px; }
+.formGroup { margin-bottom: 5px; }
+.formGroup .controlLable, .formGroup .col { float: left; }
+.formGroup .col { width: 948px; }
+.formGroup .col .radioBox { margin-right: 5px; }
+.formGroup .controlLable { text-align: right; width: 42px; }
+.inputHdline, .textarea { resize: none; width: 630px; }
+.feedback .textarea, .feedback input[type="text"] { border: 1px #ccc solid; height: 25px; line-height: 25px; padding: 0px 4px; width: 100%; }
+.feedback .textarea:hover, .feedback input[type="text"]:hover { border: 1px solid #2e9cee; }
+.feedback input[type="radio"] { margin: 0px 4px 0px 0px; }
+.formGroup .col .textarea { height: 180px; }
+.feedbackMes { margin-top: 15px; }
+.feedbackMes .mesBox { margin: 8px 0px; border-top: 1px #ccc dotted; font-size: 12px; }
+.feedbackMes .mesBox a { color: #777; }
+.feedbackMes .mesBox a:hover { color: #f39f2b; }
+.feedback .btn { margin-left: 42px; border: 0 }
+.feedback .btn a { display: inline-block; width: 114px; height: 30px; line-height: 30px; font-size: 16px; letter-spacing: 2px; color: #fff; text-align: center; }
+.feedback .btn a:hover { }
+.mesBox .questioner { height: 30px; line-height: 30px; margin: 0 0 2px; padding: 0 0 0 8px; background-color: #eee; color: #7f8bb1 }
+.mesBox .answer { padding: 4px 0 0 8px; color: #777; }
+.mesBox .asMore { float: right; }
+.feedback .formGroup .col label { display: inline-block; }
+.notice01 { padding: 10px 0px; border-bottom: 1px #ccc solid; margin-bottom: 20px; }
+.notice01 input { border: 1px solid #ccc; color: #a3a3a3; margin: 0 4px; /*padding: 4px 8px; */ text-align: center; width: auto; }
+.notice01 input:hover, .page input:focus { border: 1px solid #2e9cee; }
+.formGroup label { margin-bottom: 5px; padding-top: 5px; font-size: 13px; font-weight: normal; }
+.primary_button01 { padding: 4px 18px; border: 1px #eaeaea solid; background: #2e9cee; color: #fff; display: inline-block; cursor: pointer; }
+.primary_button01:hover { background: #2e9cee; color: #fff; }

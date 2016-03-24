@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- wap页面 -->
+	<package name="lansha-wap" namespace="/wap" extends="project-base">
+		<!-- 首页 -->
+		<action name="index" class="com.yaowang.lansha.action.wap.IndexAction" method="index">
+			<result>/lansha/wap/index.ftl</result>
+		</action>
+		<!-- 推荐直播取下一页-->
+		<action name="nextHotRooms" class="com.yaowang.lansha.action.wap.IndexAction" method="nextHotRooms">
+		</action>
+		<!-- 直播-->
+		<action name="liveList" class="com.yaowang.lansha.action.wap.AllLiveAction" method="liveList">
+			<result>/lansha/wap/live.ftl</result>
+		</action>
+		<!-- 直播取下一页-->
+		<action name="nextLiveList" class="com.yaowang.lansha.action.wap.AllLiveAction" method="nextLiveList">
+		</action>
+		
+		<action name="live" class="com.yaowang.lansha.action.wap.LiveAction" method="live">
+			<result>/lansha/wap/room.ftl</result>
+		</action>		
+        
+        <!-- 美女主播页 -->
+        <action name="meinvzhubo" class="com.yaowang.lansha.action.wap.IndexAction" method="meinvzhubo">
+        	<result>/lansha/wap/meinvzhuboh5.ftl</result>
+        </action>
+        <!-- 手游赛 -->
+        <action name="shuiyousai" class="com.yaowang.lansha.action.wap.IndexAction">
+        	<result>/lansha/wap/shuiyousai.ftl</result>
+        </action>
+	</package>
+	
+	<package name="lansha-wap-live" namespace="/wap/live" extends="project-base">
+		<action name="*" class="com.yaowang.lansha.action.wap.LiveAction" method="live">
+			<result>/lansha/wap/room.ftl</result>
+		</action>
+	</package>
+</struts>

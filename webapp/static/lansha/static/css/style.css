@@ -1,0 +1,444 @@
+.livepage { min-width: 1200px; overflow-y: hidden; }
+.livepage .header-opacity { background: #333; opacity: 1; }
+.livepage .header-opacity { background: #333; opacity: 1; }
+.livepage .header .nav { font-size: 14px; }
+.livepage .header .nav li { width: 60px; }
+.livepage .header { height: 40px; padding: 0 20px; width: calc(100% - 40px); }
+.livepage .header .logo { background-size: auto 26px; margin: 7px 10px 0 0; height: 26px; width: 130px; }
+.livepage .header .nav, .livepage .header .nav .cur a { line-height: 40px; height: 40px; }
+.livepage .header .headerBtn { margin: 0 5px; }
+.livepage .header .user-box { padding: 5px 0; }
+.container { min-width: 1200px; width: 100%; overflow: hidden; }
+.posi-rela { position: relative; }
+.leftbar { position: fixed; top: 49px; left: 0; width: 170px; background: #f9f9f9; z-index: 4; }
+.leftbar .face-box { position: relative;margin: 25px auto 12px;width: 132px;height: 91px; background: url("../images/live_left_nav_face_bg.png") no-repeat; }
+.leftbar .face-box .face { position: absolute;left: 50%;top: 50%;width: 80px;height: 80px;margin: -40px 0 0 -40px;border-radius: 80px; }
+.leftbar .face-box .follow-icon { position: absolute;left: 50%;bottom: 3px;margin-left: -35px;width: 72px;height: 20px;background: url("../images/live_left_nav_face_guanzhu1.png") no-repeat;font: 12px/16px "Microsoft YaHei";color: #ffffff;text-align: center; }
+.leftbar .face-box .follow-icon.on { background: url("../images/live_left_nav_face_guanzhu.png") no-repeat; }
+.leftbar .anchor-name { font:14px/25px "Microsoft YaHei";color: #383838;text-align: center; }
+.leftbar .anchor-game-num { height: 25px; }
+.leftbar .anchor-game-num .game { width: 90px; }
+.leftbar .anchor-game-num .num { width: 70px;margin-left: 10px; }
+.leftbar .anchor-game-num .icon-sprite { margin-top:6px; }
+.leftbar .anchor-game-num .game span,.leftbar .anchor-game-num .num span{ font: 12px/25px "Microsoft YaHei";color: #383838;padding-left: 3px;max-width: 63px;overflow: hidden;height: 25px; }
+.leftbar .show-num { margin-top: 18px; }
+.leftbar .show-num-ul { width: 150px;margin: 0 auto; }
+.leftbar .show-num-ul li { width: 50px; }
+.leftbar .show-num-ul li p { font: 12px/25px "Microsoft YaHei";color: #8a8a8a;text-align: center; }
+.leftbar .show-num-ul li .icon { display: block;margin: 0 auto;width: 17px;height: 18px; background: url("../images/show-num.png") no-repeat; }
+.linkbox-top { position: absolute; top: 0; left: 0; padding-top: 10px; }
+.leftbar .show-num-ul li .icon.today-icon { background-position: -49px 0; }
+.leftbar .show-num-ul li .icon.flower-icon { background-position: -100px 0; }
+.leftbar .msg-box { margin: 25px auto 0;width: 148px;border:1px solid #dddddd;height: 252px;position: relative;overflow: hidden; }
+.leftbar .msg-box .msg-box-sel { width: 74px;height: 27px;font: 14px/27px "Microsoft YaHei";text-align: center;color: #868585;background: #e8e8e8; }
+.leftbar .msg-box .msg-box-sel.on { background: #dbdbdb;color: #4f4f4f; }
+.link-one { width: 60px; height: 60px; padding: 20px 0 0; font: 12px/32px "Microsoft YaHei"; text-align: center; }
+.link-one a { display: block; color: #ddd; }
+.link-one .link-sprite { width: 26px; height: 26px; display: block; margin: 0 auto; background: url("../images/details-sprite.png") no-repeat 0 0; }
+.link-one .link-icon01 { background-position: -27px 0; }
+.link-one .link-icon02 { background-position: -27px -26px; }
+.link-one .link-icon03 { background-position: -27px -52px; }
+.link-one .link-icon04 { background-position: -27px -78px; }
+.link-one .link-icon05 { background-position: -27px -104px; }
+.link-one.on a { color: #3ba2ef; }
+.link-one a:hover { color: #3ba2ef; }
+.link-one a:hover .link-icon01 { background-position: 0 0; }
+.link-one a:hover .link-icon02, .link-one.on .link-icon02 { background-position: 0 -26px; }
+.link-one a:hover .link-icon03 { background-position: 0 -52px; }
+.link-one a:hover .link-icon04 { background-position: 0 -78px; }
+.link-one a:hover .link-icon05 { background-position: 0 -104px; }
+.linkbox-bottom { position: absolute; bottom: 0; left: 0; }
+.rightbox { position: absolute; top: 0px; right: 0; width: 332px; background: #fbfbfb; }
+.recommend-code { position: relative; }
+.recommend-code img { width: 332px; height: 110px; display: block; }
+.recommend-code .r-close { display: block;position: absolute;right: 6px;top: 6px;width: 20px;height: 20px;border-radius: 20px;background: url("../images/r_clock.png") no-repeat; text-indent: -99999px;}
+.slide-box { position: relative; }
+.slide-text { font-size: 0; text-align: center; }
+.slide-text span { display: inline-block; font: 14px/38px "Microsoft YaHei"; width: 50%; border-bottom: 1px solid #b0b5b9; background: #fff; color: #b0b5b9; cursor: pointer; }
+.slide-text span.cur { background: #3ba2ef; color: #fff; }
+.slide-notice { display: none;position: absolute; width: 130px; top: 27px;left: 0;padding: 5px 10px; font: 12px/22px "Microsoft YaHei"; background: #fbfbfb; color: #8a8a8a; z-index: 99; word-wrap: break-word; }
+.slide-notice2 { display: block;border-bottom:none; }
+.slide-notice2 ul { width: 100%; }
+.slide-notice2 li { font: 12px/25px "Microsoft YaHei";color: #8a8a8a;padding-left: 5px; }
+.slide-notice2 li span { color:#fff;background: #6ba5bd;margin-right: 10px;padding: 2px; }
+.day-ticket { background: #f2f2f2; height: 28px; font: 13px/28px "Microsoft YaHei"; color: #666; padding: 6px 0; border-bottom: 1px solid #c7c7c7; }
+.day-ticket span { color: #68b7f3; }
+.ticket-num { width: 90px; background: url("../images/todayTickets.png") no-repeat 8px 0; padding-left: 42px;height: 28px; }
+.ticket-rank { width: 73px; padding-left: 5px;height: 28px; }
+.ticket-minus { width: 110px; padding-left: 10px;overflow: hidden;height: 28px; }
+.talk-list { padding: 12px 30px 12px 10px; font: 12px/26px "Microsoft YaHei"; word-break: break-all; color: #555; overflow-y: auto; position: relative; }
+.talk-box { position: relative; }
+.talk-list span.col-main.user-name { cursor: pointer; }
+.talk-list .level {padding: 2px 4px;background: #999;color: #FFF;margin-right: 4px;border-radius: 3px;}
+.talk-list .level.boger {padding: 2px 4px;background: #ff7132;}
+.talk-list .level.master {padding: 2px 4px;background: #22b22c;}
+.talk-list .level.official {padding: 2px 4px;background: #282828;color: #FFF;}
+.chat_option { position: absolute; top: 10px; right: 20px; z-index: 90; width: 144px; height: 20px; background: #fff; color: #666; font: 12px/20px "Microsoft YaHei"; }
+.chat_option .chat-sprite { width: 20px; height: 20px; float: left; background: url("../images/chat-sprite.png") no-repeat; }
+.chat_option .chat-text { float: left; color: #666; }
+.chat_option li { padding: 0 5px; height: 20px; border: 1px solid #dadada; float: left; cursor: pointer; }
+.chat_option li:hover .chat-text { color: #ff5959; }
+.chat_option li.chat-scroll { width: 72px; }
+.chat_option li.chat-clear { width: 48px; border-left: none; }
+li.chat-scroll .chat-sprite { background-position: 0 0; }
+li.chat-scroll:hover .chat-sprite { background-position: -20px 0; }
+li.chat-noscroll .chat-sprite { background-position: -40px 0; }
+li.chat-noscroll:hover .chat-sprite { background-position: -60px 0; }
+li.chat-clear .chat-sprite { background-position: 0 -20px; }
+li.chat-clear:hover .chat-sprite { background-position: -20px -20px; }
+.talk-send { background: #f8fcff; width: 342px; padding:0; position: absolute; bottom: 1px; left: 0; border-top: 1px solid #eee;border-bottom: 1px solid #eee;}
+.talk-send .send-int01 { width: 237px; height: 48px; resize: none; border: 1px solid #eee; border-right: none; padding: 5px 10px; font: 12px/22px "Microsoft YaHei"; color: #555; word-wrap: break-word; word-break: break-all; }
+.talk-send .send-int02 { width: 74px; height: 60px; text-align: center; background: url("../images/sendbg.png") no-repeat 0 0; font: 14px/60px "Microsoft YaHei"; color: #fff; cursor: pointer; border: none; }
+.talk-send .send-int02 span { font: 12px/16px "Regular"; color: #91d0ff; }
+.nosend { background: #ccc !important; color: #fff !important; cursor: default !important; }
+.nosend span { color: #fff !important; }
+.talk-send .send-int02.nologin {background-position: 0 -60px !important; }
+.talk-send .send-int01.disabled { background: #f5f5f5; color: #ccc; cursor: pointer; }
+.talk-send .disabled { background: #fff; }
+.btn-grey { background: #eee !important; cursor: default !important; }
+.liveBlock { position: relative; }
+/** 直播页中部 **/
+.live-main { padding: 0 8px 0 0; margin: 0 332px 0 170px; min-width: 650px; background: #fff;overflow-x: hidden; }
+.live-main .room-intro { height: 50px; background: #fff;padding: 0 10px; }
+.live-main .live-main-recruit { width: 100%;height: 182px; }
+.live-main .recruit-img { display: block;position: relative;margin: 20px auto 0;/*width: 808px;height: 172px;background: url("../images/live_main_title_img.jpg") no-repeat;*/ }
+.live-main .recruit-btn { display: block;position: absolute;top: 58px;right: 61px;/*width: 71px;height: 25px;background: url("../images/live_main_title_btn.png") no-repeat;*/ }
+.room-intro .room-title-rightBtn { width: 94px;height: 33px;margin: 5px 0 10px 11px;background: #0d92c9;font: 14px/33px "Microsoft YaHei";color: #fff;text-align: center; }
+.room-intro .room-title-rightBtn.room-details { background: #00d067; }
+.room-text { padding: 0; }
+.room-text h3 { font: 20px/50px "Microsoft YaHei", '黑体'; color: #666666; }
+.room-pic img { display: block; width: 31px; height: 37px; margin: 5px 5px 5px 0; }
+.room-icon { margin: 15px 5px 0px; }
+.room-icon .icon-one { margin-right: 10px; font: 12px/20px "Microsoft YaHei"; }
+.room-icon .icon-one a:hover { color: #3ba2ef; }
+.room-link { margin: 15px 5px 5px 5px; text-align: center; overflow: hidden;}
+.room-link .followbtn { height: 24px;  display: block; font: 12px/24px "Microsoft YaHei";color: #fff;padding: 0 6px 0px 35px; cursor: pointer;background: url("../images/fav_icon_bg.png") 5px 2px no-repeat #3ba2ef;}
+.room-link .favnum { font: 12px/22px "Microsoft YaHei"; height: 22px; display: block; padding: 0 6px; border: 1px solid #949494; background: #fff; color: #41a4ec; border-left: 0px;}
+.room-link .flowerbtn { height: 20px; background: url("../images/gift_icons.png") 0 0 no-repeat; display: block; font: 16px/20px "Microsoft YaHei";text-indent: -9999px; width: 16px;background-size: contain;margin-right: 4px;}
+.room-link .flowernum { font: 12px/18px "Microsoft YaHei"; height: 20px; display: block; background: #fff; color: #e63526;line-height: 22px;}
+.room-link.boger { border-right: 1px solid #fff; margin-top: 1px;}
+.room-link.boger .followbtn { background: #3ba2ef; padding: 0px;}
+.room-link.boger .favnum {border:1px solid #3ba2ef;}
+.btn { background: #3ba2ef; padding: 0 30px; font: 12px/30px "Microsoft YaHei"; color: #fff; display: inline-block; cursor: pointer; border-radius: 30px; text-align: center; }
+.room-link.boger a { font-size: 12px; }
+.room-sharebox { font: 12px/22px "Microsoft YaHei"; text-align: right;margin-top: 5px; }
+.room-sharebox i { border-width: 4px; border-style: solid dashed dashed dashed; border-color: #9d9d9d transparent transparent transparent; margin: 10px 4px 0; }
+.room-mobile:hover i, .room-share:hover i { border-style: dashed dashed solid dashed; border-color: transparent transparent #9d9d9d transparent; margin-top: 6px; }
+.room-sharebox .room-mobile { margin-right: 10px; position: relative; }
+.use-mobile { position: absolute; z-index: 9; top: 26px; right: -30px; width: 231px; height: 86px; padding: 17px; background: #fff; border: 2px solid #cfd3d5; clear: both; display: none; }
+.use-mobile .mobileRCODE { width: 86px; height: 86px; }
+/*.room-mobile:hover .use-mobile { display: block; }*/
+.use-mobile::before, .share-box::before { border-bottom: 11px solid #cfd3d5; border-left: 8px solid transparent; border-right: 8px solid transparent; content: ""; left: 180px; position: absolute; top: -13px; }
+.use-mobile::after, .share-box::after { border-bottom: 12px solid #fff; border-left: 8px solid transparent; border-right: 8px solid transparent; content: ""; left: 180px; position: absolute; top: -10px; }
+.mobile-text { width: 130px; text-align: left; }
+.mobile-text h4 { font: bold 16px/32px "Microsoft YaHei"; }
+.room-share { position: relative;height: 25px;padding: 0 10px; }
+.share-box {width: 316px; height: 71px;background: #fff;clear: both; }
+.qr-con { width: 170px;margin:5px auto 0; }
+.qr-con .qr-title { font: 16px/1.5 "Microsoft YaHei";color: #343434; }
+.qr-con .qr-img { display: block;margin: 10px auto; }
+.qr-con .qr-btn { margin-left: 12px;width: 67px;height: 30px;font: 12px/30px "Microsoft YaHei";color: #ffffff;text-align: center;background: #3ca2f0;border-radius: 6px; }
+.qr-con .hide1366 { display: none; }
+    /*.room-share:hover .share-box { display: block; }*/
+.share-box::before, .share-box::after { left: 320px; }
+.hand { cursor: pointer;margin-right: 6px;font: 12px/25px "Microsoft YaHei";color: #383838; }
+.share-topic { font: bold 14px/36px "Microsoft YaHei"; height: 36px; }
+.share-copy { padding-top: 10px; }
+.share-address { width: 246px; height: 30px; padding: 0 10px; font: 14px/30px "Microsoft YaHei"; background: #f3f3f3; border-radius: 5px 0 0 5px; border: none; }
+.share-button { width: 50px; height: 30px; text-align: center; cursor: pointer; font: 14px/30px "Microsoft YaHei"; color: #fff; background: #3ba2ef; border-radius: 0 5px 5px 0; }
+.room-present { background: #fff; padding-right: 0;position: relative; height: 77px; }
+.room-time { cursor: no-drop; font: 14px/24px "Microsoft YaHei"; margin-right: 20px; }
+.room-time .getMoney { display: none; margin-top: 15px; height: 30px; line-height: 30px !important; padding: 0 24px; }
+.room-time.on { cursor: pointer; }
+.room-time.on .btn { display: block; }
+.room-time .icon-time { width: 55px; height: 55px; margin: 0; }
+/** new **/
+.getXiami {display: block;position: relative;width: 80px;height: 80px;}
+.chest-tips, .chest-image, .chest-btn, .chest-result, .chest-result-close { background-image: url('../images/chest-sprites.png'); background-repeat: no-repeat; }
+.chest { position: absolute; left: 5px; top: 0px; }
+.chest-tips { position: absolute; left: -40px; top: -75px; color: #fff; width: 118px; height: 95px; background-position: -1px -430px; z-index: 99999; text-align: left; display: none; }
+.chest-tips p { margin: 16px 0 0 16px }
+.chest-tips em { font-style: normal; color: #00fed7 }
+.chest-image { display: block; width: 60px; height: 55px; margin-left: 5px; background-position: 0 -6px }
+.chest-image:active { background-color: transparent }
+.chest-active, .chest-visitor { background: url('../images/chest.gif') no-repeat -19px -5px }
+.chest-active .chest-image, .chest-active .chest-btn, .chest-visitor .chest-image, .chest-visitor .chest-btn { opacity: 0; filter: alpha(opacity=0) }
+.chest-active .chest-image, .chest-visitor .chest-image { height: 59px }
+.chest-for-success .chest-image { background-position: -120px 0 }
+.chest-btn { display: block; color: #fff !important; margin-left: 1px; width: 58px; height: 18px; line-height: 16px; line-height: 20px \9; text-align: center; background: #282828; border-radius: 5px; font-size: 12px }
+@media all and (-ms-high-contrast: none) {
+*::-ms-backdrop, .chest-btn { line-height: 20px }
+}
+.chest-disabled .chest-btn, .chest-countdown .chest-btn { background-position: -124px -474px; cursor: default }
+.chest-result { position: fixed; left: 50%; top: 50%; margin-top: -145px; margin-left: -213px; width: 426px; height: 291px; background-position: 0 -105px; z-index: 99999999 }
+.chest-result-close { position: absolute; right: -20px; top: -20px; width: 42px; height: 42px; display: block; background-position: -124px -430px }
+.chest-result-close:hover { background-position: -168px -430px }
+.chest-result-num { color: #ff5a00; font-weight: bold; font-size: 36px; font-family: '微软雅黑'; position: absolute; left: 250px; top: 150px }
+.chest-result-tips { position: absolute; text-align: center; right: 20px; left: 20px; bottom: 17px; color: #666 }
+.chest-result-tips a { color: #038cc5 }
+.chest-result-tips span { float: left }
+.chest-result-tips span em { color: #ff5a00; font-style: normal; font-family: '微软雅黑', sans-serif; font-weight: bold }
+.chest-result-tips .desc { float: right }
+.chest-result-tips .desc em { font-family: '微软雅黑', sans-serif; font-style: normal }
+.chest-result-crit { background-position: 0 -540px }
+.chest-result-crit .chest-result-num { left: 263px; color: #fcff00; font-size: 50px; top: 21px }
+.chest-result-crit .chest-result-tips { bottom: 10px; color: #6d3400 }
+.chest-result-crit .chest-result-tips a, .chest-result-crit .chest-result-tips span em { color: #f14005; font-weight: bold }
+.chest-result-crit .chest-result-tips .desc { color: #2562da; font-weight: normal }
+/** getQB **/
+.getQBBox {display: block;position: relative;width: 130px;height: 80px;}
+.getQB { position: absolute; left: 5px; top: 0px; }
+.getQB-tips, .getQB-image, .getQB-btn, .getQB-result, .getQB-result-close { background-image: url('../images/getQB-sprites.png'); background-repeat: no-repeat; }
+.getQB-image { display: block; width: 55px; height: 55px; margin-left: 5px; background-position: 0 -6px }
+.getQB-image:active { background-color: transparent }
+.getQB-active, .getQB-visitor { background: url('../images/getQB-on.png') no-repeat -19px -5px }
+.getQB-active .getQB-image, .getQB-active .getQB-btn, .getQB-visitor .getQB-image, .getQB-visitor .getQB-btn { opacity: 0; filter: alpha(opacity=0) }
+.getQB-active .getQB-image, .getQB-visitor .getQB-image { height: 56px }
+.getQB-btn { display: block; color: #fff !important; margin-left: 1px; width: 60px; height: 18px; line-height: 16px; line-height: 20px \9; text-align: center; background: #282828; border-radius: 5px; font-size: 12px }
+.getQB .getQB-btn {display: none;}
+.getQB-countdown .getQB-btn, .getQB-active .getQB-btn {display: block;}
+.getqb-tips {display: block;position: absolute;right: -2px;top: 22px;background: url("../images/getQB_tips.png") 0 0 no-repeat;width: 73px;height: 24px;}
+/** Flower **/
+.gift_btn { display: block; width: 65px; height: 40px; position: absolute; right: 20px; bottom: 10px; cursor: pointer; z-index: 200; }
+.gift_btn2 { display: block; position: absolute; right: 36px; bottom: 66px; cursor: pointer; z-index: 200; }
+.disabled .todayTickets { background: url("../images/todayTickets_off.png") 0 0 no-repeat; }
+.gift_btn:hover { background-position: 0px 0px; }
+.gift_flower { display: block; width: 22px; height: 30px; margin: 5px auto; background: url("../images/gift_icons.png") 0 0px no-repeat; }
+.todayTickets { background: url("../images/todayTickets.png") 0 0 no-repeat; width: 30px; height: 27px; display: block; }
+.todayTickets_num { position: absolute; width: 18px; height: 18px; line-height: 18px; text-align: center; background: #df2617; border-radius: 50%; color: #fff; right: -15px; bottom: 15px; font-size: 10px; font-style: normal; }
+.gift_flower_num { position: absolute; width: 18px; height: 18px; line-height: 18px; text-align: center; background: #df2617; border-radius: 50%; color: #fff; right: 5px; bottom: 30px; font-size: 12px; font-style: normal; }
+.room_flower { padding: 0 10px; height: 30px; border-radius: 20px 20px; border: 1px solid #2e9cee; margin-top: 8px; margin-right: 10px; }
+.room_flower .gift_flower { width: 16px; height: 22px; float: left; margin: 5px 5px 0px 0px; background-size: contain; }
+.room_flower em { color: #ff7132; font-size: 14px; float: left; margin-top: 5px; }
+.f_plus-minus { position: absolute; top: -8px; right: -3px; font: bold 16px/20px "Microsoft YaHei"; color: #df2617; z-index: 20; text-indent: 0; display: none; }
+.f_plus-minus i, .plus-minus b { font-style: normal; }
+/** talk_gift **/
+.talk_gift { }
+.talk_gift .red { color: #ff7132 }
+.talk_gift .icon_flower { width: 18px; height: 18px; background: url("../images/gift_icons.png") 0 0 no-repeat; float: left; text-indent: -99999px; background-size: contain; margin-left: 5px; margin-top: 5px; }
+/*.room-time .timezone { margin-top: 15px; width: 73px; height: 30px; border-radius: 30px; background: #979797; font: 20px/30px "Microsoft YaHei"; text-align: center; color: #fff; }
+.room-time .timezone {display: block;color: #FFF;margin-left: 1px;width: 58px;height: 18px;line-height: 16px;line-height: 20px\9;text-align: center;background: #7a7d83;border-radius: 5px;}
+.room-time.on span { background: #3ba2ef; }
+.room-time i { background: url("../images/gift_box.png") no-repeat 5px 2px; }
+.room-time.on i { background: url("../images/gift_box.png") no-repeat -173px 0; }
+**/
+.room-present .btn { line-height: 40px; margin-right: 20px; }
+.room-present .btn.gray { background: #ababab; cursor: default; }
+.room-coin { font: 14px/40px "Microsoft YaHei"; margin: 22px 10px 0px 0px; }
+.room-coin .col-main { margin-right: 10px; font-size: 14px; }
+.popup-center { width: 340px; height: 164px; border-radius: 7px; background: #3ba2ef; display: none; z-index: 9999; }
+.popup-shrimp { position: fixed; top: 50%; left: 50%; margin: -82px 0 0 -170px; }
+.give-shrimp { padding: 35px 0; font: 20px/36px "Microsoft YaHei"; color: #fff; text-align: center; }
+.give-static { }
+.give-text { font-size: 16px; }
+.plus-minus { position: absolute; top: -8px; right: -3px; font: bold 20px/30px "Microsoft YaHei"; color: #3ba2ef; z-index: 20; text-indent: 0; display: none; }
+.plus-minus i, .plus-minus b { font-style: normal; }
+.guide-popup { width: 340px; height: 164px; border-radius: 7px; background: #3ba2ef; display: none; z-index: 9999; display: none; }
+.room-tips { position: absolute; right: -10px; bottom: 50px; width: 100px; height: 40px; padding: 10px 20px; border-radius: 3px; background: #3ba2ef; font: 14px/20px "Microsoft YaHei"; color: #fff; display: none; z-index: 90; }
+/*.gift-xiami:hover .room-tips { display: block; }*/
+.room-tips .popup-triangle { border-width: 10px; right: 36px; bottom: -20px; }
+.popup-triangle { width: 0; height: 0; content: ""; position: absolute; left: 30px; bottom: -40px; border-color: #3ba2ef transparent transparent; border-style: solid dashed dashed; border-width: 24px; }
+.popup-first { position: absolute; bottom: 90px; left: 0; margin: 0; }
+.popup-second { position: absolute; bottom: 90px; left: -5px; margin: 0; }
+.popup-third { position: absolute; top: 130px; left: 30px; margin: 0; }
+.popup-third .popup-triangle { border-color: transparent transparent #3ba2ef; top: -40px; border-style: dashed solid dashed; }
+.popup-guide { padding: 30px 0; font: 18px/30px "Microsoft YaHei"; color: #fff; }
+.guide-close { position: absolute; top: 10px; right: 10px; background: url("../images/popup-close.png") no-repeat 0 0; width: 31px; height: 30px; cursor: pointer; }
+.popup-guide span { font: 96px/100px "黑体"; }
+.guide-text { padding: 18px 60px 0; text-align: center; }
+.popup-first .guide-text { padding: 0 60px; }
+.guide-num { width: 52px; height: 109px; background: url("../images/guidenum-sprite.png") no-repeat 0 0; margin-left: 12px; }
+.guide-num01 { background-position: -5px 0; }
+.guide-num02 { background-position: 0 -109px; }
+.guide-num03 { background-position: 0 -218px; }
+/** gift */
+.gift-xiami { width: 70px; height: 40px; background: url('../images/xiami_btn.png') 0 0 no-repeat; cursor: pointer; float: right; position: relative; }
+.gift-xiami:hover { background-position: -75px 0px; }
+.gift-xiami.disabled { background-position: -150px 0px; cursor: default; }
+.talk-list li img { width: 20px; height: 20px; margin: 0 2px; vertical-align: text-bottom; }
+.talk-list .gift_xiami { width: 100%; color: #555; font-size: 12px; }
+.talk-list .gift_xiami .red { color: #ff7132; }
+.talk-list .gift_xiami .xiami { width: 25px; height: 25px; background: url('../images/xiaxi.png') right 4px no-repeat; float: left; text-indent: -9999px; background-size: contain; margin-left: 5px; }
+.talk-list .todatT img { width: 26px; height: 21px; }
+.talk-list .message {padding-left: 20px;background: url("../images/SMessige.png") 0 center no-repeat;}
+.talk-list .jinyan {padding-left: 20px;background: url("../images/jinyan.png") 0 center no-repeat;}
+.talk-list .message .red, .talk-list .jinyan .red {color: #e71f07;}
+.live-list { padding: 8px 0 0; font-size: 0; }
+.only-livelist .live-list { margin-right: -20px; }
+.live-list .game-one { margin: 22px 20px 0 0; width: 276px; display: inline-block; float: none; overflow: hidden; }
+.only-livelist { padding: 0 0 22px; margin-top: 20px; background: #fff; }
+.live-title { position: relative; text-align: center; }
+.left-line { position: absolute; top: 0; left: 0; height: 1px; background-color: #d9d9d9; border: none; margin-top: 15px; }
+.right-line { position: absolute; top: 0; right: 0; height: 1px; background-color: #d9d9d9; border: none; margin-top: 15px; }
+.live-title span { display: inline-block; font: 22px/30px "Microsoft YaHei"; color: #454544; }
+/*.only-livelist .game-one { width: 240px; }*/
+/*.only-livelist .game-one .game-pic { width: 240px; height: 144px; position: relative; display: block; }*/
+.details-footer { border-top: 1px solid #dbdbdb; height: 50px; font: 13px/50px "Microsoft YaHei"; color: #8f8f8f; text-align: center; margin-top: 80px; }
+/*room-popup*/
+/**.popup-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 998; background: #000; opacity: .4; filter: alpha(opacity=40); }**/
+.room-popup { position: fixed; top: 50%; left: 50%; margin: -170px 0 0 -200px; width: 400px; height: 340px; z-index: 999; background: #fffbf8; }
+.popup-title { height: 40px; background: #3ba2ef; color: #fff; font: 16px/40px "Microsoft YaHei"; overflow: hidden; text-align: center; }
+.popup-text { padding: 8px 15px 0; }
+.popup-tips { height: 26px; font: 12px/26px "Microsoft YaHei"; color: #ff7132; text-align: center; padding: 0 15px; overflow: hidden; }
+.change-roomone { padding-left: 110px; font: 14px/20px "Microsoft YaHei"; margin-top: 18px; height: 20px; color: #171717; }
+.change-roomone .change-name { width: 103px; margin-left: -110px; text-align: right; }
+.change-int01 { width: 148px; height: 18px; border: 1px solid #adadad; font: 12px/18px "Microsoft YaHei"; padding: 0 5px; }
+.copy-btn { color: #5eb5ff; margin: 0 10px; cursor: pointer; }
+.change-close { width: 138px; text-align: center; }
+.right-close { position: absolute; top: 50%; margin-top: -62.5px; right: 340.5px; background: url("../images/scale-bar.png") no-repeat 0 0; width: 14px; height: 125px; cursor: pointer; }
+.nicescroll-rails { border-left: 1px solid #fff; width: 5px !important; }
+.right-close:hover { background-position: -16px 0; }
+.right-close.open { background-position: -32px 0; }
+.right-close.open:hover { background-position: -48px 0; }
+/*center*/
+.user-center .help-right { padding: 30px 0 0; width: 919px; }
+.user-center .help-right .user-gamelist { padding: 0 0 40px 10px; }
+.user-center .help-right .user-gamelist .game-one { margin: 30px 10px 0 10px; }
+.user-center .help-right .room-topic div:last-child { width: 58px; }
+.history-title { border-bottom: 1px solid #f1f0f0; padding: 0 10px; font-size: 0; }
+.history-title span { color: #171717; padding: 0 16px; display: inline-block; font: 20px/38px "Microsoft YaHei"; }
+.user-gamelist { padding: 0px; }
+.user-gamelist .game-one { margin: 20px 0 0 15px; display: inline-block; }
+.live-static { position: absolute; right: 0; top: 0; width: 60px; height: 55px; background: url("../images/static-sprite.png") no-repeat 0 0; z-index: 4; }
+.realname-list { padding: 0 0 70px; font: 12px/34px "Microsoft YaHei"; color: #666; }
+.password-list { padding-top: 20px; }
+.mobile-list { padding-top: 20px; }
+.realname-one { padding-left: 97px; margin-top: 26px; }
+.password-list .realname-one { padding-left: 82px; margin-top: 26px; }
+.smrz-list .realname-one { margin-top: 15px; }
+.realname-border { border-bottom: 1px solid #f1f0f0; padding-bottom: 20px; }
+.realname-one .realName { border: none; background: #fff; }
+.realname-one .select { width: 256px; height: 30px; line-height: 30px; border: 1px solid #ccc; font-size: 12px; }
+.realname-one .textarea { resize: none; width: 470px; height: 80px; padding: 6px; font: 12px/20px "Microsoft Yahei"; color: #666; border: 1px solid #ccc; }
+.realname-one .textarea.on { border: 1px solid #3ba2ef; }
+.realname-one input.cur { border: 1px solid #e6e5e5; }
+.realname-one.lawarea a { color: #3ba2ef; }
+.realname-name { width: 92px; margin-left: -100px; padding-right: 15px; text-align: right; }
+.user-int01 { width: 256px; height: 32px; padding: 0 5px; border: 1px solid #e6e5e5; font: 12px/32px "Microsoft YaHei"; margin-right: 7px; }
+.password-list .user-int01 { width: 368px; }
+.user-int01.on { border: 1px solid #3ba2ef; }
+.user-int02 { width: 86px; }
+.user-int03 { width: 62px; }
+.user-int04 { width: 125px; }
+.password-list .user-int05 { width: 106px; }
+.topic_switch { cursor: pointer; color: #3ba2ef; overflow: hidden; }
+.topic_switch i { width: 15px; height: 16px; background: url('../images/arw.png') -15px 0 no-repeat; display: block; margin-top: 10px; margin-left: 10px }
+.topic_switch.on i { background: url('../images/arw.png') 0px 0 no-repeat; }
+.realname-topic { font: 12px/20px "Microsoft YaHei"; color: #ff7132; padding: 0; display: none; }
+.user-btn { width: 200px; height: 34px; font: 16px/34px "Microsoft YaHei"; margin-left: 92px; }
+.password-list .user-btn { margin-left: 44px; }
+.IDcard-one { position: relative; width: 170px; }
+.realname-one .file-img { width: 150px; height: 91px; display: block; }
+.realname-border .file-img { width: 80px; height: 80px; margin-right: 35px; }
+.file-img:hover .IDcard { display: block; }
+.realname-one .file-input { width: 78px; height: 28px; border: 1px solid #ccc; text-align: center; color: #666; font: 12px/28px "Microsoft YaHei"; background: #fff; margin-right: 15px; cursor: pointer; }
+.realname-one .file-input:hover { border: 1px solid #3ba2ef; color: #3ba2ef; }
+.IDcard-example { color: #3ba2ef; text-decoration: underline; position: relative; z-index: 99; cursor: default; }
+.col-orange { color: #ff7132; }
+.change-certain, .change-cancel { display: none; }
+.realname-one .col-orange { cursor: pointer; margin: 0 8px 0 18px; }
+.checkbox { cursor: pointer; }
+.checkbox .checkbox-icon { width: 15px; height: 15px; margin: 10px 5px 20px; background: url('../images/uncheck.png') 0 0 no-repeat; background-size: 15px 15px; }
+.checkbox.checked .checkbox-icon { background: url('../images/oncheck.png') 0 0 no-repeat; background-size: 15px 15px; }
+.IDcard { display: none; z-index: 999; position: absolute; width: 246px; height: 186px; }
+.IDcard1 { top: -205px; left: -98px; background: url("../images/IDcard1.jpg") no-repeat; }
+.IDcard2 { top: -205px; left: -98px; background: url("../images/IDcard2.jpg") no-repeat; }
+.IDcard3 { top: -205px; left: -98px; background: url("../images/IDcard3.jpg") no-repeat; }
+.IDcard-example:hover .IDcard { display: block; }
+/*我的管理员*/
+.room-manage { padding: 30px 72px 80px; }
+.manage-title { font: 18px/36px "Microsoft YaHei"; color: #171717; }
+.manage-add { padding: 15px 0; font: 14px/34px "Microsoft YaHei"; }
+.manage-int01 { width: 248px; height: 32px; font: 14px/32px "Microsoft YaHei"; padding: 0 5px; margin-right: 20px; overflow: hidden; border: 1px solid #ccc; }
+.manage-addbtn { padding: 0 50px; height: 34px; line-height: 34px; }
+.manage-list { text-align: center; border: 1px solid #f8f3f3; border-bottom: none; }
+.manage-list dt { background: #f2f2f2; color: #8a8a8a; height: 36px; overflow: hidden; font-size: 0; }
+.manage-list dd { color: #171717; height: 50px; overflow: hidden; border-bottom: 1px solid #f8f3f3; font-size: 0; }
+.manage-list dd:nth-child(even) { background: #e7f4fe; }
+.manage-list dt span { display: inline-block; overflow: hidden; font: 14px/36px "Microsoft YaHei"; height: 36px; }
+.manage-list dd span { display: inline-block; overflow: hidden; font: 14px/50px "Microsoft YaHei"; height: 50px; }
+.manage-p01 { width: 156px; }
+.manage-p02 { width: 150px; }
+.manage-p02 .btn { height: 24px; line-height: 24px; padding: 0 15px; }
+/*noLive*/
+#playerArea { position: relative; width: 100%; min-height: 400px; background: #000; }
+.noLive { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 8; background: #000; overflow: hidden; }
+.error-live { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 8; background: #000; overflow: hidden; }
+.noLive .noLive-btn, .error-live .noLive-btn { position: absolute; right: 14%; top: 10%; width: 138px; height: 50px; padding-left: 62px; background: url("../images/noLive-btn.png") no-repeat 30px center #1d2125; font: 16px/50px "Microsoft YaHei"; color: #3ba2ef; border: 2px solid #3ca2f0; border-radius: 50px; }
+.error-live .refresh { width: 420px; margin: 12% auto 0; }
+.error-live h3 { color: #fff8f3; font: 44px/1.5 "Microsoft YaHei"; text-align: center; }
+.error-live .refresh img { margin: 34px auto 5px; display: block; }
+.error-live .tips { font: 16px/1.5 "Microsoft YaHei"; color: #fff8f3; text-align: center; }
+.error-live .refresh a { margin: 36px 28px 0; width: 150px; height: 50px; border: 1px solid #3ca2f0; color: #3ca2f0; font: 20px/50px "Microsoft YaHei"; text-align: center; background: #1d2125; border-radius: 12px; }
+.noLive .game-one { background: #333; }
+.noLive .live-anchor-txt { color: #999; }
+.noLive .game-one .room-name a { color: #fff; }
+.noLive .game-one .game-pic { max-width: 100%; }
+.noLive .noLive-tips { position: absolute; left: 50%; top: 50%; margin: -14% 0 0 -270px; font: 20px/36px "Microsoft YaHei"; color: #fff; width: 540px; text-align: center; }
+.noLive .noLive-rec { position: absolute; left: 50%; top: 50%; margin: -10% 0 0 -50%; width: 100%; text-align: center; }
+.noLive .noLive-rec .game-one img { max-width: 100%; }
+.noLive .noLive-rec .noLive-game { width: 100%; height: 76px; background: #000; font: 14px/35px "Microsoft YaHei"; color: #fff; text-align: left; overflow: hidden; }
+/** QBbox **/
+.QBbox {position: absolute; top: 50%;left: 50%;width: 350px;height: 200px;margin: -175px 0 0 -100px;z-index: 99;background: #FFF;display: none;border: 1px solid #ddd;}
+.QBbox .box-header {width: 100%;height: 35px;line-height: 35px;color: #FFF;font-size: 14px;background: #3ba2ef;}
+.QBbox .box-header .fl {padding: 0 15px;}
+.QBbox .closebox {cursor: pointer;padding: 0 10px;text-align: center; width: 20px;}
+.QBbox .content {width: 100%; padding-top: 20px;}
+.QBbox .content p {line-height: 45px;text-align: center}
+.QBbox .content p input {height: 28px;line-height: 28px;width:160px;padding: 0 6px; border: 1px solid #bebebe;}
+
+/* for Retina Display start*/
+    @media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    .talk-list .gift_xiami .xiami { background: url('../images/xiaxi@2x.png') 0 3px no-repeat; background-size: 25px 25px; }
+    .link-one .link-sprite { width: 26px; height: 26px; display: block; margin: 0 auto; background: url("../images/details-sprite@2x.png") no-repeat 0 0; background-size: 60px; }
+    .link-one .link-icon01 { background-position: 1px -2px }
+    .link-one .link-icon02 { background-position: 0px -37px; }
+    .link-one .link-icon03 { background-position: 0px -77px; }
+    .link-one .link-icon04 { background-position: 1px -114px; }
+    .link-one .link-icon05 { background-position: 0px -150px; }
+    .link-one.on a { color: #3ba2ef; }
+    .link-one a:hover { color: #3ba2ef; }
+    .link-one a:hover .link-icon01 { background-position: -30px -2px; }
+    .link-one a:hover .link-icon02, .link-one.on .link-icon02 { background-position: -31px -37px; }
+    .link-one a:hover .link-icon03 { background-position: -31px -77px; }
+    .link-one a:hover .link-icon04 { background-position: -30px -114px; }
+    .link-one a:hover .link-icon05 { background-position: -32px -150px; }
+}
+/* for Retina Display end*/
+.user_manager { background: #fff none repeat scroll 0 0; border: 1px solid #ccc; font-size: 12px; border-radius: 4px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); overflow: hidden; padding: 1px; position: absolute; right: 170px; top: 256px; width: 178px; z-index: 555; }
+.user_manager a { color: #000; cursor: pointer; display: block; height: 25px; line-height: 25px; padding-left: 30px; text-align: left; }
+.user_manager a:hover { background: #2e98fa none repeat scroll 0 0; color: #fff; }
+.user_wrap a.jy { background: rgba(0, 0, 0, 0) url("../images/user_manager_icon.png") no-repeat scroll 5px 5px; }
+.user_wrap a.jy:hover { background: #2e98fa url("../images/user_manager_icon.png") no-repeat scroll 5px -16px; }
+.user_wrap a.pb { background: rgba(0, 0, 0, 0) url("../images/user_manager_icon.png") no-repeat scroll 5px -38px; }
+.user_wrap a.pb:hover { background: #2e98fa url("../images/user_manager_icon.png") no-repeat scroll 5px -59px; }
+.user_wrap a.report { background: url("../images/user_manager_icon.png?20150104") no-repeat 5px -125px; }
+.user_wrap a.report:hover { background: url("../images/user_manager_icon.png?20150104") no-repeat scroll 5px -144px #2e98fa; }
+.user_wrap a.rm { background: rgba(0, 0, 0, 0) url("../images/user_manager_icon.png") no-repeat scroll 5px -80px; }
+.user_wrap a.rm:hover { background: #2e98fa url("../images/user_manager_icon.png") no-repeat scroll 5px -101px; }
+
+@media only screen and ( min-width: 1800px) {
+    .leftbar { width: 260px; }
+    .rightbox { width: 360px; }
+    .live-main { margin: 0 360px 0 260px; }
+    .ticket-num { width: 110px; }
+    .ticket-rank { width: 82px; }
+    .talk-send { width: 360px; }
+    .talk-send .send-int01 { width: 264px; }
+    .leftbar .anchor-game-num .game { width: 120px; }
+    .leftbar .anchor-game-num .num { margin-left: 25px; }
+    .leftbar .msg-box { width: 220px; }
+    .leftbar .msg-box .msg-box-sel { width: 110px; }
+    .slide-notice { width: 200px; }
+    .room-share { padding: 30px; }
+    .recommend-code img { width: 360px; height: 141px;}
+    .leftbar .show-num-ul { width: 180px; }
+    .leftbar .show-num-ul li { width: 60px; }
+    .qr-con .qr-btn { width: 77px;font-size: 14px; }
+    .qr-con .hide1366 { display: block; }
+    .qr-con { margin-top: 0;width: 200px; }
+    .popup-third { position: absolute; top: 130px; left: 80px; margin: 0; }
+}
+@media only screen and ( min-width: 1400px) {
+
+}

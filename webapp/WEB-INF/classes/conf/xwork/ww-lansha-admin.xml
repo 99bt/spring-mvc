@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!-- 游戏-->
+    <package name="project-admin-game" namespace="/admin/game" extends="project-admin">
+
+        <!-- 游戏类别 -->
+        <action name="gameCategory" class="com.yaowang.lansha.action.admin.GameCategoryAction" method="list">
+            <result>/lansha/admin/game/gameCategory.ftl</result>
+        </action>
+        <action name="gameCategory-detail" class="com.yaowang.lansha.action.admin.GameCategoryAction" method="detail">
+            <result>/lansha/admin/game/gameDetail.ftl</result>
+        </action>
+        <action name="gameCategory-save" class="com.yaowang.lansha.action.admin.GameCategoryAction" method="save">
+            <result>/lansha/admin/game/gameCategory.ftl</result>
+        </action>
+        <action name="gameCategory-delete" class="com.yaowang.lansha.action.admin.GameCategoryAction" method="delete">
+            <result>/lansha/admin/game/gameCategory.ftl</result>
+        </action>
+        <!-- 游戏维护 -->
+        <action name="game" class="com.yaowang.lansha.action.admin.GameAction" method="list">
+            <result>/lansha/admin/game/gameList.ftl</result>
+        </action>
+        <action name="game-info" class="com.yaowang.lansha.action.admin.GameAction" method="info">
+            <result>/lansha/admin/game/gameInfo.ftl</result>
+        </action>
+        <action name="game-save" class="com.yaowang.lansha.action.admin.GameAction" method="save">
+            <result name="success">/lansha/admin/game/gameList.ftl</result>
+            <result name="error">/lansha/admin/game/gameInfo.ftl</result>
+        </action>
+        <action name="game-remove" class="com.yaowang.lansha.action.admin.GameAction" method="remove">
+            <result>/lansha/admin/game/gameList.ftl</result>
+        </action>
+        <action name="game-updateHot" class="com.yaowang.lansha.action.admin.GameAction" method="updateHot">
+        </action>
+        <!-- 推荐游戏 -->
+        <action name="game-hot" class="com.yaowang.lansha.action.admin.GameAction" method="hotList">
+            <result>/lansha/admin/game/gameHotList.ftl</result>
+        </action>
+        <action name="game-hot-remove" class="com.yaowang.lansha.action.admin.GameAction" method="hotRemove">
+            <result>/lansha/admin/game/gameHotList.ftl</result>
+        </action>
+        <action name="game-hot-updateOrder" class="com.yaowang.lansha.action.admin.GameAction" method="hotUpdateOrder">
+        </action>
+
+
+    </package>
+
+    <!-- 广告-->
+    <package name="project-admin-adManage" namespace="/admin/ad" extends="project-admin">
+
+        <!-- 广告管理 -->
+        <action name="adManage" class="com.yaowang.lansha.action.admin.AdManageAction" method="list">
+            <result>/lansha/admin/ad/adManage.ftl</result>
+        </action>
+        <action name="adManage-detail" class="com.yaowang.lansha.action.admin.AdManageAction" method="detail">
+            <result>/lansha/admin/ad/adManageDetail.ftl</result>
+        </action>
+        <action name="adManage-save" class="com.yaowang.lansha.action.admin.AdManageAction" method="save">
+            <result name="success">/lansha/admin/ad/adManage.ftl</result>
+            <result name="error">/lansha/admin/ad/adManageDetail.ftl</result>
+        </action>
+        <action name="adManage-delete" class="com.yaowang.lansha.action.admin.AdManageAction" method="delete">
+            <result>/lansha/admin/ad/adManage.ftl</result>
+        </action>
+
+    </package>
+
+    <!-- 房间 -->
+    <package name="admin-room" namespace="/admin/room" extends="project-admin">
+        <!-- 房间管理 -->
+        <action name="room" class="com.yaowang.lansha.action.admin.RoomAction" method="list">
+            <result>/lansha/admin/room/room-list.ftl</result>
+        </action>
+        <action name="room-detail" class="com.yaowang.lansha.action.admin.RoomAction" method="detail">
+            <result>/lansha/admin/room/room-edit.ftl</result>
+        </action>
+        <action name="room-save" class="com.yaowang.lansha.action.admin.RoomAction" method="save">
+            <result name="error">/lansha/admin/room/room-edit.ftl</result>
+            <result name="success">/lansha/admin/room/room-list.ftl</result>
+        </action>
+        <action name="room-delete" class="com.yaowang.lansha.action.admin.RoomAction" method="delete">
+            <result>/lansha/admin/room/room-list.ftl</result>
+        </action>
+        <action name="room-update-basenum" class="com.yaowang.lansha.action.admin.RoomAction" method="updateBasenum">
+            <result>/lansha/admin/room/room-list.ftl</result>
+        </action>
+        <action name="room-update-multiplenum" class="com.yaowang.lansha.action.admin.RoomAction" method="updateMultiplenum">
+            <result>/lansha/admin/room/room-list.ftl</result>
+        </action>
+        <action name="room-banned" class="com.yaowang.lansha.action.admin.RoomAction" method="banned">
+            <result>/lansha/admin/room/room-list.ftl</result>
+        </action>
+        <action name="room-launch" class="com.yaowang.lansha.action.admin.RoomAction" method="launch">
+            <result>/lansha/admin/room/room-list.ftl</result>
+        </action>
+        <action name="room-game" class="com.yaowang.lansha.action.admin.RoomAction" method="game">
+            <result>/lansha/admin/room/game.ftl</result>
+        </action>
+        <action name="room-search" class="com.yaowang.lansha.action.admin.RoomAction" method="search"/>
+        <!--签约主播管理-->
+        <action name="contract" class="com.yaowang.lansha.action.admin.YwUserRoomContractAction" method="list">
+            <result>/lansha/admin/room/contract/contract-list.ftl</result>
+        </action>
+        <action name="contract-detail" class="com.yaowang.lansha.action.admin.YwUserRoomContractAction" method="detail">
+            <result>/lansha/admin/room/contract/contract-edit.ftl</result>
+        </action>
+        <action name="contract-save" class="com.yaowang.lansha.action.admin.YwUserRoomContractAction" method="save">
+            <result name="error">/lansha/admin/room/contract/contract-edit.ftl</result>
+            <result name="success">/lansha/admin/room/contract/contract-list.ftl</result>
+        </action>
+        <action name="contract-search" class="com.yaowang.lansha.action.admin.YwUserRoomContractAction" method="search">
+            <result>/lansha/admin/room/contract/contract.ftl</result>
+        </action>
+        <action name="contract-delete" class="com.yaowang.lansha.action.admin.YwUserRoomContractAction" method="delete">
+            <result>/lansha/admin/room/contract/contract-list.ftl</result>
+        </action>
+        <action name="contract-export" class="com.yaowang.lansha.action.admin.YwUserRoomContractAction" method="export">
+
+        </action>
+
+         <!-- 工资-->
+        <action name="salaryReport" class="com.yaowang.lansha.action.admin.RoomSalaryAction" method="list">
+            <result>/lansha/admin/room/salary/salary-list.ftl</result>
+        </action>
+
+        <action name="salaryReport-detail" class="com.yaowang.lansha.action.admin.RoomSalaryAction" method="detail">
+            <result>/lansha/admin/room/salary/salary-detail.ftl</result>
+        </action>
+        <action name="salaryReport-detail-edit" class="com.yaowang.lansha.action.admin.RoomSalaryAction" method="edit">
+            <result>/lansha/admin/room/salary/salary-detail-edit.ftl</result>
+        </action>
+        <action name="salaryReport-detail-update" class="com.yaowang.lansha.action.admin.RoomSalaryAction" method="update">
+            <result>/lansha/admin/room/salary/salary-detail.ftl</result>
+        </action>
+
+        <action name="salaryReport-listExport" class="com.yaowang.lansha.action.admin.RoomSalaryAction" method="listExport" />
+        <action name="salaryReport-detailExport" class="com.yaowang.lansha.action.admin.RoomSalaryAction" method="detailExport" />
+        <!-- 热门推荐房间 -->
+        <action name="room-hot" class="com.yaowang.lansha.action.admin.RoomAction" method="listHot">
+            <result>/lansha/admin/room/room-hot-list.ftl</result>
+        </action>
+        <action name="room-hot-detail" class="com.yaowang.lansha.action.admin.RoomAction" method="detailHot">
+            <result>/lansha/admin/room/room-hot-edit.ftl</result>
+        </action>
+        <action name="room-hot-save" class="com.yaowang.lansha.action.admin.RoomAction" method="saveHot">
+            <result name="error">/lansha/admin/room/room-hot-edit.ftl</result>
+            <result name="success">/lansha/admin/room/room-hot-list.ftl</result>
+        </action>
+        <action name="room-hot-delete" class="com.yaowang.lansha.action.admin.RoomAction" method="deleteHot">
+            <result>/lansha/admin/room/room-hot-list.ftl</result>
+        </action>
+        <action name="room-hot-search" class="com.yaowang.lansha.action.admin.RoomAction" method="searchHot"/>
+        <action name="room-hot-setup" class="com.yaowang.lansha.action.admin.RoomAction" method="setupHot"/>
+        <!-- 大神推荐房间 -->
+        <action name="room-dashen" class="com.yaowang.lansha.action.admin.RoomAction" method="listDaShen">
+            <result>/lansha/admin/room/room-dashen-list.ftl</result>
+        </action>
+
+        <action name="room-dashen-detail" class="com.yaowang.lansha.action.admin.RoomAction" method="detailHot">
+            <result>/lansha/admin/room/room-dashen-edit.ftl</result>
+        </action>
+
+        <action name="room-dashen-save" class="com.yaowang.lansha.action.admin.RoomAction" method="saveDaShen">
+            <result name="error">/lansha/admin/room/room-dashen-edit.ftl</result>
+            <result name="success">/lansha/admin/room/room-dashen-list.ftl</result>
+        </action>
+        <action name="room-dashen-delete" class="com.yaowang.lansha.action.admin.RoomAction" method="deleteDaShen">
+            <result>/lansha/admin/room/room-dashen-list.ftl</result>
+        </action>
+
+        <!-- 女神推荐房间 -->
+        <action name="room-nvshen" class="com.yaowang.lansha.action.admin.RoomAction" method="listNvShen">
+            <result>/lansha/admin/room/room-nvshen-list.ftl</result>
+        </action>
+        <action name="room-nvshen-detail" class="com.yaowang.lansha.action.admin.RoomAction" method="detailHot">
+            <result>/lansha/admin/room/room-nvshen-edit.ftl</result>
+        </action>
+        <action name="room-nvshen-save" class="com.yaowang.lansha.action.admin.RoomAction" method="saveNvShen">
+            <result name="error">/lansha/admin/room/room-nvshen-edit.ftl</result>
+            <result name="success">/lansha/admin/room/room-nvshen-list.ftl</result>
+        </action>
+        <action name="room-nvshen-delete" class="com.yaowang.lansha.action.admin.RoomAction" method="deleteNvShen">
+            <result>/lansha/admin/room/room-nvshen-list.ftl</result>
+        </action>
+
+        <!-- 直播间广告 -->
+        <!-- 查看 -->
+        <action name="advertisement" class="com.yaowang.lansha.action.admin.LanshaAdvertisementAction" method="list">
+            <result>/lansha/admin/advertisement/advertisementList.ftl</result>
+        </action>
+        <!-- 跳转止新增和修改 -->
+        <action name="room-advertisement-detail" class="com.yaowang.lansha.action.admin.LanshaAdvertisementAction"
+                method="detail">
+            <result>/lansha/admin/advertisement/advertisementDetail.ftl</result>
+        </action>
+        <!-- 新增和修改 -->
+        <action name="room-advertisement-save" class="com.yaowang.lansha.action.admin.LanshaAdvertisementAction"
+                method="save">
+            <result>/lansha/admin/advertisement/advertisementList.ftl</result>
+        </action>
+        <!-- 删除-->
+        <action name="room-advertisement-delete" class="com.yaowang.lansha.action.admin.LanshaAdvertisementAction"
+                method="delete">
+            <result>/lansha/admin/advertisement/advertisementList.ftl</result>
+        </action>
+        <!-- 主播积分排行-->
+        <action name="anchorRank" class="com.yaowang.lansha.action.admin.LanshaRoomRankingAction" method="list">
+            <result>/lansha/admin/room/anchorRank.ftl</result>
+        </action>
+        <!-- 主播积分详情-->
+        <action name="anchorRank-detail" class="com.yaowang.lansha.action.admin.LanshaRoomRankingAction"
+                method="detail">
+            <result>/lansha/admin/room/anchorRank-detail.ftl</result>
+        </action>
+    </package>
+
+    <!-- 主播审核-->
+    <package name="project-admin-audit" namespace="/admin/audit" extends="project-admin">
+        <action name="audit" class="com.yaowang.lansha.action.admin.AuditAction" method="list">
+            <result>/lansha/admin/audit/audit.ftl</result>
+        </action>
+        <action name="audit-view" class="com.yaowang.lansha.action.admin.AuditAction" method="view">
+            <result>/lansha/admin/audit/auditView.ftl</result>
+        </action>
+        <action name="audit-doAudit" class="com.yaowang.lansha.action.admin.AuditAction" method="doAudit">
+            <result>/lansha/admin/audit/audit.ftl</result>
+        </action>
+        <action name="audit-pic" class="com.yaowang.lansha.action.admin.AuditAction" method="pic"/>
+    </package>
+
+    <!-- 会员管理 -->
+    <package name="admin-ywuser" namespace="/admin/ywuser" extends="project-admin">
+        <!-- 会员管理 -->
+        <action name="ywuser" class="com.yaowang.lansha.action.admin.YwUserAction" method="list">
+            <result>/lansha/admin/ywuser/ywuserList.ftl</result>
+        </action>
+        <action name="ywuser-info" class="com.yaowang.lansha.action.admin.YwUserAction" method="info">
+            <result>/lansha/admin/ywuser/ywuserInfo.ftl</result>
+        </action>
+        <action name="ywuser-save" class="com.yaowang.lansha.action.admin.YwUserAction" method="save">
+            <result name="success">/lansha/admin/ywuser/ywuserInfo.ftl</result>
+        </action>
+        <action name="ywuser-remove" class="com.yaowang.lansha.action.admin.YwUserAction" method="remove">
+            <result>/lansha/admin/ywuser/ywuserList.ftl</result>
+        </action>
+        <action name="ywuser-updateStatus" class="com.yaowang.lansha.action.admin.YwUserAction" method="updateStatus">
+            <result type="json"></result>
+        </action>
+        <action name="ywuser-updateBlack" class="com.yaowang.lansha.action.admin.YwUserAction" method="updateBlack">
+            <result type="json"></result>
+        </action>
+        <action name="ywuser-weblogin" class="com.yaowang.lansha.action.admin.YwUserAction" method="weblogin"/>
+
+        <action name="ywuser-app" class="com.yaowang.lansha.action.admin.YwUserAction" method="app"/>
+    </package>
+
+    <package name="admin-log" namespace="/admin/log" extends="project-admin">
+        <!-- 用户登录日志 -->
+        <action name="log-user" class="com.yaowang.lansha.action.admin.LogUserLoginAction" method="userLog">
+            <result>/admin/log/userLoginLog.ftl</result>
+        </action>
+        <!-- 用户登录日志删除 -->
+        <action name="log-user-delete" class="com.yaowang.lansha.action.admin.LogUserLoginAction" method="userDelete">
+            <result>/admin/log/userLoginLog.ftl</result>
+        </action>
+    </package>
+
+    <!-- 观看记录-->
+    <package name="admin-record" namespace="/admin/record" extends="project-admin">
+        <!-- 观看记录 -->
+        <action name="recordManage" class="com.yaowang.lansha.action.admin.UserRoomHistoryAction" method="list">
+            <result>/lansha/admin/record/recordManage.ftl</result>
+        </action>
+    </package>
+
+    <!-- 礼物管理 -->
+    <package name="admin-gift" namespace="/admin/gift" extends="project-admin">
+        <!-- 查看 -->
+        <action name="gift" class="com.yaowang.lansha.action.admin.LanshaGiftAction" method="list">
+            <result>/lansha/admin/gift/giftList.ftl</result>
+        </action>
+        <!-- 跳转止新增和修改 -->
+        <action name="gift-detail" class="com.yaowang.lansha.action.admin.LanshaGiftAction" method="detail">
+            <result>/lansha/admin/gift/giftDetail.ftl</result>
+        </action>
+        <!-- 新增和修改 -->
+        <action name="gift-save" class="com.yaowang.lansha.action.admin.LanshaGiftAction" method="save">
+            <result>/lansha/admin/gift/giftList.ftl</result>
+        </action>
+        <!-- 删除-->
+        <action name="gift-delete" class="com.yaowang.lansha.action.admin.LanshaGiftAction" method="delete">
+            <result>/lansha/admin/gift/giftList.ftl</result>
+        </action>
+
+    </package>
+
+    <!-- APP版本管理 -->
+    <package name="admin-lansha" namespace="/admin/lansha" extends="project-admin">
+        <!-- 查看 -->
+        <action name="version" class="com.yaowang.lansha.action.admin.LanshaVersionAction" method="list">
+            <result>/lansha/admin/version/versionList.ftl</result>
+        </action>
+        <!-- 跳转止新增和修改 -->
+        <action name="version-detail" class="com.yaowang.lansha.action.admin.LanshaVersionAction" method="detail">
+            <result>/lansha/admin/version/versionDetail.ftl</result>
+        </action>
+        <!-- 新增和修改 -->
+        <action name="version-save" class="com.yaowang.lansha.action.admin.LanshaVersionAction" method="save">
+            <result>/lansha/admin/version/versionList.ftl</result>
+        </action>
+        <!-- 删除-->
+        <action name="version-delete" class="com.yaowang.lansha.action.admin.LanshaVersionAction" method="delete">
+            <result>/lansha/admin/version/versionList.ftl</result>
+        </action>
+    </package>
+
+
+    <!-- 直播报表 -->
+    <package name="admin-report" namespace="/admin/report" extends="project-admin">
+        <!-- 列表直播报表数据 -->
+        <action name="live" class="com.yaowang.lansha.action.admin.LiveReportAction" method="liveReport">
+            <result>/lansha/admin/report/report-list.ftl</result>
+        </action>
+        <!-- 直播报表详情 -->
+        <action name="live-detail" class="com.yaowang.lansha.action.admin.LiveReportAction" method="liveDetailReport">
+            <result>/lansha/admin/report/report-detail.ftl</result>
+        </action>
+        <!-- 直播报表数据导出 -->
+        <action name="live-export" class="com.yaowang.lansha.action.admin.LiveReportAction" method="liveReportExport"/>
+        <!-- 直播报表数据导出 -->
+        <action name="live-detailExport" class="com.yaowang.lansha.action.admin.LiveReportAction"
+                method="liveDetailReportExport"/>
+
+        <!-- 意见反馈 -->
+        <action name="suggestion" class="com.yaowang.lansha.action.admin.SuggestionAction" method="list">
+            <result>/lansha/admin/suggestion/suggestion-list.ftl</result>
+        </action>
+        <!-- 意见反馈详情 -->
+        <action name="suggestion-detail" class="com.yaowang.lansha.action.admin.SuggestionAction" method="detail">
+            <result>/lansha/admin/suggestion/suggestion-detail.ftl</result>
+        </action>
+
+        <!-- 注册量统计 -->
+        <action name="regiest" class="com.yaowang.lansha.action.admin.RegiestStatisticsAction" method="list">
+            <result>/lansha/admin/report/regiest.ftl</result>
+        </action>
+        <action name="regiest-statistics" class="com.yaowang.lansha.action.admin.RegiestStatisticsAction"
+                method="statistics"/>
+
+        <!--推广注册统计 -->
+        <action name="user" class="com.yaowang.lansha.action.admin.PopularizeRegisterStatisticsAction" method="list">
+            <result>/lansha/admin/report/popularizeRegisterStatisticsList.ftl</result>
+        </action>
+    </package>
+
+</struts>

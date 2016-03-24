@@ -1,0 +1,149 @@
+html { background: #e6e6e6; }
+body { min-width: 320px; max-width: 640px; margin: 0 auto; }
+.header { width: 100%; height: 50px; background: #292f35; }
+.logo { width: 88px; height: 19px; margin-top: 16px; margin-left: 5.3%; background: url("../images/logo.png") no-repeat; background-size: cover; }
+.header p { margin-right: 5.3%; font: 13px/50px "Microsoft YaHei"; color: #fff; }
+.select { width: 100%; height: 44px; background: #e6e6e6; }
+.select-a { width: 15.2%; height: 44px; font: 16px/44px "Microsoft YaHei"; color: #8d979e; text-align: center; }
+.selected { height: 40px; border-bottom: 4px solid #3ca2f0; font: 16px/40px "Microsoft YaHei"; color: #3ca2f0; }
+.rec { margin-left: 25.6%; }
+.live { margin-right: 25.6%; }
+.selectfed { position: fixed; top: 0; left: 0; right: 0; z-index: 9; }
+.downloadfed { margin-top: 44px; }
+.download { display: block; width: 100%; height: 110px; background: url("../../upload/download-bg.jpg") no-repeat; background-size: 100% 100%; }
+.list-title { width: 92.06%; height: 16px; margin: 0 auto; padding: 10px 2.6% 10px 0; }
+.list-title h3 { padding-left: 3.5%; font: 16px/16px "Microsoft YaHei"; color: #292f35; border-left: 2px solid #3ba2ef; }
+.list-title a { width: 10px; height: 16px; background: url("../images/right-icon.png") no-repeat; background-size: 100% 100%; }
+.list { width: 94.66%; margin: 0 auto; position: relative; z-index: 8; }
+.list .game-one { width: 48.5%; margin-top: 10px; }
+.game-one a { position: relative; z-index: 9; width: 100%; }
+.game-one:nth-child(2n) { margin-left: 3%; }
+.game-one .live-user { position: absolute; bottom: 0; left: 0; width: 86.7%; padding: 0 4.5% 0 8.8%; height: 25px; background: rgba(0, 0, 0, 0.6); }
+.game-one img { width: 100%; display: block; }
+.game-one .liver { max-width: 43.3%; height: 25px; font: 12px/25px "Microsoft YaHei"; color: #fff; text-align: center; overflow: hidden; }
+.game-one .watchNum { max-width: 43.3%; height: 25px; padding-left: 16px; font: 12px/25px "Microsoft YaHei"; color: #fff; background: url("../images/watch-icon.png") no-repeat left 6px; background-size: 14px 12px; overflow: hidden; }
+.game-one h3 { width: 86.7%; padding: 0 4.5% 0 8.8%; color: #292f35; font: 14px/25.8px "Microsoft YaHei"; height: 28.5px; overflow: hidden; background: #fff; }
+.noMoreData { transition: all 3s; width: 98%; height: 45px; border: 1px solid #e5e5e5; margin: 10px auto; text-align: center; line-height: 45px; margin-bottom: 50px; cursor: pointer; border-radius: 2.5px; background-color: #fff; color: #999; }
+.hide3s { opacity: 0; *display: none; cursor: default; }
+/*直播详情页面*/
+.play { width: 100%; height: auto; background: url('../images/play-bg.jpg') center center no-repeat; background-size: cover; overflow: hidden; }
+.play img { width: 100%; display: block; }
+.playerArea { width: 100%; height: auto; position: relative; }
+.playerArea video { width: 100%; height: 100%; background: none; }
+.play .watchNum { position: absolute; left: 0; right: 0; top: 0; height: 35px; background: rgba(0, 0, 0, 0.4); z-index: 9; }
+.play .watchNum p { max-width: 73.3%; height: 35px; margin-right: 20px; padding-left: 21px; font: 12px/35px "Microsoft YaHei"; color: #fff; background: url("../images/watch-icon.png") no-repeat left 11px; background-size: 14px 12px; overflow: hidden; }
+.play .error { position: absolute; left: 0; right: 0; top: 0; bottom: 0; line-height: 100%; text-align: center; z-index: 99; background: #000; color: #fff; font-size: 24px; }
+.hide { display: none; }
+.live-man { width: 94.66%; padding: 0 2.67%; height: 65px; background: #fff; }
+.live-man img { margin: 5px 3.2% 5px 0; width: 55px; height: 55px; border-radius: 55px; }
+.live-msg { width: 43%; overflow: hidden; }
+.live-name { margin-top: 8px; font: 16px/1.5 "Microsoft YaHei"; color: #292f35; height: 24px; }
+.live-id { font: 14px/1.5 "Microsoft YaHei"; color: #8d979e; height: 21px; }
+.live-id em { color: #3ba2ef; }
+.share { margin-top: 13px; width: 26px; height: 38px; background: url("../images/share-icon.png") no-repeat; background-size: 100% 100%; }
+.follow { margin-top: 16px; margin-right: 10.3%; width: 40px; padding: 20px 0 0 10px; height: 17px; background: url("../images/follow-icon.png") no-repeat; background-size: 100% 50%; font: 10px/1.5 "Microsoft YaHei"; color: #ff7132; }
+.play .back { width: 25px; height: 20px; border-radius: 35px; background: url("../images/back-icon.png") no-repeat center center; background-size: 50% 50%; margin: 8px; }
+.fixed { position: fixed; top: 0; left: 0; right: 0; z-index: 10; }
+.down { display: block; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; max-height: 60px;}
+.down img { width: 100%; display: block;max-height: 60px;}
+/*下载页面*/
+.download-logo { width: 24%; margin: 60px auto 235px; }
+.download-logo img { width: 100%; display: block; }
+.download-logo p { width: 100%; color: #3ba2ef; font: 16px/1.5 "Microsoft YaHei"; text-align: center; }
+.download-btn { display: block; width: 89.6%; margin: 0 auto; height: 50px; font: 17px/50px "Microsoft YaHei"; color: #fff; background: #3ba2ef; border-radius: 50px; text-align: center; }
+.download-btn.gray { background: #ccc; color: #f0f0f0; }
+.fixed-bg { display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 99; background: #8a8a8a; opacity: .6; }
+.fixed-bg .tips-box { padding-top: 12px; padding-left: 16%; margin-right: 5%; width: 67%; height: 83px; line-height: 30px; background: url("../images/tips-boxbg.png") no-repeat; background-size: 100% 100%; }
+.fixed-bg .tips-box p { padding-top: 17px; font: 14px/25px "Microsoft YaHei"; color: #fff; }
+/*分享*/
+.bdsharebuttonbox { position: fixed; bottom: 113px; left: 10%; z-index: 999; width: calc(80% - 40px); height: 270px; background: #fff; padding: 0 20px 20px 20px; }
+.bdsharebuttonbox a { float: none !important; display: block; position: relative; z-index: 999; background-position: 0 0 !important; width: 40px !important; margin: 0 auto !important; height: 40px !important; text-indent: 0 !important; }
+.bdsharebuttonbox .bds_tsina { background: url("../images/sina-icon.png") no-repeat; background-size: 100% 100%; }
+.bdsharebuttonbox .bds_weixin { background: url("../images/wechat-icon.png") no-repeat; background-size: 100% 100%; }
+.bdsharebuttonbox .bds_sqq { background: url("../images/qq-icon.png") no-repeat; background-size: 100% 100%; }
+.bdsharebuttonbox .bds_qzone { background: url("../images/qzone-icon.png") no-repeat; background-size: 100% 100%; }
+.bdsharebuttonbox .bds_copy { background: url("../images/copy-icon.png") no-repeat; background-size: 100% 100%; }
+.bdsharebuttonbox .close-btn { position: absolute; bottom: -2px; left: 0; height: 50px; background: #f0f0f0; width: 100%; font: 15px/50px "Microsoft YaHei"; color: #292f35; text-align: center; }
+.bdsharebuttonbox .ff { width: 100%; margin-top: 40px; }
+.bdsharebuttonbox .ff .san { width: 21%; margin: 0 6%; }
+.bdsharebuttonbox p { width: 120%; margin-left: -10%; font: 13px/16px "Microsoft YaHei"; height: 16px; color: #292f35; text-align: center; margin-top: 5px; }
+.live-detail .fixed-bg { background: rgba(0, 0, 0, .6); opacity: 1; }
+@media (device-width: 320px) {
+.live-man { height: 60px; }
+.live-man img { margin: 2.5px 3.2% 2.5px 0; }
+.live-name { margin-top: 3px; }
+.share { margin-top: 8px; }
+.follow { margin-top: 11px; margin-right: 5%; }
+.bdsharebuttonbox { bottom: 70px; }
+}
+
+#video-show {position: absolute;width: 100%;z-index:6;top: 0px;left: 0px;}
+#videoPlayer {position: absolute;width: 100%;z-index:5;top: 0px;left: 0px;background: #191919;}
+.playBtn{position:absolute;top:50%;left:50%;width:92px;height:92px;margin:-49px 0 0 -46px;background:url('../images/playCircle.png') 12px 13px no-repeat;background-size:110px 72px;background-color:rgba(0,0,0,0)}
+.playBtn:after{content:'';display:block;position:absolute;top:50%;left:50%;width:30px;height:36px;margin:-17px -11px;background:url('../images/playCircle.png') -75px 0 no-repeat;background-size:110px 72px}
+.playBtn.pause:after{content:'';display:block;position:absolute;top:50%;left:50%;width:30px;height:34px;margin:-15px -12px;background:url('../images/playCircle.png') -79px -34px no-repeat;background-size:110px 72px}
+.x-loading-spinner{display:none;position:absolute;top:50%;left:50%;font-size:4em;line-height:1;width:1em;height:1em;margin-left:-0.5em;margin-top:-0.5em;opacity:.75;z-index:6;-webkit-animation:spin 1.5s infinite linear;-moz-animation:spin 1.5s infinite linear;-o-animation:spin 1.5s infinite linear;animation:spin 1.5s infinite linear;background:#fff;border-radius:50%}
+.x-loading-spinner:before{content:"\e01e";font-family:VideoJS;position:absolute;top:0;left:0;width:1em;height:1em;text-align:center;text-shadow:0 0 .1em #000}
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(359deg);
+    }
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
+}
+@-o-keyframes spin {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+.load-container{display:none;position:absolute;top:50%;left:50%;font-size:4em;line-height:1;width:1em;height:1em;margin-left:-0.5em;margin-top:-0.5em;opacity:.75;z-index:6}
+.load1 .loader,.load1 .loader:before,.load1 .loader:after{background:#FFF;-webkit-animation:load1 1s infinite ease-in-out;animation:load1 1s infinite ease-in-out;width:1em;height:4em}
+.load1 .loader:before,.load1 .loader:after{position:absolute;top:0;content:''}
+.load1 .loader:before{left:-1.5em;-webkit-animation-delay:-0.32s;animation-delay:-0.32s}
+.load1 .loader{text-indent:-9999em;position:relative;font-size:11px;-webkit-animation-delay:-0.16s;animation-delay:-0.16s}
+.load1 .loader:after{left:1.5em}
+@-webkit-keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #FFF;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #ffffff;
+        height: 5em;
+    }
+}
+@keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #FFF;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #ffffff;
+        height: 5em;
+    }
+}

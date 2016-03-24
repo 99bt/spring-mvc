@@ -1,0 +1,196 @@
+/*reset.css*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td { padding: 0; margin: 0; font-family: "Microsoft Yahei"; }
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0; }
+address, caption, cite, code, dfn, em, strong, th, var { font-weight: normal; font-style: normal; }
+ol, ul { list-style: none; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
+input, button, textarea { outline: none; }
+a { text-decoration: none; color: #2e2e2e; }
+a, a:active, a:focus { outline: none; -webkit-tap-highlight-color: transparent; }
+/*common*/
+.clearfix:after { content: "."; display: block; height: 0; visibility: hidden; clear: both; }
+.clearfix { *zoom: 1; }
+.fl { float: left; }
+.fr { float: right; }
+body {max-width: 640px; padding-bottom: 50px;margin: 0 auto;font-weight: normal;}
+.mgt10 {margin-top: 10px;}
+.hide {display: none;}
+.show {display: block;}
+/** index **/
+.index-topbar {height: 45px;background: #3ca2f0;}
+.index-topbar .logo {float: left;margin: 12px 0 0px 15px;}
+.index-topbar .logo img {height: 22px;}
+.index-topbar .slgo {float: right;line-height: 45px;margin-right: 10px;color: #fff;font-size: 12px;}
+.index-nav {width: 100%;height: 40px;background: #fff;overflow: hidden;border-bottom: 1px solid #f5f5f5;position: relative;}
+.index-nav .swiper-wrapper {padding-right: 30px;}
+.index-nav .navs {width: 90%;float: left;}
+.index-nav .swiper-slide {padding: 0 10px;width:auto;line-height: 40px;font-size: 12px;}
+.index-nav .on a {border: 2px solid #3ca2f0;padding: 4px 10px; border-radius: 14px 14px;}
+.index-nav .move-item {position: absolute;right: 0px;top:0px;height: 40px;width: 30px;background: url("../images/move-item-btn.png") center center no-repeat #FFF;background-size: 30% 35%;; z-index: 2;box-shadow: -1px 0 10px 1px #ccc;}
+.siderbar {width: 100%;height: 121px;overflow: hidden;position: relative;}
+.siderbar img {width:100%;height: 121px;}
+.siderbar .pagination {position: absolute;z-index: 20;bottom: 10px;right:0px;width: 66px;text-align: right;}
+.siderbar .swiper-pagination-bullet {display: inline-block;width: 8px;height: 8px;border-radius:5px;background: #fff;margin: 0 2px;opacity: 0.8;
+cursor: pointer;}
+.siderbar .swiper-pagination-bullet-active {background: #3ba2ef;}
+.recommend-boger { padding:10px 0px;width: 96%;overflow: hidden; margin: 0 auto;}
+.recommend-boger .swiper-slide {width: 63px;float: left;overflow: hidden;margin-right: 10px;}
+.recommend-boger .swiper-slide a {display: block;text-align: center;}
+.recommend-boger .swiper-slide img {width: 63px; height: 63px;border-radius: 100%;}
+.recommend-boger .swiper-slide p {font-size: 12px;height: 20px;overflow: hidden;line-height: 20px;text-overflow: ellipsis;white-space: nowrap;}
+.recommend-live {padding: 0 10px;}
+.recommend-live .rlive-title {line-height: 16px;height: 20px; margin: 5px 0px;}
+.recommend-live .rlive-title h2 {border-left: 2px solid #3ba2ef;font-size: 16px;color: #292f35;padding-left: 4px;}
+.recommend-live .rlive-title span, .recommend-live .rlive-title span a {font-size: 12px;color: #9fa7ad;}
+.recommend-live .rlive-title span a img {width: 8px;height: 13px; vertical-align: middle;margin-left: 4px;}
+    /** download-bar **/
+.download-bar {width: 100%;padding: 8px 10px;position: fixed;left: 0px;bottom: 0px;z-index: 80;background: #0f0f0f;background: rgba(0, 0, 0, .8); opacity: 1;font-weight: lighter;}
+.download-bar .left {height: 40px;color: #FFF;font-size: 12px;}
+.download-bar .left img {width: 40px;height: 40px;margin-right: 4px;}
+.download-bar .left p {margin-top: 2px;line-height: 18px;}
+.download-bar .right {float: right;}
+.download-bar .right .download-btn {float: right;display: block;width: 120px;height: 40px;border-radius: 5px;background: #fd6d04;text-align: center;font-size: 17px;color: #ffffff;line-height: 40px;margin-right: 15px;font-weight: lighter;}
+/** livebox **/
+.live-list {}
+.live-list li {width: 49%;padding-bottom: 21px;float: left;margin-right: 2%;position: relative;margin-bottom: 10px;}
+/*.live-list li.last {margin-right: 0px;}*/
+.live-list li:nth-child(even) {margin-right: 0px;}
+.live-list li img {width: 100%; height: 97px;border-radius: 8px;}
+.live-list li .mask {background-color:rgba(0,0,0,0);background:-moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));background:-webkit-gradient(linear,top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.7)));background:-webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));background:-o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));position: absolute;z-index: 2;left: 0px;top: 0px;width: 100%;border-radius: 8px;}
+.live-list li .room-info {position: absolute;left: 0px;bottom: 0px;width: 100%;height: 45px;overflow: hidden;z-index: 9;}
+.live-list li h2 {overflow: hidden;line-height: 20px;font-size: 12px;color: #ffffff;text-overflow: ellipsis;white-space: nowrap;}
+.live-list li .avatar {width: 30px;height: 30px;float: left;border: 2px solid #fff;border-radius: 100%;margin-right: 5px;margin-top: 5px;}
+.live-list li .room-info p {font-size: 12px;color: #0f0f0f;line-height: 22px;}
+.live-list li .room-info .uname {color: #292f35;max-width: 45%;overflow: hidden;line-height: 20px;text-overflow: ellipsis;white-space: nowrap;}
+.live-list li .room-info .viewnum {color: #9fa7ad;padding-left: 16px;background: url("../images/view-num-bg.png") 0 center no-repeat;background-size: 13px 11px; }
+.live-list li .gallerytitle{text-shadow:1px 1px 1px #000;background-color:rgba(0,0,0,0);background:-moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));background:-webkit-gradient(linear,top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.7)));background:-webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));background:-o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7))}
+
+/** live **/
+.game-header {width: 100%;height: 150px;overflow: hidden;position: relative;}
+.game-header .mask {background-color:rgba(0,0,0,0);background:-moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));background:-webkit-gradient(linear,top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.7)));background:-webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));background:-o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.7));position: absolute;z-index: 2;left: 0px;top: 0px;width: 100%;display:block;bottom: 0px;}
+.game-header img {width: 100%; height: 150px;}
+.game-header .game-info {position: absolute;left: 10px;bottom: 5px;z-index: 9; width: 100%;}
+.game-header .game-info .game-icon {width: 50px;height: 50px;float: left;margin-right: 5px;}
+.game-header .game-info .game-name {font-size: 15px;color: #fff;line-height: 24px;margin-top: 4px;}
+.game-header .game-info .game-roomsnum {font-size: 12px;color: #707070;margin-top: 5px;}
+
+/** room **/
+.play { width: 100%; height: auto; background: url('') center center no-repeat; background-size: cover; overflow: hidden; }
+.play img { width: 100%; display: block; }
+.playerArea { width: 100%; height: auto; position: relative;background-color: #3ba2ef; }
+.playerArea video { width: 100%; height: 100%; background: none; }
+.play .watchNum { position: absolute; left: 0; right: 0; top: 0; height: 35px; background: rgba(0, 0, 0, 0.4); z-index: 110; }
+.play .watchNum p { max-width: 73.3%; height: 35px; margin-right: 10px; padding-left: 21px; font: 12px/35px "Microsoft YaHei"; color: #fff; background: url("../images/watch-icon.png") no-repeat left 11px; background-size: 14px 12px; overflow: hidden; }
+.play .error { position: absolute; left: 0; right: 0; top: 0; bottom: 0; line-height: 100%; text-align: center; z-index: 99; background: #000; color: #fff; font-size: 20px; opacity: 0.85;}
+.play .back { width: 25px; height: 20px; border-radius: 35px; background: url("../images/back-icon.png") no-repeat center center; background-size: 50% 50%; margin: 8px; }
+
+#video-show {position: absolute;width: 100%;z-index:6;top: 0px;left: 0px;}
+#videoPlayer {position: absolute;width: 100%;z-index:5;top: 0px;left: 0px;background: #191919;}
+.playBtn{position:absolute;top:50%;left:50%;width:92px;height:92px;margin:-49px 0 0 -46px;background:url('../images/playCircle.png') 12px 13px no-repeat;background-size:110px 72px;background-color:rgba(0,0,0,0)}
+.playBtn:after{content:'';display:block;position:absolute;top:50%;left:50%;width:30px;height:36px;margin:-17px -11px;background:url('../images/playCircle.png') -75px 0 no-repeat;background-size:110px 72px}
+.playBtn.pause:after{content:'';display:block;position:absolute;top:50%;left:50%;width:30px;height:34px;margin:-15px -12px;background:url('../images/playCircle.png') -79px -34px no-repeat;background-size:110px 72px}
+/** loading **/
+.load-container{display:none;position:absolute;top:50%;left:50%;font-size:4em;line-height:1;width:1em;height:1em;margin-left:-0.5em;margin-top:-0.5em;opacity:.75;z-index:6}
+.load1 .loader,.load1 .loader:before,.load1 .loader:after{background:#FFF;-webkit-animation:load1 1s infinite ease-in-out;animation:load1 1s infinite ease-in-out;width:1em;height:4em}
+.load1 .loader:before,.load1 .loader:after{position:absolute;top:0;content:''}
+.load1 .loader:before{left:-1.5em;-webkit-animation-delay:-0.32s;animation-delay:-0.32s}
+.load1 .loader{text-indent:-9999em;position:relative;font-size:11px;-webkit-animation-delay:-0.16s;animation-delay:-0.16s}
+.load1 .loader:after{left:1.5em}
+@-webkit-keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #FFF;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #ffffff;
+        height: 5em;
+    }
+}
+@keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 #FFF;
+        height: 4em;
+    }
+    40% {
+        box-shadow: 0 -2em #ffffff;
+        height: 5em;
+    }
+}
+/** tab **/
+#tabs-container{height:100%;background: #f7f7f7;}
+.tabs{background-size:auto 100%;width:100%;height:40px;overflow:hidden;}
+.tabs a{font-size: 15px;font-weight: normal; text-align: center; float: left; width: 33.3333%; height: 38px; line-height: 38px; color: #999999;border-bottom: 1px solid #999999;}
+.tabs a.active {color: #3ba2ef;border-bottom: 2px solid #3ba2ef;}
+.content-slide .boger-info {overflow: hidden; margin: 5px auto;}
+.content-slide .boger-info .avatar {width: 55px;height: 55px;float: left;border-radius: 100%;margin: 10px;}
+.content-slide .boger-info .uname {font-size: 16px;line-height: 24px;color: #292f35;margin-top: 15px;}
+.content-slide .boger-info .room-game {font-size: 12px;color: #999999;margin-top: 5px;}
+.content-slide .boger-info .room-game em {color: #3ba2ef;}
+.content-slide .doarea {overflow: hidden;}
+.content-slide .btn {display: block;border-radius: 3px; background: #ff7132;width: 46%;height: 40px;line-height: 40px;text-align: center;float: left;color: #fff;margin-left: 2.5%;}
+.content-slide .btn img {width: 17px;height: 17px;margin-right: 4px;vertical-align: middle;}
+.room-note {width: 96%; margin: 15px auto 10px;}
+.room-note .title {font-size: 16px;color: #292f35;padding-left: 6px;border-left: 2px solid #3ba2ef;}
+.room-note .content {font-size: 12px;color: #999999;line-height: 20px;margin-top: 10px;}
+/** talk list **/
+.talk-area {overflow: hidden}
+.talk-area .avatar {width: 50px;height: 50px;float: left;border-radius: 100%;margin: 10px;}
+.talk-area .talk-input {float: left;width: 50%;border: 1px solid #e0e0e0;height: 34px;line-height: 34px;padding: 2px 4px;margin-top: 20px;border-radius: 3px;font-size: 13px;outline: none;}
+.talk-area .btn {width: 15%;text-align: center;color: #fff;line-height: 40px;height: 40px;float: right;margin-right: 10px;margin-top: 20px;font-size: 14px;background: #3ba2ef;}
+
+.content-slide .talk-list {width: 96%;margin: 4px auto;}
+.content-slide .talk-list li {line-height: 22px;color: #999;font-size: 12px;}
+.content-slide .talk-list li .talk-content {color: #292f35;}
+.content-slide .live-list {width: 96%;margin: 10px auto;}
+/** gift **/
+.gift-area {position: fixed;right: 4px;bottom: 65px;z-index:90;}
+.gift-area a {display: block;width: 43px;height: 40px;float: left;margin-right: 10px;}
+.gift-area a img {width: 43px;height: 40px;}
+
+/** share **/
+.fixed-bg { display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 99; opacity: 1; }
+.fixed-bg .tips-box { padding-top: 12px; padding-left: 16%; margin-right: 5%; width: 67%; height: 83px; line-height: 30px; background: url("../images/tips-boxbg.png") no-repeat; background-size: 100% 100%; }
+.fixed-bg .tips-box p { padding-top: 17px; font: 14px/25px "Microsoft YaHei"; color: #fff; }
+/*分享*/
+.bdsharebuttonbox { position: fixed; bottom: 113px; left: 10%; z-index: 999; width: calc(80% - 40px); height: 270px; background: #fff; padding: 0 20px 20px 20px; }
+.bdsharebuttonbox a { float: none !important; display: block; position: relative; z-index: 999; background-position: 0 0 !important; width: 40px !important; margin: 0 auto !important; height: 40px !important; text-indent: 0 !important; }
+.bdsharebuttonbox .bds_tsina { background: url("../images/sina-icon.png") no-repeat; background-size: 100% 100%; }
+.bdsharebuttonbox .bds_weixin { background: url("../images/wechat-icon.png") no-repeat; background-size: 100% 100%; }
+.bdsharebuttonbox .bds_sqq { background: url("../images/qq-icon.png") no-repeat; background-size: 100% 100%; }
+.bdsharebuttonbox .bds_qzone { background: url("../images/qzone-icon.png") no-repeat; background-size: 100% 100%; }
+.bdsharebuttonbox .bds_copy { background: url("../images/copy-icon.png") no-repeat; background-size: 100% 100%; }
+.bdsharebuttonbox .close-btn { position: absolute; bottom: -2px; left: 0; height: 50px; background: #f0f0f0; width: 100%; font: 15px/50px "Microsoft YaHei"; color: #292f35; text-align: center; }
+.bdsharebuttonbox .ff { width: 100%; margin-top: 40px; position:relative;}
+.bdsharebuttonbox .ff .san { width: 21%; margin: 0 6%; }
+.bdsharebuttonbox p { width: 120%; margin-left: -10%; font: 13px/16px "Microsoft YaHei"; height: 16px; color: #292f35; text-align: center; margin-top: 5px;position:relative; }
+
+.loadingTips {padding:10px 20px;text-align: center;background-color: rgba(0,0,0,.8);color: #fff;font-size: 14px;position: fixed;z-index: 999;left: 50%;top: 50%;margin-left: -40px;margin-top: -40px;border-radius: 5px;display: none;}
+/*下载页面*/
+.download-logo { width: 24%; margin: 60px auto 235px; }
+.download-logo img { width: 100%; display: block; }
+.download-logo p { width: 100%; color: #3ba2ef; font: 16px/1.5 "Microsoft YaHei"; text-align: center; }
+.download-btn { display: block; width: 89.6%; margin: 0 auto; height: 50px; font: 17px/50px "Microsoft YaHei"; color: #fff; background: #3ba2ef; border-radius: 50px; text-align: center; }
+.download-btn.gray { background: #ccc; color: #f0f0f0; }
+.download-fixed-bg { display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 99; background: #8a8a8a; opacity: .6; }
+.download-fixed-bg .tips-box { padding-top: 12px; padding-left: 16%; margin-right: 5%; width: 67%; height: 83px; line-height: 30px; background: url("../images/tips-boxbg.png") no-repeat; background-size: 100% 100%; }
+.download-fixed-bg .tips-box p { padding-top: 17px; font: 14px/25px "Microsoft YaHei"; color: #fff; }
+
+@media (device-width: 320px) {
+    .live-man { height: 60px; }
+    .live-man img { margin: 2.5px 3.2% 2.5px 0; }
+    .live-name { margin-top: 3px; }
+    .share { margin-top: 8px; }
+    .follow { margin-top: 11px; margin-right: 5%; }
+    .bdsharebuttonbox { bottom: 70px; }
+}
+/** 适配 **/
+@media screen and (max-width:320px) {
+    .recommend-boger li img {width: 50px;height: 50px;}
+}

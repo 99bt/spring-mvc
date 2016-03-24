@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-lazy-init="true">
+	<description>spring定时器</description>
+	
+	<!-- 每个月2号凌晨2时定时启动，删除上个月的临时目录 -->
+	<bean id="tempFileDirTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref ="tempFileDirService" />
+		<property name="targetMethod" value="deleteDir" />
+	</bean>
+	<bean id="tempFileDirTask" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref ="tempFileDirTaskJob" />
+		<!-- 每月2号凌晨2点执行
+		 --> 
+		<property name="cronExpression" value="0 0 2 2 * ?" />
+		<!-- 测试（1分钟）
+		<property name="cronExpression" value="1 * * * * ?" />
+		-->
+	</bean>
+
+	<!-- 启动定时器 -->
+	<bean class="com.yaowang.util.spring.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref local="tempFileDirTask" />
+			</list>
+		</property>
+	</bean>
+</beans>

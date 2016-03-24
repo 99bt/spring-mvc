@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 移动端接口 -->
+	<package name="lansha-mobile-base" namespace="/" extends="project-base">
+		<!-- 拦截器 -->
+		<interceptors>
+			<!-- 系统错误接口 -->
+			<interceptor name="jsonSystemInterceptor" class="com.yaowang.lansha.common.interceptors.JsonSystemInterceptor" />
+			<!-- 管理员登录拦截器 -->
+			<interceptor name="lanshaMobileUserInterceptor" class="com.yaowang.lansha.common.interceptors.LanshaMobileUserInterceptor" />
+			
+			<interceptor-stack name="jsonSystemInterceptorStack">
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="jsonSystemInterceptor" />
+				<interceptor-ref name="lanshaMobileUserInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 默认拦截器 -->
+		<default-interceptor-ref name="jsonSystemInterceptorStack" />
+	</package>
+	
+	<package name="lansha-mobile-login" namespace="/" extends="lansha-mobile-base">
+		<!-- 拦截器 -->
+		<interceptors>
+			<!-- 管理员登录拦截器 -->
+			<interceptor name="lanshaMobileInterceptor" class="com.yaowang.lansha.common.interceptors.LanshaMobileInterceptor" />
+			<interceptor-stack name="lanshaMobileInterceptorStack">
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="jsonSystemInterceptor" />
+                <interceptor-ref name="lanshaMobileUserInterceptor" />
+				<interceptor-ref name="lanshaMobileInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 默认拦截器 -->
+		<default-interceptor-ref name="lanshaMobileInterceptorStack" />
+	</package>
+	
+	<!-- 首页 -->
+	<package name="lansha-mobile-index" namespace="/mobile/index" extends="lansha-mobile-base">
+		<!-- 首页数据 -->
+		<action name="index" class="com.yaowang.lansha.action.mobile.IndexAction" method="index" />
+		<!-- 热门推荐 -->
+		<action name="hotRoom" class="com.yaowang.lansha.action.mobile.IndexAction" method="hotRoom" />
+
+        <action name="indexV2" class="com.yaowang.lansha.action.mobile.RoomAction" method="indexV2" />
+
+	</package>
+	
+	<!-- 游戏 -->
+	<package name="lansha-mobile-game" namespace="/mobile/game" extends="lansha-mobile-base">
+		<!-- 游戏列表 -->
+		<action name="list" class="com.yaowang.lansha.action.mobile.GameAction" method="list" />
+		<!-- 全文搜索 -->
+		<action name="search" class="com.yaowang.lansha.action.mobile.GameAction" method="search" />
+		<!-- 全文搜索结果 -->
+		<action name="dosearch" class="com.yaowang.lansha.action.mobile.GameAction" method="dosearch" />
+        <!-- 游戏分类数据-->
+        <action name="type" class="com.yaowang.lansha.action.mobile.GameAction" method="type" />
+
+        <!-- 游戏数据 -->
+        <action name="data" class="com.yaowang.lansha.action.mobile.RoomAction" method="data" />
+	</package>
+	
+	<!-- 直播 -->
+	<package name="lansha-mobile-live" namespace="/mobile/live" extends="lansha-mobile-base">
+		<!-- 直播列表 -->
+		<action name="list" class="com.yaowang.lansha.action.mobile.LiveAction" method="list"/>
+		<!-- 直播间 -->
+		<action name="live" class="com.yaowang.lansha.action.mobile.LiveAction" method="live"/>
+        <!-- 直播间  listv2 -->
+        <action name="listv2" class="com.yaowang.lansha.action.mobile.RoomAction" method="listv2"/>
+
+        <action name="ticketRank" class="com.yaowang.lansha.action.mobile.TicketRankingAction" method="ranking"/>
+
+        <action name="recommend" class="com.yaowang.lansha.action.mobile.RoomAction" method="recommend" />
+
+
+
+
+	</package>
+	<!-- 直播(需要登录) -->
+	<package name="lansha-mobile-live-login" namespace="/mobile/live" extends="lansha-mobile-login">
+		<!-- 送礼物 -->
+		<action name="gift" class="com.yaowang.lansha.action.mobile.LiveAction" method="gift"/>
+		<!-- 领取礼物 -->
+		<action name="getBi" class="com.yaowang.lansha.action.mobile.LiveAction" method="getBi"/>
+		<!-- 订阅 -->
+		<action name="relation" class="com.yaowang.lansha.action.mobile.LiveAction" method="relation"/>
+	</package>
+	
+	<!-- 个人中心 -->
+	<package name="lansha-mobile-user" namespace="/mobile/user" extends="lansha-mobile-login">
+		<!--  我的页面-->
+		<action name="my" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="my" />
+		<!--  历史记录-->
+		<action name="history" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="history" />
+		<!--  订阅记录-->
+		<action name="relation" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="relation" />
+		<!--  资料编辑-->
+		<action name="info" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="info" />
+		<!--  保存资料-->
+		<action name="infoSave" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="infoSave" />
+		<!--  上传头像-->
+		<action name="infoIco" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="infoIco" />
+		<!-- 手机绑定 -->
+		<action name="mobileBand" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="mobileBand" />
+		<!-- 主播申请 -->
+		<action name="becomeanchor" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="becomeanchor" />
+        <!--主播申请进度-->
+        <action name="applicationStatus" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="applicationStatus" />
+
+		<action name="becomeanchor-pic" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="pic" />
+		<!-- 保存主播申请信息 -->
+		<action name="becomeanchorsave" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="becomeanchorsave" />
+		<!-- 中奖记录 -->
+		<action name="record" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="record" />
+		<!-- 收货地址 -->
+		<action name="address" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="address" />
+		<!-- 保存收货地址 -->
+		<action name="saveAddress" class="com.yaowang.lansha.action.mobile.UserCenterAction" method="saveAddress" />
+        <!-- 禁言设置 -->
+        <action name="muzzled" class="com.yaowang.lansha.action.mobile.LanshaRoomBlackAction" method="muzzled" />
+
+
+	</package>
+	
+	<package name="interface-user-basic" namespace="/mobile/settings" extends="lansha-mobile-base">
+		<!-- 短信发送-->
+		<action name="mt" class="com.yaowang.lansha.action.mobile.RegisterAction" method="sendSMS" />
+		<!-- 忘记密码-->
+		<action name="resetPwd" class="com.yaowang.lansha.action.mobile.RegisterAction" method="updatePassword" />
+        <!-- 找回密码-->
+        <action name="findpwd" class="com.yaowang.lansha.action.mobile.RegisterAction" method="findpwd" />
+		<!-- 注册-->
+		<action name="register" class="com.yaowang.lansha.action.mobile.RegisterAction" method="register" />
+		<!-- 设备号是否已注册过 -->
+		<action name="device" class="com.yaowang.lansha.action.mobile.RegisterAction" method="device" />
+		
+		<!-- 登录-->
+		<action name="login" class="com.yaowang.lansha.action.mobile.LoginAction" method="login" />
+		<!-- 退出-->
+		<action name="logout" class="com.yaowang.lansha.action.mobile.LoginAction" method="logout" />
+		<!-- 检测token有效-->
+		<action name="checkToken" class="com.yaowang.lansha.action.mobile.LoginAction" method="checkToken" />
+		
+		<!-- 意见反馈-->
+
+		<action name="gamesuggest" class="com.yaowang.lansha.action.mobile.LanshaSuggestionAction" method="save" />
+		
+		<!-- 检测版本号-->
+		<action name="checkVersion" class="com.yaowang.lansha.action.mobile.LanshaVersionAction" method="checkVersion" />
+		
+		<!-- 第三方登录 -->
+		<action name="userband" class="com.yaowang.lansha.action.mobile.LoginAction" method="userband" />
+		<!-- 主播推流登录 -->
+		<action name="liveLogin" class="com.yaowang.lansha.action.mobile.LoginAction" method="liveLogin" />
+		<!-- 分享 -->
+		<action name="share" class="com.yaowang.lansha.action.mobile.UserSettingAction" method="share"/>
+	</package>
+	
+	<!-- 设置 -->
+	<package name="lansha-mobile-/mobile/settings" namespace="/mobile/settings" extends="lansha-mobile-login">
+		<!--  全局消息推送开关-->
+		<action name="push" class="com.yaowang.lansha.action.mobile.UserSettingAction" method="push" />
+	</package>
+	
+	<!-- 直播插件 -->
+	<package name="lansha-mobile-livePlugin" namespace="/mobile/livePlugin" extends="lansha-mobile-base">
+		<!-- 主播推流登录 -->
+		<action name="liveLogin" class="com.yaowang.lansha.action.mobile.LivePluginAction" method="liveLogin" />
+	</package>
+	<!-- 直播插件-登录 -->
+	<package name="lansha-mobile-livePlugin-login" namespace="/mobile/livePlugin" extends="lansha-mobile-login">
+		<!-- 游戏列表 -->
+		<action name="info" class="com.yaowang.lansha.action.mobile.LivePluginAction" method="info" />
+		<!-- 游戏列表 -->
+		<action name="gameList" class="com.yaowang.lansha.action.mobile.LivePluginAction" method="gameList" />
+		<!-- 直播信息 -->
+		<action name="userInfo" class="com.yaowang.lansha.action.mobile.LivePluginAction" method="userInfo" />
+		<!-- 直播信息保存 -->
+		<action name="saveInfo" class="com.yaowang.lansha.action.mobile.LivePluginAction" method="saveInfo" />
+		<!-- 直播信息保存 -->
+		<action name="live" class="com.yaowang.lansha.action.mobile.LivePluginAction" method="live" />
+
+        <action name="liveInfo" class="com.yaowang.lansha.action.mobile.LivePluginAction" method="liveInfo" />
+	</package>
+</struts>

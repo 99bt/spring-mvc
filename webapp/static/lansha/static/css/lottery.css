@@ -1,0 +1,92 @@
+/*reset.css*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { padding: 0; margin: 0; font-family: "Microsoft Yahei"; }
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0; }
+address, caption, cite, code, dfn, em, strong, th, var { font-weight: normal; font-style: normal; }
+ol, ul { list-style: none; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
+q:before, q:after { content: ''; }
+abbr, acronym { border: 0; }
+input, button, textarea { outline: none; }
+a { text-decoration: none; color: #8a8a8a; }
+a, a:active, a:focus { outline: none; -webkit-tap-highlight-color: transparent; }
+body { background: #f7f7f7; }
+/*common*/
+.clearfix:after { content: "."; display: block; height: 0; visibility: hidden; clear: both; }
+.clearfix { *zoom: 1; }
+.fl { float: left; }
+.fr { float: right; }
+.col-main { color: #3ba2ef; }
+.mgt10 { margin-top: 10px; }
+.mgt15 { margin-top: 15px; }
+.mgt20 { margin-top: 20px; }
+.mgt22 { margin-top: 22px; }
+.mgt30 { margin-top: 30px; }
+.mgt36 { margin-top: 36px; }
+.layout { margin: 0 auto; width: 1180px; }
+body { background: #8a0c0f; }
+.layout { width: 1000px; }
+.lottery-header { height: 766px; background: url("../images/lottery-top.png") no-repeat center 0; }
+.lottery-header .layout { width: 1100px; position: relative; }
+.lottery-logo { width: 260px; height: 64px; background: url("../images/lottery-logo.png") no-repeat 0 0; overflow: hidden; text-indent: -9999em; }
+.lottery-link { position: relative; width: 368px; }
+.lottery-link a { position: absolute; top: 0; background: url("../images/lottery-sprite.png") no-repeat 0 0; text-align: center; }
+.lottery-link a.lottery-reg { left: 0; width: 223px; height: 53px; font: 30px/53px "Microsoft YaHei"; color: #ff0101; z-index: 3; background-position: -233px 0; }
+.lottery-link a.lottery-user { font-size: 24px; }
+.lottery-link a.lottery-login { left: 195px; width: 145px; height: 47px; font: 20px/47px "Microsoft YaHei"; color: #fff; background-position: -515px 0; z-index: 2; }
+.lottery-link a.lottery-reg:hover { background-position: 0 0; color: #b00d07; }
+.lottery-link a.lottery-login:hover { background-position: -715px 0; color: #fcf29a; }
+.lottery-main { background: url("../images/lottery-bg.jpg") no-repeat center 0; }
+.lottery-left { width: 520px; }
+.lottery-chance, .lottery-noLogin { font: 40px/50px "Microsoft YaHei"; color: #fdd245; margin-top: 70px; text-align: center; }
+.lottery-chance span { color: #f5eac5; margin: 0 4px; }
+.lottery-noLogin { color: #fb4646; }
+.lottery-noLogin a { color: #fdd245; text-decoration: underline; }
+.lottery-ask span { display: block; margin: 15px auto 0; width: 270px; height: 53px; background: #6e090c; color: #fff; border-radius: 7px; font: 20px/53px "Microsoft YaHei"; text-align: center; cursor: pointer; }
+.lottery-flash { margin: 40px auto 0; width: 512px; height: 512px; position: relative; }
+.lottery-dial { width: 512px; height: 512px; background: url("../images/lottery-dial.png") no-repeat 0 0; position: absolute; top: 0; left: 0 }
+.lottery-dial div.lottery-star { position: absolute; top: 50%; left: 50%; width: 172px; height: 172px; z-index: 3; margin: -87px 0 0 -86px; outline: none }
+.lottery-dial div.lottery-star #lotteryBtn { cursor: pointer; position: absolute; top: 0; left: 0; }
+.dial-btn { position: absolute; top: 50%; left: 50%; width: 124px; height: 124px; margin: -62px 0 0 -62px; background: url("../images/dail-btn.png") no-repeat 0 0; }
+#flashContent { width: 510px; height: 510px; }
+#layer { background: #f5f5f5; border: #000 solid 1px; padding: 20px; position: absolute; left: 0; top: 0; display: none; }
+.lottery-right { width: 440px; position: relative; padding-top: 155px; }
+.lottery-tips { position: absolute; top: 30px; right: 90px; background: url("../images/lottery-tips.png") no-repeat 0 0; width: 429px; height: 129px; }
+.lottery-invite { font: 26px/48px "Microsoft YaHei"; color: #fff; }
+.lottery-int { width: 310px; height: 50px; padding: 0 10px; border-radius: 7px 0 0 7px; background: #6e090c; border: none; font: 16px/50px "Microsoft YaHei"; color: #fff; }
+.copy-btn { width: 110px; height: 50px; border-radius: 0 7px 7px 0; background: #fb4646; color: #fff; font: 22px/50px "Microsoft YaHei"; border: none; text-align: center; cursor: pointer; }
+.lottery-show { margin-top: 25px; }
+.show-slide { height: 61px; }
+.show-slide span { width: 220px; height: 60px; text-align: center; font: 18px/60px "Microsoft YaHei"; color: #c13a3e; cursor: pointer; background: #fdb748; border-top: 1px solid #ce6836; }
+.show-slide span.show-one { width: 219px; border-radius: 7px 0 0 0; border-right: 1px solid #fdf248; }
+.show-slide span.show-two { border-radius: 0 7px 0 0; }
+.show-slide .cur { background: #f9cf26; color: #7c0c0f; border-top: 1px solid #e2982f; }
+.show-list { height: 250px; padding: 20px 25px; border-radius: 0 0 7px 7px; background: #c13a3e; font: 14px/30px "Microsoft YaHei"; color: #fff; overflow: hidden; }
+.show-list li span { margin: 0 15px 0 0; }
+.show-list ul li span { margin: 0 10px 0 0; }
+.slide-one ol, .slide-one ul { height: 240px; overflow: hidden; outline: none; }
+.slide-one ol a { color: #fff; }
+.slide-one ol a.nologin1 { color: #fdd245; text-decoration: underline; margin-right: 5px; }
+.slide-one { height: 240px; overflow: hidden; }
+.lottery-title { height: 67px; font: 40px/50px "Microsoft YaHei"; color: #fff; background: url("../images/lottery-title.png") no-repeat center 0; text-align: center; padding: 62px 25px 0 0; }
+.lottery-time { font: 16px/30px "Microsoft YaHei"; color: #fdd245; }
+.lottery-text { padding: 15px 0; font: 16px/30px "Microsoft YaHei"; color: #fff8f8; }
+.lottery-num { padding-left: 12px; }
+.lottery-footer { height: 118px; margin-top: 40px; padding: 82px 0 0; background: url("../images/lottery-foote.png") no-repeat center 0; }
+.lottery-flogo a { width: 178px; height: 38px; margin: 0 auto; display: block; background: url("../images/lottery-flogo.png") no-repeat 0 0; }
+.lottery-footer p { text-align: center; font: 13px/30px "Microsoft YaHei"; padding-top: 15px; color: #7a7d83; }
+.lottery-maplink { position: fixed; bottom: 100px; right: 0; width: 160px; height: 460px; background: url("../images/lottery-maplink.png") no-repeat 0 0; }
+.lottery-maplink li { height: 92px; font: bold 24px/92px "Microsoft YaHei"; color: #fff; text-align: center; cursor: pointer; }
+.lottery-maplink .maplink-one:hover { color: #8a0c0f; }
+.lottery-popup, .lottery-virtual { position: fixed; top: 50%; left: 50%; margin: -270px 0 0 -240px; width: 360px; height: 481px; padding: 30px 60px; z-index: 920; background: url("../images/lottery-popupbg.png") no-repeat 0 0; display: none; }
+.lottery-virtual { margin: -145px 0 0 -240px; width: 360px; height: 230px; background: #c13a3e; border-radius: 7px; }
+.lottery-popup h2, .lottery-virtual h2 { font: 30px/60px "Microsoft YaHei"; text-align: center; color: #f9cf26; }
+.lottery-popup h3, .lottery-virtual h3 { font: 18px/30px "Microsoft YaHei"; text-align: center; color: #f9cf26; }
+.address-list { padding: 5px 0 0; }
+.lottery-int01 { width: 336px; height: 30px; font: 18px/30px "Microsoft YaHei"; padding: 12px; background: #ffffda; color: #c13a3e; border-radius: 5px; border: none; }
+.lottery-btn01, .lottery-btn02 { background: #f9cf26; text-align: center; display: block; margin-top: 46px; color: #c13a3e; font-size: 26px; cursor: pointer; }
+.xbox_MsgBox .xbox_MsgBox_message { text-align: center; font-size: 16px; line-height: 22px; }
+/** mb **/
+.mb { width: 100%; margin: 0 auto; }
+.mb .lottery-header, .mb .lottery-header .layout { width: 100%; margin: 0 auto; }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 接口 -->
+	<package name="interface-user" namespace="/interface" extends="project-base">
+		<!-- 主播状态修改接口 -->
+		<action name="roomStateStart" class="com.yaowang.lansha.action.api.RoomStateAction" method="start" />
+		<action name="roomStateStop" class="com.yaowang.lansha.action.api.RoomStateAction" method="stop" />
+		<!-- im回调接口 -->
+		<action name="imcallback" class="com.yaowang.lansha.action.api.ImCallbackAction" method="callback" />
+	</package>
+</struts>

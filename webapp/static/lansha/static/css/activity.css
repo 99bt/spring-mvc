@@ -1,0 +1,24 @@
+.activit-layout { position: relative;height: 870px; }
+.activit-download { height: 870px; background: url("../../upload/activiy-download.jpg") no-repeat center top; }
+.tel { position: absolute;top: 83px;left: 90px;width:522px;height:650px; background: url("../../upload/activity-download1.png") no-repeat; }
+.lansha { position: absolute;top: -12px; right: 50px;width: 572px;height: 457px; background: url("../../upload/activity-download2.png") no-repeat; }
+.footer { margin-top: 0 !important; }
+.btn {position: relative; padding-left: 65px;width: 180px;height: 58px; background-color: #2e9cee;font:20px/58px "Microsoft YaHei";border-radius: 58px;color: #fff;background-repeat: no-repeat; }
+.unclick { cursor:default; background-color: #360f61; border:2px solid #777777; color: #979797;width: 176px;height: 54px; }
+.wait { display: none; position: absolute;bottom:0;right: 47px;font:10px/1.5 "Microsoft YaHei";color: #979797;width: 48px;height: 18px; }
+.unclick .wait { display: block; }
+.join {  position: absolute;width: 248px; top: 340px;right: 201px;height: 55px; background: url("../../upload/activity-download3.png") no-repeat; }
+.IOS { margin-top: 21px;background-image: url("../../upload/activity-download10.png ");background-position: 30px 12px; }
+.IOS.unclick { background-position: 26px -288px; }
+.android.unclick { background-position: 30px -186px; }
+.android { margin-top: 1px;background-image: url("../../upload/activity-download10.png ");background-position: 26px -87px; }
+.right-box { width: 420px;height: 264px; position: absolute; top: 460px;right: 90px;z-index: 9;overflow: hidden; }
+.right-box .select { width: 210px;height:50px; font: 22px/50px "Microsoft YaHei";text-align: center;color: #fff;border-bottom: 2px solid #979797; }
+.right-box .selected { border-bottom:3px solid #00dafb; }
+.right-box .tips { margin-top: 34px;margin-bottom: 17px;width: 100%;height: 14px; }
+.right-box .QRcode { width: 145px;height: 145px;background: url("../../upload/activiy-download7.jpg") no-repeat; }
+.right-box .hidebox { position: absolute;top:53px;width: 420px;height: 211px; }
+.right-box .client { display: block; }
+.footer .footerNav { border-top:none; }
+.client { left: 0; }
+.tool { left: 420px; }
