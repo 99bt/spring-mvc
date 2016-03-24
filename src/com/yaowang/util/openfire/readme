@@ -1,0 +1,21 @@
+ 房间名称       text-single   muc#roomconfig_roomname
+ 描述        text-single   muc#roomconfig_roomdesc
+ 允许占有者更改主题     boolean    muc#roomconfig_changesubject
+ 最大房间占有者人数     list-single   muc#roomconfig_maxusers
+ 其 Presence 是 Broadcast 的角色  list-multi   muc#roomconfig_presencebroadcast
+ 列出目录中的房间     boolean    muc#roomconfig_publicroom
+ 房间是持久的      boolean    muc#roomconfig_persistentroom
+ 房间是适度的      boolean    muc#roomconfig_moderatedroom
+ 房间仅对成员开放     boolean    muc#roomconfig_membersonly
+ 允许占有者邀请其他人    boolean    muc#roomconfig_allowinvites
+ 需要密码才能进入房间    boolean    muc#roomconfig_passwordprotectedroom
+ 密码        text-private  muc#roomconfig_roomsecret
+ 能够发现占有者真实 JID 的角色  list-single   muc#roomconfig_whois
+ 登录房间对话      boolean    muc#roomconfig_enablelogging
+ 仅允许注册的昵称登录    boolean    x-muc#roomconfig_reservednick
+ 允许使用者修改昵称     boolean    x-muc#roomconfig_canchangenick
+ 允许用户注册房间     boolean    x-muc#roomconfig_registration
+ 房间管理员      jid-multi   muc#roomconfig_roomadmins
+ 房间拥有者      jid-multi   muc#roomconfig_roomowners
+ 
+ 

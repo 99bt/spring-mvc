@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- struts管理员后台配置 -->
+	<package name="project-admin-index" namespace="/admin" extends="project-admin">
+		<!-- 不需要登录验证，所以使用默认拦截器 -->
+		<default-interceptor-ref name="defaultStack" />
+		
+		<!-- 登录 -->
+		<action name="login" class="com.yaowang.action.admin.LoginAction" method="login">
+			<!-- 登录成功，跳转至后台首页 -->
+			<result type="chain">index</result>
+		</action>
+		
+		<!-- 获取验证码 -->
+		<action name="code" class="com.yaowang.action.admin.LoginAction" method="code" />
+	</package>
+	
+	<!-- 后台管理员框架 -->
+	<package name="project-admin-main" namespace="/admin" extends="project-admin">
+		<!-- 管理员登录权限 -->
+		<default-interceptor-ref name="adminInterceptorStack" />
+		<!-- 后台首页  -->
+		<action name="index" class="com.yaowang.action.admin.MainAction">
+			<result>main/subsystemindex.ftl</result>
+		</action>
+		<!-- 顶部 -->
+		<action name="top" class="com.yaowang.action.admin.MainAction">
+			<result>main/top.ftl</result>
+		</action>
+		<!-- 底部 -->
+		<action name="foot" class="com.yaowang.action.admin.MainAction">
+			<result>main/foot.ftl</result>
+		</action>
+		<!-- 左侧 -->
+		<action name="left" class="com.yaowang.action.admin.MainAction" method="left">
+			<result>main/left.ftl</result>
+		</action>
+		<!-- 右侧 -->
+		<action name="nav" class="com.yaowang.action.admin.MainAction" method="nav">
+			<result>main/subsystemright.ftl</result>
+		</action>
+		
+		<!-- 修改密码 -->
+		<action name="changePwd" class="com.yaowang.action.admin.LoginAction" method="changePwd">
+			<result>main/changePwd.ftl</result>
+		</action>
+		<!-- 退出 -->
+		<action name="logout" class="com.yaowang.action.admin.LoginAction" method="logout" />
+	</package>
+	
+	<!-- 系统管理 -->
+	<package name="project-admin-system" namespace="/admin/system" extends="project-admin">
+		<!-- 系统参数 -->
+		<action name="system" class="com.yaowang.action.admin.SystemAction" method="system">
+			<result>system/system.ftl</result>
+		</action>
+		<action name="system-view" class="com.yaowang.action.admin.SystemAction" method="view">
+			<result>system/system-view.ftl</result>
+		</action>
+		<action name="system-save" class="com.yaowang.action.admin.SystemAction" method="save">
+			<result>system/system-view.ftl</result>
+		</action>
+		
+		<!-- 缓存 -->
+		<action name="system-call" class="com.yaowang.action.admin.SystemCallAction" method="call">
+			<result>system/system-call.ftl</result>
+		</action>
+		
+		<!-- 微代码 -->
+		<action name="system-mcode" class="com.yaowang.action.admin.SystemMcodeAction" method="list">
+			<result>mcode/mcodeList.ftl</result>
+		</action>
+		<action name="system-mcode-detail" class="com.yaowang.action.admin.SystemMcodeAction" method="detail">
+			<result>mcode/mcode.ftl</result>
+		</action>
+		<action name="system-mcode-save" class="com.yaowang.action.admin.SystemMcodeAction" method="save">
+			<result>mcode/mcode.ftl</result>
+		</action>
+		<action name="system-mcode-delete" class="com.yaowang.action.admin.SystemMcodeAction" method="delete">
+			<result>mcode/mcode.ftl</result>
+		</action>
+		<!-- 连接池 -->
+		<action name="system-database" class="com.yaowang.action.admin.SystemAction" method="database">
+			<result>system/database.ftl</result>
+		</action>
+	</package>
+	
+	<!-- 角色管理 -->
+	<package name="project-admin-role" namespace="/admin/role" extends="project-admin">
+		<action name="role" class="com.yaowang.action.admin.RoleAction" method="role">
+			<result>role.ftl</result>
+		</action>
+		<!-- 删除 -->
+		<action name="role-delete" class="com.yaowang.action.admin.RoleAction" method="delete">
+			<result>role.ftl</result>
+		</action>
+		<!-- 修改页面 -->
+		<action name="role-view" class="com.yaowang.action.admin.RoleAction" method="view">
+			<result>role-view.ftl</result>
+		</action>
+		<!-- 保存修改 -->
+		<action name="role-update" class="com.yaowang.action.admin.RoleAction" method="update">
+			<result>role-view.ftl</result>
+		</action>
+	</package>
+	
+	<!-- 管理员用户 -->
+	<package name="project-admin-adminUser" namespace="/admin/adminUser" extends="project-admin">
+		<action name="adminUser" class="com.yaowang.action.admin.AdminUserAction" method="adminUser">
+			<result>adminUser.ftl</result>
+		</action>
+		<!-- 删除 -->
+		<action name="adminUser-delete" class="com.yaowang.action.admin.AdminUserAction" method="delete">
+			<result>adminUser.ftl</result>
+		</action>
+		<!-- 修改页面 -->
+		<action name="adminUser-view" class="com.yaowang.action.admin.AdminUserAction" method="view">
+			<result>adminUser-view.ftl</result>
+		</action>
+		<!-- 保存修改 -->
+		<action name="adminUser-save" class="com.yaowang.action.admin.AdminUserAction" method="save">
+			<result>adminUser-view.ftl</result>
+		</action>
+		<!-- 密码重置 -->
+		<action name="adminUser-resetPwd" class="com.yaowang.action.admin.AdminUserAction" method="resetPwd">
+			<result>adminUser.ftl</result>
+		</action>
+	</package>
+	
+	<!-- 日志 -->
+	<package name="project-admin-log" namespace="/admin/log" extends="project-admin">
+		<!-- 系统日志 -->
+		<action name="log" class="com.yaowang.action.admin.LogAction" method="log">
+			<result>log.ftl</result>
+		</action>
+		<!-- 查看 -->
+		<action name="log-view" class="com.yaowang.action.admin.LogAction" method="view">
+			<result>log-view.ftl</result>
+		</action>
+		<!-- 删除 -->
+		<action name="log-delete" class="com.yaowang.action.admin.LogAction" method="delete">
+			<result>log.ftl</result>
+		</action>
+		
+		<!-- 后台登陆日志 -->
+		<action name="log-admin" class="com.yaowang.action.admin.LogAction" method="adminLog">
+			<result>adminLoginLog.ftl</result>
+		</action>
+		<!-- 后台登陆日志删除 -->
+		<action name="log-admin-delete" class="com.yaowang.action.admin.LogAction" method="adminDelete">
+			<result>adminLoginLog.ftl</result>
+		</action>
+		
+		<!-- 短信日志 -->
+		<action name="log-mt" class="com.yaowang.action.admin.LogAction" method="mtLog">
+			<result>mtLog.ftl</result>
+		</action>
+		
+		<!-- 邮件日志 -->
+		<action name="log-email" class="com.yaowang.action.admin.LogAction" method="emailLog">
+			<result>emailLog.ftl</result>
+		</action>
+		<action name="log-email-send" class="com.yaowang.action.admin.LogAction" method="sendEmail" />
+	</package>
+</struts>
